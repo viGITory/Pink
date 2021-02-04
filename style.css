@@ -33,6 +33,7 @@ input[type='radio'].visually-hidden {
 }
 .main-header__nav-inner {
   min-height: 66px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +43,10 @@ input[type='radio'].visually-hidden {
   display: none;
 }
 .main-header__menu {
-  display: none;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  width: 100%;
 }
 .logo {
   display: block;
