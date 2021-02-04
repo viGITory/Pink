@@ -49,6 +49,10 @@ input[type='radio'].visually-hidden {
   font-size: 0;
   fill: #ffffff;
   text-decoration: none;
+  outline-offset: 10px;
+  outline-color: transparent;
+  transition-duration: 0.2s;
+  transition-property: fill, opacity;
 }
 .logo:hover,
 .logo:focus {
