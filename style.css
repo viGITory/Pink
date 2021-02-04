@@ -10,3 +10,16 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
+.logo {
+  display: block;
+  font-size: 0;
+  fill: #ffffff;
+  text-decoration: none;
+}
+.logo:hover,
+.logo:focus {
+  fill: #d22856;
+}
+.logo:active {
+  opacity: 0.3;
+}
