@@ -4,3 +4,9 @@
   font-family: 'Open Sans', Arial, sans-serif;
   color: #283645;
 }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
