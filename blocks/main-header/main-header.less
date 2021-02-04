@@ -5,12 +5,13 @@
 }
 
 .main-header__nav {
+	position: relative;
+	
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .main-header__nav-inner {
 	min-height: 66px;
-	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -26,5 +27,8 @@
 	top: 66px;
 	left: 0;
 	width: 100%;
+	z-index: 10;
+
+	background-color: #283645;
 	// display: none;
 }
