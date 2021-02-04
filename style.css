@@ -75,3 +75,21 @@ input[type='radio'].visually-hidden {
 .button-hamburger:active {
   opacity: 0.3;
 }
+.button-close {
+  padding: 0;
+  margin: 0;
+  width: 24px;
+  height: 23px;
+  display: none;
+  font-size: 0;
+  fill: #ffffff;
+  border: 0;
+  background-color: transparent;
+}
+.button-close:hover,
+.button-close:focus {
+  fill: #d22856;
+}
+.button-close:active {
+  opacity: 0.3;
+}
