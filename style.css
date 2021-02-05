@@ -72,6 +72,21 @@ input[type='radio'].visually-hidden {
     top: 110px;
   }
 }
+@media (min-width: 960px) {
+  .main-header__logo-tablet {
+    display: none;
+  }
+  .main-header__logo-desktop {
+    display: block;
+  }
+  .main-header__button {
+    display: none;
+  }
+  .main-header__menu {
+    display: block;
+    align-self: center;
+  }
+}
 .logo {
   display: block;
   font-size: 0;
