@@ -45,3 +45,36 @@
 .main-menu__link:active {
 	opacity: 0.3;
 }
+
+@media (min-width: @desktop-screen) {
+	.main-menu__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.main-menu__item {
+		margin-right: 83px;
+
+		box-shadow: none;
+	}
+
+	.main-menu__item:last-child {
+		margin-right: 0;
+
+		border-bottom: none;
+	}
+
+	.main-menu__link {
+		min-height: auto;
+
+		font-weight: 400;
+		text-transform: none;
+		line-height: 18px;
+
+		outline-offset: 10px;
+	}
+
+	.main-menu__link:active {
+		color: rgba(255, 255, 255, 0.3);
+	}
+}

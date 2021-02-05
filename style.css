@@ -89,8 +89,11 @@ input[type='radio'].visually-hidden {
     display: none;
   }
   .main-header__menu {
+    width: auto;
+    position: static;
     display: block;
     align-self: center;
+    background-color: inherit;
   }
 }
 .logo {
@@ -109,6 +112,11 @@ input[type='radio'].visually-hidden {
 }
 .logo:active {
   opacity: 0.3;
+}
+@media (min-width: 960px) {
+  .logo:active {
+    fill: rgba(255, 255, 255, 0.3);
+  }
 }
 .main-menu__list {
   margin: 0;
@@ -146,6 +154,30 @@ input[type='radio'].visually-hidden {
 }
 .main-menu__link:active {
   opacity: 0.3;
+}
+@media (min-width: 960px) {
+  .main-menu__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-menu__item {
+    margin-right: 83px;
+    box-shadow: none;
+  }
+  .main-menu__item:last-child {
+    margin-right: 0;
+    border-bottom: none;
+  }
+  .main-menu__link {
+    min-height: auto;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 18px;
+    outline-offset: 10px;
+  }
+  .main-menu__link:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 .button-hamburger {
   padding: 0;
