@@ -43,13 +43,34 @@ input[type='radio'].visually-hidden {
   display: none;
 }
 .main-header__menu {
-  position: absolute;
   top: 66px;
   left: 0;
-  width: 100%;
   z-index: 10;
-  background-color: #283645;
+  position: absolute;
+  width: 100%;
   display: none;
+  background-color: #283645;
+}
+@media (min-width: 660px) {
+  .main-header__nav-inner {
+    min-height: 110px;
+    align-items: stretch;
+  }
+  .main-header__logo {
+    margin-top: 27px;
+  }
+  .main-header__logo-mobile {
+    display: none;
+  }
+  .main-header__logo-tablet {
+    display: block;
+  }
+  .main-header__button {
+    align-self: center;
+  }
+  .main-header__menu {
+    top: 110px;
+  }
 }
 .logo {
   display: block;
