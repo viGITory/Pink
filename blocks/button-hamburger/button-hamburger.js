@@ -9,18 +9,18 @@ let mainHeaderMenu = document.querySelector('.main-header__menu');
 buttonHamburger.addEventListener('click', (event) => {
 	event.preventDefault();
 
-	buttonHamburger.style.display = 'none';
-	buttonClose.style.display = 'block';
-	mainHeaderNav.style.backgroundColor = 'transparent';
-	mainHeaderMenu.style.display = 'block';
+	buttonHamburger.classList.add('js-button-hamburger--closed');
+	buttonClose.classList.add('js-button-close--opened');
+	mainHeaderNav.classList.add('js-main-header__nav--opened');
+	mainHeaderMenu.classList.add('js-main-header__menu--opened');
 });
 
 // CLOSE MENU
 buttonClose.addEventListener('click', (event) => {
 	event.preventDefault();
 
-	buttonHamburger.style.display = 'block';
-	buttonClose.style.display = 'none';
-	mainHeaderNav.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-	mainHeaderMenu.style.display = 'none';
+	buttonHamburger.classList.remove('js-button-hamburger--closed');
+	buttonClose.classList.remove('js-button-close--opened');
+	mainHeaderNav.classList.remove('js-main-header__nav--opened');
+	mainHeaderMenu.classList.remove('js-main-header__menu--opened');
 });
