@@ -24,6 +24,11 @@ input[type='radio'].visually-hidden {
   padding: 0 20px;
   box-sizing: border-box;
 }
+@media (min-width: 960px) {
+  .container {
+    padding: 0 10px;
+  }
+}
 .main-header {
   color: #ffffff;
   background-color: #283645;
