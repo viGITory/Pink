@@ -49,6 +49,7 @@ input[type='radio'].visually-hidden {
   width: 100%;
   z-index: 10;
   background-color: #283645;
+  display: none;
 }
 .logo {
   display: block;
