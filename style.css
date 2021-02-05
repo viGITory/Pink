@@ -108,6 +108,9 @@ input[type='radio'].visually-hidden {
   }
 }
 @media (min-width: 960px) {
+  .main-header__nav {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   .main-header__logo-tablet {
     display: none;
   }
