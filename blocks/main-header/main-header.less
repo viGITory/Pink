@@ -11,7 +11,7 @@
 }
 
 .main-header__nav-inner {
-	min-height: 66px;
+	min-height: 65px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -23,7 +23,7 @@
 }
 
 .main-header__menu {
-	top: 66px;
+	top: 65px;
 	left: 0;
 	z-index: 10;
 	position: absolute;
@@ -34,8 +34,8 @@
 }
 
 .main-header__promo-inner {
-	padding-top: 424px;
-	padding-bottom: 34px;
+	padding-top: 425px;
+	padding-bottom: 35px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -43,12 +43,18 @@
 
 .main-header__promo-title {
 	margin: 0;
+	margin-bottom: 35px;
 	padding: 0;
+	max-width: 200px;
 	display: none;
+
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
 }
 
 .main-header__download-list {
-	margin-top: 32px;
+	margin-top: 35px;
 	margin-bottom: 25px;
 }
 
@@ -81,7 +87,7 @@
 	}
 
 	.main-header__logo {
-		margin-top: 27px;
+		margin-top: 25px;
 	}
 	
 	.main-header__logo-mobile {
@@ -99,10 +105,31 @@
 	.main-header__menu {
 		top: 110px;
 	}
+
+	.main-header__promo-inner {
+		max-width: 300px;
+		padding-top: 95px;
+		padding-bottom: 110px;
+	}
+
+	.main-header__promo-title {
+		display: block;
+	}
+
+	.main-header__download-list {
+		margin-top: 45px;
+		margin-bottom: 35px;
+	}
+
+	.main-header__download-description {
+		max-width: 300px;
+
+		font-size: 18px;
+	}
 }
 
 @media (min-width: @desktop-screen) {
-	.main-header__nav {
+	.main-header__nav { 
 		background-color: rgba(0, 0, 0, 0.5);
 	}
 
@@ -125,5 +152,21 @@
 		align-self: center;
 
 		background-color: inherit;
+	}
+
+	.main-header__promo-inner {
+		padding-top: 110px;
+	}
+
+	.main-header__promo-title {
+		margin-bottom: 50px;
+		max-width: 250px;
+
+		font-size: 50px;
+	}
+
+	.main-header__download-list {
+		margin-top: 65px;
+		margin-bottom: 60px;
 	}
 }
