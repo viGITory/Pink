@@ -1,6 +1,6 @@
 'use strict';
 
-const toggleBurger = () => {
+export const toggleBurger = () => {
 	let btnBurger = document.querySelector('.button-burger');
 	let btnBurgerIcon = document.querySelector('.button-burger__icon');
 	let btnBurgerCross = document.querySelector('.button-burger__icon-cross');
