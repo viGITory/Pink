@@ -87,6 +87,11 @@ input[type='radio'].visually-hidden {
   font-weight: 300;
   text-align: center;
 }
+.main-header__promo-title::selection,
+.main-header__download-description::selection {
+  color: #283645;
+  background-color: #ffffff;
+}
 .js-main-header__nav--bg {
   background-color: transparent;
 }
@@ -222,6 +227,10 @@ input[type='radio'].visually-hidden {
 .main-menu__link:active {
   opacity: 0.3;
 }
+.main-menu__link::selection {
+  color: #283645;
+  background-color: #ffffff;
+}
 @media (min-width: 960px) {
   .main-menu__list {
     display: flex;
@@ -301,6 +310,10 @@ input[type='radio'].visually-hidden {
 }
 .download-button:active {
   color: rgba(210, 40, 86, 0.3);
+}
+.download-button::selection {
+  color: #283645;
+  background-color: #ffffff;
 }
 @media (min-width: 660px) {
   .download-button {
