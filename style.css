@@ -36,6 +36,8 @@ input[type='radio'].visually-hidden {
 .main-header__nav {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
+  transition-duration: 0.2s;
+  transition-property: background-color;
 }
 .main-header__nav-inner {
   min-height: 65px;
