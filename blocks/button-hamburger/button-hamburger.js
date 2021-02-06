@@ -1,26 +1,18 @@
 'use strict';
 
-let buttonHamburger = document.querySelector('.button-hamburger');
-let buttonClose = document.querySelector('.button-close');
-let mainHeaderNav = document.querySelector('.main-header__nav');
-let mainHeaderMenu = document.querySelector('.main-header__menu');
+const toggleBurger = () => {
+	let btnBurger = document.querySelector('.button-burger');
+	let btnBurgerIcon = document.querySelector('.button-burger__icon');
+	let btnBurgerCross = document.querySelector('.button-burger__icon-cross');
+	let mainHeaderNav = document.querySelector('.main-header__nav');
+	let mainHeaderMenu = document.querySelector('.main-header__menu');
 
-// OPEN MENU
-buttonHamburger.addEventListener('click', (event) => {
-	event.preventDefault();
+	btnBurger.addEventListener('click', () => {
+		btnBurgerIcon.classList.toggle('js-btn-burger__icon--hide');
+		btnBurgerCross.classList.toggle('js-btn-burger__cross--show');
+		mainHeaderNav.classList.toggle('js-main-header__nav--bg');
+		mainHeaderMenu.classList.toggle('js-main-header__menu--show');
+	});
+};
 
-	buttonHamburger.classList.add('js-button-hamburger--closed');
-	buttonClose.classList.add('js-button-close--opened');
-	mainHeaderNav.classList.add('js-main-header__nav--opened');
-	mainHeaderMenu.classList.add('js-main-header__menu--opened');
-});
-
-// CLOSE MENU
-buttonClose.addEventListener('click', (event) => {
-	event.preventDefault();
-
-	buttonHamburger.classList.remove('js-button-hamburger--closed');
-	buttonClose.classList.remove('js-button-close--opened');
-	mainHeaderNav.classList.remove('js-main-header__nav--opened');
-	mainHeaderMenu.classList.remove('js-main-header__menu--opened');
-});
+toggleBurger();

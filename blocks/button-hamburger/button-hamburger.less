@@ -1,8 +1,6 @@
-.button-hamburger {
+.button-burger {
 	padding: 0;
 	margin: 0;
-	width: 50px;
-	height: 24px;
 	display: block;
 
 	font-size: 0;
@@ -16,15 +14,27 @@
 	transition-property: fill, opacity;
 }
 
-.button-hamburger:hover,
-.button-hamburger:focus {
+.button-burger:hover,
+.button-burger:focus {
 	fill: @red;
 }
 
-.button-hamburger:active {
+.button-burger:active {
 	opacity: 0.3;
 }
 
-.js-button-hamburger--closed {
+.button-burger__icon-cross {
 	display: none;
 }
+
+// JS //
+
+.js-btn-burger__icon--hide {
+	display: none;
+}
+
+.js-btn-burger__cross--show {
+	display: block;
+}
+
+//
