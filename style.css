@@ -449,3 +449,44 @@ input[type='radio'].visually-hidden {
     line-height: 30px;
   }
 }
+.reviews {
+  background-color: #ffffff;
+}
+.reviews__inner {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviews__slider {
+  margin-top: 35px;
+}
+.user-review__quote {
+  max-width: 280px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+.user-review__user {
+  margin-bottom: 20px;
+}
+.user-review__user-name {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+}
+.user-review__user-description {
+  display: none;
+  font-size: 14px;
+}
+.user-review__text {
+  margin: 0;
+  padding: 0;
+}
