@@ -578,6 +578,12 @@ input[type='radio'].visually-hidden {
   margin: 0;
   padding: 0;
 }
+.user-review__text::selection,
+.user-review__user-name::selection,
+.user-review__user-description::selection {
+  color: #ffffff;
+  background-color: #283645;
+}
 @media (min-width: 660px) {
   .user-review__quote {
     max-width: 620px;
@@ -706,4 +712,13 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase;
   background-color: #d22856;
   transform: rotate(-45deg);
+}
+.price-table__plan::selection,
+.price-table__cost::selection {
+  color: #283645;
+  background-color: #ffffff;
+}
+.price-table__cell-text::selection {
+  color: #ffffff;
+  background-color: #283645;
 }
