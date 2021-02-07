@@ -4,6 +4,14 @@
   font-family: 'Open Sans', Arial, sans-serif;
   color: #283645;
 }
+.page__research {
+  display: none;
+}
+@media (min-width: 660px) {
+  .page__research {
+    display: block;
+  }
+}
 .visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,
 input[type='radio'].visually-hidden {
@@ -448,6 +456,50 @@ input[type='radio'].visually-hidden {
     font-size: 18px;
     line-height: 30px;
   }
+}
+.research__inner {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+.research__group {
+  margin-left: 310px;
+}
+.research__title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+}
+.research__text {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+.research__link {
+  color: #d22856;
+  text-decoration: underline;
+  outline-color: #283645;
+  outline-offset: 5px;
+  transition-duration: 0.2s;
+  transition-property: color;
+}
+.research__link:visited {
+  color: #d22856;
+}
+.research__link:hover,
+.research__link:focus,
+.research__link:active {
+  color: #283645;
+}
+.research__title::selection,
+.research__text::selection,
+.research__link::selection {
+  color: #ffffff;
+  background-color: #283645;
 }
 .reviews {
   background-color: #ffffff;
