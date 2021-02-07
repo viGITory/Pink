@@ -632,10 +632,14 @@ input[type='radio'].visually-hidden {
   box-shadow: 0 0 0 3px #283645;
   background-color: #ffffff;
 }
-.price {
+.price__inner {
   padding-bottom: 500px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.price__slider {
+  margin-top: 40px;
 }
 .price-table {
   font-size: 14px;
