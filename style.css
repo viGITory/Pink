@@ -490,6 +490,34 @@ input[type='radio'].visually-hidden {
   margin: 0;
   padding: 0;
 }
+@media (min-width: 660px) {
+  .user-review__quote {
+    max-width: 620px;
+    font-size: 18px;
+  }
+  .user-review__user {
+    margin-top: 40px;
+    margin-bottom: 0;
+    order: 1;
+  }
+  .user-review__user-name {
+    font-size: 20px;
+  }
+  .user-review__user-description {
+    display: block;
+  }
+}
+@media (min-width: 960px) {
+  .user-review__quote {
+    max-width: 690px;
+  }
+  .user-review__user-name {
+    font-size: 24px;
+  }
+  .user-review__user-description {
+    font-size: 18px;
+  }
+}
 .slider {
   min-height: 12px;
   display: flex;
