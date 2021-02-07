@@ -1,0 +1,106 @@
+.price {
+	padding-bottom: 500px;
+	display: flex;
+	justify-content: center;
+}
+
+.price-table {
+	font-size: 14px;
+	line-height: 30px;
+
+	border-collapse: collapse;
+}
+
+.price-table__header-cell {
+	padding: 0;
+	min-width: 280px;
+	height: 100px;
+
+	color: #ffffff;
+
+	box-sizing: border-box;
+	background-color: @darkblue;
+	border: 2px solid @darkblue;
+	border-top: 0;
+	border-right: 2px solid #e5e5e5;
+}
+
+.price-table__header-cell:first-child {
+	display: none;
+
+	background-color: transparent;
+	border: 0;
+}
+
+.price-table__header-cell:last-child {
+	border-right-color: @darkblue;
+}
+
+.price-table__plan {
+	display: block;
+
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.price-table__cost {
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.price-table__cell {
+	padding: 0;
+	padding-right: 15px;
+	padding-left: 20px;
+	height: 60px;
+
+	text-transform: uppercase;
+
+	background-color: #ffffff;
+	box-sizing: border-box;
+	border: solid 2px #e5e5e5;
+}
+
+.price-table__cell:first-child {
+	display: none;
+}
+
+.price-table__cell-wrapper {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.price-table__check-on {
+	min-width: 31px; // в случае переполнения галочка уменьшается
+
+	fill: #3dc644;
+}
+
+.price-table__check-off {
+	min-width: 27px; // в случае переполнения крестик уменьшается
+
+	fill: #f25b26;
+}
+
+.price-table__header-cell--special {
+	position: relative;
+
+	overflow: hidden;
+}
+
+.price-table__header-cell--special::before {
+	top: 13px;
+	left: -37px;
+	width: 120px;
+	content: 'Хит';
+	position: absolute;
+
+	font-size: 14px;
+	line-height: 30px;
+	text-transform: uppercase;
+
+	background-color: @red;
+	transform: rotate(-45deg);
+}
