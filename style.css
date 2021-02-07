@@ -726,3 +726,50 @@ input[type='radio'].visually-hidden {
   color: #ffffff;
   background-color: #283645;
 }
+@media (min-width: 660px) {
+  .price-table__header-cell {
+    min-width: 155px;
+    height: 80px;
+  }
+  .price-table__header-cell:first-child {
+    display: block;
+  }
+  .price-table__header-cell--special::before {
+    top: 3px;
+    left: -43px;
+  }
+  .price-table__cell {
+    height: 50px;
+    font-size: 0;
+    text-transform: none;
+    text-align: center;
+  }
+  .price-table__cell:first-child {
+    padding-left: 15px;
+    display: table-cell;
+    font-size: 14px;
+    text-align: left;
+  }
+  .price-table__cell-wrapper {
+    justify-content: center;
+  }
+  .price-table__plan {
+    font-size: 16px;
+  }
+  .price-table__cost {
+    font-size: 18px;
+  }
+}
+@media (min-width: 960px) {
+  .price-table__header-cell {
+    min-width: 235px;
+    height: 100px;
+  }
+  .price-table__header-cell--special::before {
+    top: 13px;
+    left: -37px;
+  }
+  .price-table__cell {
+    height: 60px;
+  }
+}
