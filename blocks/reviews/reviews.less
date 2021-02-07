@@ -13,3 +13,47 @@
 .reviews__slider {
 	margin-top: 35px;
 }
+
+.reviews__arrow {
+	margin-top: 20px;
+	padding: 0;
+	height: 41px;
+	display: none;
+
+	font-size: 0;
+	
+	fill: rgba(40, 54, 69, 0.3);
+	outline-offset: 10px;
+	outline-color: @darkblue;
+	transition-duration: 0.2s;
+	transition-property: fill;
+	border: none;
+	box-sizing: border-box;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.reviews__arrow:hover,
+.reviews__arrow:focus {
+	fill: rgba(40, 54, 69, 0.6);
+}
+
+.reviews__arrow:active {
+	fill: rgba(40, 54, 69, 0.1);
+}
+
+@media (min-width: @desktop-screen) {
+	.reviews__inner {
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: space-between;
+	}
+
+	.reviews__slider {
+		display: none;
+	}
+
+	.reviews__arrow {
+		display: block;
+	}
+}
