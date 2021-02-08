@@ -6,9 +6,7 @@ html(lang="ru")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(name="description", content="")
 		//- OPEN GRAPH ДЛЯ СОЦСЕТЕЙ
-		meta(property="og:title" content="")
-		meta(property="og:description" content="")
-		meta(property="og:image" content="")
+		include ../blocks/opengraph/opengraph.pug
 		title PINK
 		link(rel="icon", href="#", type="image/png", sizes="32x32")
 		link(rel="preconnect", href="https://fonts.gstatic.com")
@@ -16,6 +14,8 @@ html(lang="ru")
 		link(rel="stylesheet", href="style.css")
 
 	body.page(style="background-color: #f2f2f2;")
+		include ../svg.pug
+
 		div.page__header
 			include ../blocks/main-header/main-header.pug
 
