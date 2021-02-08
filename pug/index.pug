@@ -14,7 +14,7 @@ html(lang="ru")
 		link(rel="stylesheet", href="style.css")
 
 	body.page(style="background-color: #f2f2f2;")
-		include ../svg.pug
+		include ../blocks/svg/svg.pug
 
 		div.page__header
 			include ../blocks/main-header/main-header.pug
@@ -28,5 +28,7 @@ html(lang="ru")
 				include ../blocks/reviews/reviews.pug
 			div.page__price
 				include ../blocks/price/price.pug
+			div.page__contacts
+				include ../blocks/contacts/contacts.pug
 
 		script(src="scripts/scripts.js", type="module")
