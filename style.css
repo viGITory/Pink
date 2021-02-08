@@ -950,3 +950,41 @@ input[type='radio'].visually-hidden {
     display: block;
   }
 }
+.social {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.social__item {
+  margin-right: 12px;
+}
+.social__item:last-child {
+  margin-right: 0;
+}
+.social__icon {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  text-decoration: none;
+  fill: #d22856;
+  box-sizing: border-box;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+  outline-offset: 5px;
+  outline-color: #283645;
+  transition-duration: 0.2s;
+  transition-property: border-color, fill;
+}
+.social__icon:hover,
+.social__icon:focus {
+  border-color: #283645;
+}
+.social__icon:active {
+  fill: rgba(210, 40, 86, 0.3);
+  border-color: rgba(40, 54, 69, 0.1);
+}
