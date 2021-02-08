@@ -988,3 +988,35 @@ input[type='radio'].visually-hidden {
   fill: rgba(210, 40, 86, 0.3);
   border-color: rgba(40, 54, 69, 0.1);
 }
+.copyright {
+  display: flex;
+  align-items: center;
+  color: #283645;
+  text-decoration: none;
+  fill: #d22856;
+  outline-offset: 10px;
+  outline-color: #283645;
+  transition-duration: 0.2s;
+  transition-property: fill;
+}
+.copyright:visited {
+  font-size: inherit;
+}
+.copyright:hover,
+.copyright:focus {
+  fill: #283645;
+}
+.copyright:active {
+  fill: rgba(40, 54, 69, 0.3);
+}
+.copyright__text {
+  font-size: 14px;
+}
+.copyright__icon {
+  margin-right: -7px;
+}
+@media (min-width: 960px) {
+  .copyright__text {
+    font-size: 18px;
+  }
+}

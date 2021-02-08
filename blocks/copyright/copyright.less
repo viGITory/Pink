@@ -1,0 +1,40 @@
+.copyright {
+	display: flex;
+	align-items: center;
+
+	color: @darkblue;
+	text-decoration: none;
+
+	fill: @red;
+	outline-offset: 10px;
+	outline-color: @darkblue;
+	transition-duration: 0.2s;
+	transition-property: fill;
+}
+
+.copyright:visited {
+	font-size: inherit;
+}
+
+.copyright:hover,
+.copyright:focus {
+	fill: @darkblue;
+}
+
+.copyright:active {
+	fill: rgba(40, 54, 69, 0.3);
+}
+
+.copyright__text {
+	font-size: 14px;
+}
+
+.copyright__icon {
+	margin-right: -7px;
+}
+
+@media (min-width: @desktop-screen) {
+	.copyright__text {
+		font-size: 18px;
+	}
+}
