@@ -1,0 +1,41 @@
+.main-footer {
+	background-color: #ffffff;
+}
+
+.main-footer__inner {
+	min-height: 127px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.main-footer__logo {
+	margin-top: 35px;
+}
+
+.main-footer__logo-desktop {
+	display: none;
+}
+
+.main-footer__social,
+.main-footer__copyright {
+	align-self: center;
+}
+
+@media (min-width: @desktop-screen) {
+	.main-footer__inner {
+		min-height: 197px;
+	}
+
+	.main-footer__logo {
+		margin-top: 70px;
+	}
+
+	.main-footer__logo-tablet {
+		display: none;
+	}
+
+	.main-footer__logo-desktop {
+		display: block;
+	}
+}
