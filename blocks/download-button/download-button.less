@@ -7,15 +7,16 @@
 
 	font-size: 18px;
 	font-weight: 700;
+	line-height: 18px;
 	text-decoration: none;
 	color: #ffffff;
+	text-align: center;
 
 	overflow: hidden;
 	box-sizing: border-box;
 	border: 3px solid #ffffff;
 	border-radius: 30px;
-	outline-offset: 10px;
-	outline-color: transparent;
+	outline: none;
 	transition-duration: 0.2s;
 	transition-property: color, background-color;
 }
@@ -39,5 +40,11 @@
 @media (min-width: @tablet-screen) {
 	.download-button {
 		width: 300px;
+	}
+}
+
+@media (min-width: @desktop-screen) {
+	.download-button {
+		font-size: 21px;
 	}
 }

@@ -2,10 +2,10 @@
 	color: #ffffff;
 
 	background-color: @darkblue;
-	background-image: url(blocks/main-header/img/back-desktop.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: url(blocks/main-header/img/iphone-mobile.png), url(blocks/main-header/img/back-desktop.jpg);
+	background-position: center bottom 270px, center bottom 270px;
+	background-repeat: no-repeat, no-repeat;
+	background-size: auto 285px, cover;
 }
 
 .main-header__nav {
@@ -23,6 +23,10 @@
 	align-items: center;
 }
 
+.main-header__logo {
+	margin-right: 20px;
+}
+
 .main-header__logo-tablet,
 .main-header__logo-desktop {
 	display: none;
@@ -31,8 +35,8 @@
 .main-header__menu {
 	top: 65px;
 	left: 0;
-	z-index: 10;
 	position: absolute;
+	z-index: 10;
 	width: 100%;
 	display: none;
 
@@ -49,7 +53,7 @@
 
 .main-header__promo-title {
 	margin: 0;
-	margin-bottom: 35px;
+	margin-bottom: 30px;
 	padding: 0;
 	max-width: 200px;
 	display: none;
@@ -60,7 +64,7 @@
 }
 
 .main-header__download-list {
-	margin-top: 35px;
+	margin-top: 30px;
 	margin-bottom: 25px;
 }
 
@@ -71,6 +75,7 @@
 
 	font-size: 14px;
 	font-weight: 300;
+	line-height: 24px;
 	text-align: center;
 }
 
@@ -82,18 +87,23 @@
 }
 
 // JS //
-
 .js-main-header__nav--bg {
-	background-color: transparent;
+	background-color: #283645;
 }
 
 .js-main-header__menu--show {
 	display: block;
 }
-
 //
 
 @media (min-width: @tablet-screen) {
+	.main-header {
+		background-image: url(blocks/main-header/img/iphone-tablet.png), url(blocks/main-header/img/back-desktop.jpg);
+		background-position: center bottom, center center;
+		background-repeat: no-repeat, no-repeat;
+		background-size: auto auto, cover;
+	}
+
 	.main-header__nav-inner {
 		min-height: 110px;
 		align-items: stretch;
@@ -120,9 +130,9 @@
 	}
 
 	.main-header__promo-inner {
-		max-width: 300px;
-		padding-top: 95px;
+		padding-top: 90px;
 		padding-bottom: 110px;
+		max-width: 300px;
 	}
 
 	.main-header__promo-title {
@@ -142,6 +152,13 @@
 }
 
 @media (min-width: @desktop-screen) {
+	.main-header {
+		background-image: url(blocks/main-header/img/iphone-desktop.png), url(blocks/main-header/img/back-desktop.jpg);
+		background-position: center bottom, center center;
+		background-repeat: no-repeat, no-repeat;
+		background-size: auto auto, cover;
+	}
+
 	.main-header__nav { 
 		background-color: rgba(0, 0, 0, 0.5);
 	}
@@ -169,6 +186,7 @@
 
 	.main-header__promo-inner {
 		padding-top: 110px;
+		padding-bottom: 120px;
 	}
 
 	.main-header__promo-title {
@@ -180,6 +198,6 @@
 
 	.main-header__download-list {
 		margin-top: 65px;
-		margin-bottom: 60px;
+		margin-bottom: 55px;
 	}
 }
