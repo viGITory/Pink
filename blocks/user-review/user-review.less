@@ -1,18 +1,13 @@
 .user-review__quote {
-	max-width: 280px;
 	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-	font-size: 14px;
-	line-height: 30px;
-	text-align: center;
 }
 
 .user-review__user {
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 .user-review__user-name {
@@ -21,16 +16,23 @@
 	font-size: 18px;
 	font-weight: 700;
 	font-style: normal;
+	line-height: 30px;
 }
 
 .user-review__user-description {
 	display: none;
+	
 	font-size: 14px;
+	line-height: 30px;
 }
 
 .user-review__text {
 	margin: 0;
 	padding: 0;
+
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
 }
 
 .user-review__text::selection,
@@ -42,14 +44,7 @@
 }
 
 @media (min-width: @tablet-screen) {
-	.user-review__quote {
-		max-width: 620px;
-
-		font-size: 18px;
-	}
-
 	.user-review__user {
-		margin-top: 40px;
 		margin-bottom: 0;
 		order: 1;
 	}
@@ -61,13 +56,15 @@
 	.user-review__user-description {
 		display: block;
 	}
+
+	.user-review__text {
+		margin-bottom: 40px;
+
+		font-size: 18px;
+	}
 }
 
 @media (min-width: @desktop-screen) {
-	.user-review__quote {
-		max-width: 690px;
-	}
-
 	.user-review__user-name {
 		font-size: 24px;
 	}

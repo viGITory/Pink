@@ -1,3 +1,17 @@
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  border: 0;
+}
 .page {
   margin: 0;
   padding: 0;
@@ -7,29 +21,21 @@
 .page__research {
   display: none;
 }
+.page__footer {
+  display: none;
+}
 @media (min-width: 660px) {
   .page__research {
     display: block;
   }
-}
-.visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
+  .page__footer {
+    display: block;
+  }
 }
 .container {
-  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
+  max-width: 960px;
   box-sizing: border-box;
 }
 @media (min-width: 960px) {
@@ -41,9 +47,11 @@ input[type='radio'].visually-hidden {
   color: #ffffff;
   background-color: #283645;
   background-image: url(blocks/main-header/img/iphone-mobile.png), url(blocks/main-header/img/back-desktop.jpg);
-  background-position: center bottom 270px, center bottom 270px;
+  background-position: center bottom 270px,
+											 center bottom 270px;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto 285px, cover;
+  background-size: auto 285px,
+											 cover;
 }
 .main-header__nav {
   position: relative;
@@ -65,9 +73,9 @@ input[type='radio'].visually-hidden {
   display: none;
 }
 .main-header__menu {
+  position: absolute;
   top: 65px;
   left: 0;
-  position: absolute;
   z-index: 10;
   width: 100%;
   display: none;
@@ -95,9 +103,9 @@ input[type='radio'].visually-hidden {
   margin-bottom: 25px;
 }
 .main-header__download-description {
-  max-width: 235px;
   margin: 0;
   padding: 0;
+  max-width: 235px;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -117,9 +125,11 @@ input[type='radio'].visually-hidden {
 @media (min-width: 660px) {
   .main-header {
     background-image: url(blocks/main-header/img/iphone-tablet.png), url(blocks/main-header/img/back-desktop.jpg);
-    background-position: center bottom, center center;
+    background-position: center bottom,
+												 center center;
     background-repeat: no-repeat, no-repeat;
-    background-size: auto auto, cover;
+    background-size: auto auto,
+												 cover;
   }
   .main-header__nav-inner {
     min-height: 110px;
@@ -160,9 +170,11 @@ input[type='radio'].visually-hidden {
 @media (min-width: 960px) {
   .main-header {
     background-image: url(blocks/main-header/img/iphone-desktop.png), url(blocks/main-header/img/back-desktop.jpg);
-    background-position: center bottom, center center;
+    background-position: center bottom,
+												 center center;
     background-repeat: no-repeat, no-repeat;
-    background-size: auto auto, cover;
+    background-size: auto auto,
+												 cover;
   }
   .main-header__nav {
     background-color: rgba(0, 0, 0, 0.5);
@@ -177,8 +189,8 @@ input[type='radio'].visually-hidden {
     display: none;
   }
   .main-header__menu {
-    width: auto;
     position: static;
+    width: auto;
     display: block;
     align-self: center;
     background-color: inherit;
@@ -217,6 +229,35 @@ input[type='radio'].visually-hidden {
   .logo:active {
     fill: rgba(255, 255, 255, 0.3);
   }
+}
+.button-burger {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 0;
+  fill: #ffffff;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  outline-color: transparent;
+  transition-duration: 0.2s;
+  transition-property: fill, opacity;
+}
+.button-burger:hover,
+.button-burger:focus {
+  fill: #d22856;
+}
+.button-burger:active {
+  opacity: 0.3;
+}
+.button-burger__icon-cross {
+  display: none;
+}
+.js-btn-burger__icon--hide {
+  display: none;
+}
+.js-btn-burger__cross--show {
+  display: block;
 }
 .main-menu__list {
   margin: 0;
@@ -300,35 +341,6 @@ input[type='radio'].visually-hidden {
     color: rgba(255, 255, 255, 0.3);
   }
 }
-.button-burger {
-  margin: 0;
-  padding: 0;
-  display: block;
-  font-size: 0;
-  fill: #ffffff;
-  border: 0;
-  background-color: transparent;
-  outline: none;
-  outline-color: transparent;
-  transition-duration: 0.2s;
-  transition-property: fill, opacity;
-}
-.button-burger:hover,
-.button-burger:focus {
-  fill: #d22856;
-}
-.button-burger:active {
-  opacity: 0.3;
-}
-.button-burger__icon-cross {
-  display: none;
-}
-.js-btn-burger__icon--hide {
-  display: none;
-}
-.js-btn-burger__cross--show {
-  display: block;
-}
 .download-button {
   width: 280px;
   height: 55px;
@@ -406,6 +418,13 @@ input[type='radio'].visually-hidden {
   width: 100%;
   transform: translateX(-50%);
 }
+.features {
+  background-color: #ffffff;
+  background-image: url(blocks/features/img/iphone-mobile.png), url(blocks/features/img/bg.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto 275px, cover;
+  background-position: bottom -35px center, top 215px center;
+}
 .features__inner {
   padding-top: 40px;
   padding-bottom: 320px;
@@ -415,7 +434,9 @@ input[type='radio'].visually-hidden {
 }
 .features__title {
   margin-bottom: 110px;
-  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 24px;
   font-weight: 300;
   text-align: center;
@@ -425,20 +446,11 @@ input[type='radio'].visually-hidden {
   margin-bottom: 30px;
   padding: 0;
 }
-.features__title-row:last-child,
-.features__item:last-child {
-  margin-bottom: 0;
-}
-.features__title-row::selection,
-.features__item-title::selection,
-.features__item-text::selection {
-  color: #ffffff;
-  background-color: #283645;
+.features__title-row:last-child {
+  max-width: 210px;
 }
 .features__group {
-  max-width: 260px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
 }
 .features__item {
@@ -452,20 +464,38 @@ input[type='radio'].visually-hidden {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
+  line-height: 24px;
 }
 .features__item-text {
   margin: 0;
   padding: 0;
   font-size: 14px;
+  line-height: 24px;
+}
+.features__title-row:last-child,
+.features__item:last-child {
+  margin-bottom: 0;
+}
+.features__title-row::selection,
+.features__item-title::selection,
+.features__item-text::selection {
+  color: #ffffff;
+  background-color: #283645;
 }
 @media (min-width: 660px) {
+  .features {
+    background-color: #ffffff;
+    background-image: url(blocks/features/img/iphone-mobile.png), url(blocks/features/img/bg.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 485px, cover;
+    background-position: bottom -60px left 20px, top 240px center;
+  }
   .features__inner {
     padding-top: 50px;
     padding-bottom: 45px;
   }
   .features__title {
     margin-bottom: 110px;
-    max-width: 100%;
     font-size: 40px;
   }
   .features__title-row {
@@ -476,41 +506,51 @@ input[type='radio'].visually-hidden {
   }
   .features__group {
     margin-left: 310px;
-    max-width: 310px;
   }
   .features__item {
     text-align: left;
   }
 }
 @media (min-width: 960px) {
+  .features {
+    background-color: #ffffff;
+    background-image: url(blocks/features/img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 325px center;
+  }
   .features__inner {
+    padding-top: 70px;
     padding-bottom: 65px;
   }
   .features__title {
     font-size: 50px;
   }
   .features__title-row:last-child {
-    max-width: 420px;
+    max-width: 440px;
   }
   .features__group {
     margin-left: 0;
-    min-width: 100%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
   }
   .features__item {
-    margin-right: 80px;
     margin-bottom: 0;
     padding-top: 350px;
-    max-width: 245px;
+    flex-basis: 240px;
     text-align: center;
-    line-height: 30px;
+    background-image: url(blocks/features/img/iphone-mobile.png);
+    background-size: auto 300px;
+    background-repeat: no-repeat;
+    background-position: top center;
   }
   .features__item:last-child {
     margin-right: 0;
   }
   .features__item-title {
+    margin-bottom: 30px;
     font-size: 30px;
+    line-height: 30px;
   }
   .features__item-text {
     font-size: 18px;
@@ -518,8 +558,13 @@ input[type='radio'].visually-hidden {
   }
 }
 .research__inner {
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 95px;
+  padding-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  background-image: url(blocks/research/img/diagram.png);
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 .research__group {
   margin-left: 310px;
@@ -528,6 +573,7 @@ input[type='radio'].visually-hidden {
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
+  max-width: 170px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -540,10 +586,11 @@ input[type='radio'].visually-hidden {
   line-height: 24px;
 }
 .research__link {
+  font-size: 14px;
+  line-height: 24px;
   color: #d22856;
   text-decoration: underline;
-  outline-color: #283645;
-  outline-offset: 5px;
+  outline: none;
   transition-duration: 0.2s;
   transition-property: color;
 }
@@ -561,82 +608,121 @@ input[type='radio'].visually-hidden {
   color: #ffffff;
   background-color: #283645;
 }
+@media (min-width: 960px) {
+  .research__group {
+    margin-left: 370px;
+  }
+  .research__title {
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  .research__text {
+    margin-bottom: 35px;
+  }
+  .research__text,
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
 .reviews {
   background-color: #ffffff;
 }
 .reviews__inner {
-  padding-top: 45px;
+  padding-top: 40px;
   padding-bottom: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.reviews__slider {
-  margin-top: 35px;
+.reviews__user-review {
+  margin-bottom: 35px;
+  max-width: 280px;
 }
-.reviews__arrow {
-  margin-top: 20px;
+.reviews__arrow-prev,
+.reviews__arrow-next {
+  margin-top: 25px;
   padding: 0;
   height: 41px;
   display: none;
   font-size: 0;
   fill: rgba(40, 54, 69, 0.3);
-  outline-offset: 10px;
-  outline-color: #283645;
+  outline: none;
   transition-duration: 0.2s;
   transition-property: fill;
-  border: none;
+  border: 0;
   box-sizing: border-box;
   cursor: pointer;
   background-color: transparent;
 }
-.reviews__arrow:hover,
-.reviews__arrow:focus {
+.reviews__arrow-prev:hover,
+.reviews__arrow-next:hover,
+.reviews__arrow-prev:focus,
+.reviews__arrow-next:focus {
   fill: rgba(40, 54, 69, 0.6);
 }
-.reviews__arrow:active {
+.reviews__arrow-prev:active,
+.reviews__arrow-next:active {
   fill: rgba(40, 54, 69, 0.1);
+}
+@media (min-width: 660px) {
+  .reviews__user-review {
+    margin-bottom: 35px;
+    max-width: 620px;
+  }
 }
 @media (min-width: 960px) {
   .reviews__inner {
+    padding-top: 185px;
+    padding-bottom: 40px;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
+    background-image: url(blocks/reviews/img/quotes.png);
+    background-size: auto auto;
+    background-position: top 70px center;
+    background-repeat: no-repeat;
+  }
+  .reviews__user-review {
+    margin-bottom: 0;
+    max-width: 700px;
   }
   .reviews__slider {
     display: none;
   }
-  .reviews__arrow {
+  .reviews__arrow-prev,
+  .reviews__arrow-next {
     display: block;
   }
 }
 .user-review__quote {
-  max-width: 280px;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 14px;
-  line-height: 30px;
-  text-align: center;
 }
 .user-review__user {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .user-review__user-name {
   display: block;
   font-size: 18px;
   font-weight: 700;
   font-style: normal;
+  line-height: 30px;
 }
 .user-review__user-description {
   display: none;
   font-size: 14px;
+  line-height: 30px;
 }
 .user-review__text {
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
 }
 .user-review__text::selection,
 .user-review__user-name::selection,
@@ -645,12 +731,7 @@ input[type='radio'].visually-hidden {
   background-color: #283645;
 }
 @media (min-width: 660px) {
-  .user-review__quote {
-    max-width: 620px;
-    font-size: 18px;
-  }
   .user-review__user {
-    margin-top: 40px;
     margin-bottom: 0;
     order: 1;
   }
@@ -660,11 +741,12 @@ input[type='radio'].visually-hidden {
   .user-review__user-description {
     display: block;
   }
+  .user-review__text {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
 }
 @media (min-width: 960px) {
-  .user-review__quote {
-    max-width: 690px;
-  }
   .user-review__user-name {
     font-size: 24px;
   }
@@ -783,11 +865,11 @@ input[type='radio'].visually-hidden {
   overflow: hidden;
 }
 .price-table__header-cell--special::before {
+  content: 'Хит';
+  position: absolute;
   top: 13px;
   left: -37px;
   width: 120px;
-  content: 'Хит';
-  position: absolute;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
@@ -917,7 +999,7 @@ input[type='radio'].visually-hidden {
   min-height: 190px;
   position: relative;
   background-image: url(blocks/contacts/img/map.jpg);
-  background-position: 50% 50%;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1031,8 +1113,7 @@ input[type='radio'].visually-hidden {
   box-sizing: border-box;
   border: 3px solid rgba(40, 54, 69, 0.1);
   border-radius: 50%;
-  outline-offset: 5px;
-  outline-color: #283645;
+  outline: none;
   transition-duration: 0.2s;
   transition-property: border-color, fill;
 }

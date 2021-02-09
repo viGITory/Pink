@@ -1,6 +1,12 @@
 .research__inner {
-	padding-top: 100px;
-	padding-bottom: 120px;
+	padding-top: 95px;
+	padding-bottom: 90px;
+	display: flex;
+	justify-content: center;
+
+	background-image: url(blocks/research/img/diagram.png);
+	background-repeat: no-repeat;
+	background-position: left center;
 }
 
 .research__group {
@@ -11,6 +17,7 @@
 	margin: 0;
 	margin-bottom: 15px;
 	padding: 0;
+	max-width: 170px;
 	
 	font-size: 30px;
 	font-weight: 700;
@@ -27,11 +34,12 @@
 }
 
 .research__link {
+	font-size: 14px;
+	line-height: 24px;
 	color: @red;
 	text-decoration: underline;
 
-	outline-color: @darkblue;
-	outline-offset: 5px;
+	outline: none;
 	transition-duration: 0.2s;
 	transition-property: color;
 }
@@ -50,5 +58,28 @@
 .research__text::selection,
 .research__link::selection {
 	color: #ffffff;
+	
 	background-color: #283645;
+}
+
+@media (min-width: 960px) {
+	.research__group {
+		margin-left: 370px;
+	}
+
+	.research__title {
+		margin-bottom: 20px;
+
+		line-height: 30px;
+	}
+
+	.research__text {
+		margin-bottom: 35px;
+	}
+
+	.research__text,
+	.research__link {
+		font-size: 18px;
+		line-height: 30px;
+	}
 }

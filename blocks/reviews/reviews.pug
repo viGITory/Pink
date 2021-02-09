@@ -2,13 +2,13 @@ section.reviews
 	div.container
 		div.reviews__inner
 			h2.visually-hidden Отзывы пользователей
-			button.reviews__arrow.reviews__arrow-prev(type="button")
+			button.reviews__arrow-prev(type="button")
 				svg(width="22", height="41")
 					use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-left")
 			div.reviews__user-review
 				include ../user-review/user-review.pug
 			div.reviews__slider
 				include ../slider/slider.pug
-			button.reviews__arrow.reviews__arrow-next(type="button")
+			button.reviews__arrow-next(type="button")
 				svg(width="22", height="41")
 					use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-right")
