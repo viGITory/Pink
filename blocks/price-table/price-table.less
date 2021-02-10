@@ -34,11 +34,13 @@
 	display: block;
 
 	font-size: 18px;
+	line-height: 30px;
 	text-transform: uppercase;
 }
 
 .price-table__cost {
 	font-size: 24px;
+	line-height: 30px;
 	font-weight: normal;
 }
 
@@ -112,6 +114,23 @@
 	background-color: #283645;
 }
 
+// JS //
+
+.js-price-table--translate-right {
+	transition: all 0.2s ease;
+	transform: translateX(33.3333%);
+}
+
+.js-price-table--translate-left {
+	transition: all 0.2s ease;
+	transform: translateX(-33.3333%);
+}
+
+
+
+
+
+
 @media (min-width: @tablet-screen) {
 	.price-table__header-cell {
 		min-width: 155px;
@@ -167,7 +186,19 @@
 		left: -37px;
 	}
 
+	.price-table__plan {
+		font-size: 18px;
+	}
+
+	.price-table__cost {
+		font-size: 24px;
+	}
+
 	.price-table__cell {
 		height: 60px;
+	}
+
+	.price-table__cell:first-child {
+		font-size: 18px;
 	}
 }

@@ -557,6 +557,9 @@ input[type='radio'].visually-hidden {
     line-height: 30px;
   }
 }
+.research {
+  background-color: #ffffff;
+}
 .research__inner {
   padding-top: 95px;
   padding-bottom: 90px;
@@ -609,6 +612,9 @@ input[type='radio'].visually-hidden {
   background-color: #283645;
 }
 @media (min-width: 960px) {
+  .research {
+    background-color: #f2f2f2;
+  }
   .research__group {
     margin-left: 370px;
   }
@@ -637,7 +643,6 @@ input[type='radio'].visually-hidden {
 }
 .reviews__user-review {
   margin-bottom: 35px;
-  max-width: 280px;
 }
 .reviews__arrow-prev,
 .reviews__arrow-next {
@@ -668,7 +673,6 @@ input[type='radio'].visually-hidden {
 @media (min-width: 660px) {
   .reviews__user-review {
     margin-bottom: 35px;
-    max-width: 620px;
   }
 }
 @media (min-width: 960px) {
@@ -771,18 +775,24 @@ input[type='radio'].visually-hidden {
   margin-right: 0;
 }
 .slider__item--checked {
+  transition: all 0.2s ease;
   box-shadow: 0 0 0 3px #283645;
   background-color: #ffffff;
 }
 .price {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
+  background-image: url(blocks/price/img/bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
 .price__inner {
   padding-top: 90px;
-  padding-bottom: 45px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .price__slider {
   margin-top: 40px;
@@ -797,6 +807,7 @@ input[type='radio'].visually-hidden {
 }
 @media (min-width: 960px) {
   .price__inner {
+    padding-top: 150px;
     padding-bottom: 95px;
   }
 }
@@ -827,10 +838,12 @@ input[type='radio'].visually-hidden {
 .price-table__plan {
   display: block;
   font-size: 18px;
+  line-height: 30px;
   text-transform: uppercase;
 }
 .price-table__cost {
   font-size: 24px;
+  line-height: 30px;
   font-weight: normal;
 }
 .price-table__cell {
@@ -885,6 +898,14 @@ input[type='radio'].visually-hidden {
   color: #ffffff;
   background-color: #283645;
 }
+.js-price-table--translate-right {
+  transition: all 0.2s ease;
+  transform: translateX(33.3333%);
+}
+.js-price-table--translate-left {
+  transition: all 0.2s ease;
+  transform: translateX(-33.3333%);
+}
 @media (min-width: 660px) {
   .price-table__header-cell {
     min-width: 155px;
@@ -928,8 +949,17 @@ input[type='radio'].visually-hidden {
     top: 13px;
     left: -37px;
   }
+  .price-table__plan {
+    font-size: 18px;
+  }
+  .price-table__cost {
+    font-size: 24px;
+  }
   .price-table__cell {
     height: 60px;
+  }
+  .price-table__cell:first-child {
+    font-size: 18px;
   }
 }
 .contacts {

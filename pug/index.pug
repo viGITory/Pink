@@ -25,13 +25,13 @@ html(lang="ru")
 			div.page__research
 				include ../blocks/research/research.pug
 			div.page__reviews
-				include ../blocks/reviews/reviews.pug
+				//- include ../blocks/reviews/reviews.pug
 			div.page__price
-				//- include ../blocks/price/price.pug
+				include ../blocks/price/price.pug
 			div.page__contacts
 				include ../blocks/contacts/contacts.pug
 
-		footer.page__footer
+		div.page__footer
 			include ../blocks/main-footer/main-footer.pug
 
 		script(src="scripts/scripts.js", type="module")
