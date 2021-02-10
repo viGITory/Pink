@@ -965,7 +965,7 @@ input[type='radio'].visually-hidden {
 .contacts {
   background-color: #ffffff;
 }
-.contacts__wrapper {
+.contacts__inner {
   padding-top: 45px;
   padding-bottom: 40px;
   display: flex;
@@ -974,9 +974,8 @@ input[type='radio'].visually-hidden {
 }
 .contacts__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   padding: 0;
-  max-width: 225px;
   font-size: 24px;
   font-weight: 300;
   text-align: center;
@@ -984,36 +983,41 @@ input[type='radio'].visually-hidden {
 .contacts__group {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 .contacts__group-item {
-  margin-bottom: 25px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
   font-style: normal;
   text-align: center;
 }
 .contacts__group-item:last-child {
   margin-bottom: 0;
+  max-width: 240px;
 }
 .contacts__item-title {
+  display: block;
   font-size: 18px;
   font-weight: 700;
+}
+.contacts__title::selection,
+.contacts__item-title::selection,
+.contacts__link::selection {
+  color: #ffffff;
+  background-color: #283645;
 }
 .contacts__link {
   font-size: 24px;
   font-weight: 300;
   color: #d22856;
   text-decoration: none;
-  outline-color: #283645;
+  outline: none;
   transition-duration: 0.2s;
   transition-property: color;
 }
 .contacts__link:visited {
   color: #d22856;
 }
-.contacts__link:hover {
+.contacts__link:hover,
+.contacts__link:focus {
   color: #283645;
 }
 .contacts__link--email:hover {
@@ -1039,20 +1043,23 @@ input[type='radio'].visually-hidden {
   position: absolute;
 }
 @media (min-width: 660px) {
-  .contacts__wrapper {
+  .contacts__inner {
     padding-top: 50px;
+    padding-bottom: 30px;
   }
   .contacts__title {
     margin-bottom: 50px;
-    max-width: 375px;
+    max-width: 550px;
     font-size: 40px;
   }
   .contacts__group {
     max-width: 550px;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .contacts__group-item {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
   .contacts__group-item:last-child {
     margin: 0 auto;
@@ -1062,18 +1069,18 @@ input[type='radio'].visually-hidden {
   }
 }
 @media (min-width: 960px) {
-  .contacts__wrapper {
+  .contacts__inner {
     padding-top: 70px;
-    padding-bottom: 0;
+    padding-bottom: 20px;
   }
   .contacts__title {
-    margin-bottom: 70px;
-    max-width: 465px;
+    margin-bottom: 50px;
+    max-width: 480px;
     font-size: 50px;
   }
   .contacts__group {
     margin-bottom: 0px;
-    min-width: 865px;
+    min-width: 880px;
   }
   .contacts__group-item {
     margin-bottom: 0px;
