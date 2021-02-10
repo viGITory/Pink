@@ -16,8 +16,8 @@
 	position: relative;
 	
 	background-color: rgba(0, 0, 0, 0.5);
-	transition-duration: 0.2s;
-	transition-property: background-color;
+	// transition-property: background-color;
+	// transition-duration: @main-duration;
 }
 
 .main-header__nav-inner {
@@ -44,7 +44,7 @@
 	width: 100%;
 	display: none;
 
-	background-color: #283645;
+	background-color: @darkblue;
 }
 
 .main-header__promo-inner {
@@ -85,14 +85,14 @@
 
 .main-header__promo-title::selection,
 .main-header__download-description::selection {
-	color: #283645;
+	color: @darkblue;
 	
 	background-color: #ffffff;
 }
 
 // JS //
 .js-main-header__nav--bg {
-	background-color: #283645;
+	background-color: @darkblue;
 }
 
 .js-main-header__menu--show {

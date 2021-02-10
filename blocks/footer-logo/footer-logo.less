@@ -1,0 +1,24 @@
+.footer-logo__desktop {
+	display: none;
+}
+
+.footer-logo__tablet:hover,
+.footer-logo__desktop:hover {
+	fill: @red;
+}
+
+.footer-logo__tablet:active,
+.footer-logo__desktop:active {
+	fill: @darkblue;
+	opacity: 0.3;
+}
+
+@media (min-width: @desktop-screen) {
+	.footer-logo__tablet {
+		display: none;
+	}
+
+	.footer-logo__desktop {
+		display: block;
+	}
+}
