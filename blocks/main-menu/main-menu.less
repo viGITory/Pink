@@ -33,7 +33,7 @@
 
 	outline: none;
 	transition-property: color, opacity;
-	transition-duration: 0.2s;
+	transition-duration: @main-duration;
 }
 
 .main-menu__link:visited {
@@ -50,28 +50,9 @@
 }
 
 .main-menu__link::selection {
-	color: #283645;
+	color: @darkblue;
 	
 	background-color: #ffffff;
-}
-
-.main-menu__link::after {
-	content: '';
-	position: absolute;
-	bottom: -15px;
-	left: 50%;
-	width: 0;
-	height: 2px;
-
-	background-color: #ffffff;
-	transition-property: all;
-	transition-duration: 0.2s;
-}
-
-.main-menu__link:hover:after,
-.main-menu__link:focus:after {
-	width: 100%;
-	transform: translateX(-50%);
 }
 
 @media (min-width: @desktop-screen) {
@@ -104,5 +85,28 @@
 
 	.main-menu__link:active {
 		color: rgba(255, 255, 255, 0.3);
+	}
+
+	.main-menu__link::after {
+		content: '';
+		position: absolute;
+		bottom: -15px;
+		left: 50%;
+		width: 0;
+		height: 2px;
+
+		background-color: #ffffff;
+		transition-property: all;
+		transition-duration: @main-duration;
+	}
+
+	.main-menu__link:hover::after,
+	.main-menu__link:focus::after {
+		width: 100%;
+		transform: translateX(-50%);
+	}
+
+	.main-menu__link:active::after {
+		background-color: rgba(255, 255, 255, 0.3);
 	}
 }

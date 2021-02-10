@@ -1,5 +1,5 @@
 .research {
-background-color: #ffffff;
+	background-color: #f2f2f2;
 }
 
 .research__inner {
@@ -44,8 +44,8 @@ background-color: #ffffff;
 	text-decoration: underline;
 
 	outline: none;
-	transition-duration: 0.2s;
 	transition-property: color;
+	transition-duration: @main-duration;
 }
 
 .research__link:visited {
@@ -63,14 +63,10 @@ background-color: #ffffff;
 .research__link::selection {
 	color: #ffffff;
 	
-	background-color: #283645;
+	background-color: @darkblue;
 }
 
 @media (min-width: @desktop-screen) {
-	.research {
-background-color: #f2f2f2;
-	}
-	
 	.research__group {
 		margin-left: 370px;
 	}

@@ -6,10 +6,9 @@
 	text-decoration: none;
 
 	fill: @red;
-	outline-offset: 10px;
-	outline-color: @darkblue;
-	transition-duration: 0.2s;
+	outline: none;
 	transition-property: fill;
+	transition-duration: @main-duration;
 }
 
 .copyright:visited {
@@ -27,6 +26,12 @@
 
 .copyright__text {
 	font-size: 14px;
+}
+
+.copyright__text::selection {
+	color: #ffffff;
+
+	background-color: @darkblue;
 }
 
 .copyright__icon {

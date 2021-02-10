@@ -9,9 +9,9 @@
 	border: 0;
 	background-color: transparent;
 	outline: none;
-	outline-color: transparent;
-	transition-duration: 0.2s;
+	cursor: pointer;
 	transition-property: fill, opacity;
+	transition-duration: @main-duration;
 }
 
 .button-burger:hover,
@@ -20,7 +20,7 @@
 }
 
 .button-burger:active {
-	opacity: 0.3;
+	fill: rgba(210, 40, 86, 0.3);
 }
 
 .button-burger__icon-cross {

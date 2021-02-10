@@ -103,7 +103,7 @@
 
 .price-table__plan::selection,
 .price-table__cost::selection {
-	color: #283645;
+	color: @darkblue;
 
 	background-color: #ffffff;
 }
@@ -111,7 +111,7 @@
 .price-table__cell-text::selection {
 	color: #ffffff;
 
-	background-color: #283645;
+	background-color: @darkblue;
 }
 
 // JS //
@@ -125,11 +125,6 @@
 	transition: all 0.2s ease;
 	transform: translateX(-33.3333%);
 }
-
-
-
-
-
 
 @media (min-width: @tablet-screen) {
 	.price-table__header-cell {

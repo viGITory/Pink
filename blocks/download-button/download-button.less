@@ -17,8 +17,8 @@
 	border: 3px solid #ffffff;
 	border-radius: 30px;
 	outline: none;
-	transition-duration: 0.2s;
 	transition-property: color, background-color;
+	transition-duration: @main-duration;
 }
 
 .download-button:hover,
@@ -33,7 +33,7 @@
 }
 
 .download-button::selection {
-	color: #283645;
+	color: @darkblue;
 	background-color: #ffffff;
 }
 
