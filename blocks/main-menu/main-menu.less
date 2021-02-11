@@ -31,7 +31,7 @@
 	text-transform: uppercase;
 	text-decoration: none;
 
-	outline: none;
+	outline-color: #ffffff;
 	transition-property: color, opacity;
 	transition-duration: @main-duration;
 }
@@ -80,7 +80,7 @@
 		text-transform: none;
 		line-height: 18px;
 
-		outline: none;
+		outline-offset: 5px;
 	}
 
 	.main-menu__link:active {
@@ -100,8 +100,7 @@
 		transition-duration: @main-duration;
 	}
 
-	.main-menu__link:hover::after,
-	.main-menu__link:focus::after {
+	.main-menu__link:hover::after {
 		width: 100%;
 		transform: translateX(-50%);
 	}

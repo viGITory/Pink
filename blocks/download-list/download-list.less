@@ -21,7 +21,8 @@
 .download-list__link {
 	display: inline-block;
 
-	outline: none;
+	outline-offset: 10px;
+	outline-color: #ffffff;
 	transition-property: opacity;
 	transition-duration: @main-duration;
 }
@@ -40,8 +41,7 @@
 	transition-duration: @main-duration;
 }
 
-.download-list__link:hover::after,
-.download-list__link:focus::after {
+.download-list__link:hover::after {
 	width: 100%;
 	transform: translateX(-50%);
 }
