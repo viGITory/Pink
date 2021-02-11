@@ -59,6 +59,17 @@ input[type='radio'].visually-hidden {
   justify-content: space-between;
   align-items: center;
 }
+.main-header__to-main-anchor {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 10px;
+  color: transparent;
+  text-decoration: none;
+}
+.main-header__to-main-anchor:focus {
+  color: #fff;
+}
 .main-header__logo {
   margin-right: 20px;
 }
@@ -128,6 +139,9 @@ input[type='radio'].visually-hidden {
   .main-header__nav-inner {
     min-height: 110px;
     align-items: stretch;
+  }
+  .main-header__anchor {
+    font-size: 14px;
   }
   .main-header__logo {
     margin-top: 25px;
@@ -318,7 +332,7 @@ input[type='radio'].visually-hidden {
   color: #d22856;
 }
 .main-menu__link:active {
-  fill: rgba(210, 40, 86, 0.3);
+  color: rgba(210, 40, 86, 0.3);
 }
 .main-menu__link::selection {
   color: #283645;
