@@ -7,99 +7,99 @@
 	background-position: center bottom 270px,
 											 center bottom 270px;
 	background-repeat: 	 no-repeat,
-										 	 no-repeat;
+											 no-repeat;
 	background-size: 		 auto 285px,
 											 cover;
-}
 
-.main-header__nav {
-	position: relative;
-	
-	background-color: rgba(0, 0, 0, 0.5);
-}
+	&__nav {
+		position: relative;
 
-.main-header__nav-inner {
-	min-height: 65px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 
-.main-header__to-main-anchor {
-	position: absolute;
-	left: 10px;
-	bottom: 10px;
+	&__nav-inner {
+		min-height: 65px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-	font-size: 10px;
-	color: transparent;
-	text-decoration: none;
-}
+	&__to-main-anchor {
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
 
-.main-header__to-main-anchor:focus {
-	color: #fff;
-}
+		font-size: 10px;
+		color: transparent;
+		text-decoration: none;
+	}
 
-.main-header__logo {
-	margin-right: 20px;
-}
+	&__to-main-anchor:focus {
+		color: #fff;
+	}
 
-.main-header__logo-tablet,
-.main-header__logo-desktop {
-	display: none;
-}
+	&__logo {
+		margin-right: 20px;
+	}
 
-.main-header__menu {
-	position: absolute;
-	top: 65px;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	display: none;
+	&__logo-tablet,
+	&__logo-desktop {
+		display: none;
+	}
 
-	background-color: @darkblue;
-}
+	&__menu {
+		position: absolute;
+		top: 65px;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		display: none;
 
-.main-header__promo-inner {
-	padding-top: 425px;
-	padding-bottom: 35px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+		background-color: @darkblue;
+	}
 
-.main-header__promo-title {
-	margin: 0;
-	margin-bottom: 30px;
-	padding: 0;
-	max-width: 200px;
-	display: none;
+	&__promo-inner {
+		padding-top: 425px;
+		padding-bottom: 35px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-	font-size: 40px;
-	font-weight: 300;
-	text-align: center;
-}
+	&__promo-title {
+		margin: 0;
+		margin-bottom: 30px;
+		padding: 0;
+		max-width: 200px;
+		display: none;
 
-.main-header__download-list {
-	margin-top: 30px;
-	margin-bottom: 25px;
-}
+		font-size: 40px;
+		font-weight: 300;
+		text-align: center;
+	}
 
-.main-header__download-description {
-	margin: 0;
-	padding: 0;
-	max-width: 235px;
+	&__download-list {
+		margin-top: 30px;
+		margin-bottom: 25px;
+	}
 
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 24px;
-	text-align: center;
-}
+	&__download-description {
+		margin: 0;
+		padding: 0;
+		max-width: 235px;
 
-.main-header__promo-title::selection,
-.main-header__download-description::selection {
-	color: @darkblue;
-	
-	background-color: #ffffff;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: center;
+	}
+
+	&__promo-title::selection,
+	&__download-description::selection {
+		color: @darkblue;
+
+		background-color: #ffffff;
+	}
 }
 
 // JS //
@@ -122,56 +122,56 @@
 												 no-repeat;
 		background-size: 		 auto auto,
 												 cover;
-	}
 
-	.main-header__nav-inner {
-		min-height: 110px;
-		align-items: stretch;
-	}
+		&__nav-inner {
+			min-height: 110px;
+			align-items: stretch;
+		}
 
-	.main-header__anchor {
-		font-size: 14px;
-	}
+		&__anchor {
+			font-size: 14px;
+		}
 
-	.main-header__logo {
-		margin-top: 25px;
-	}
-	
-	.main-header__logo-mobile {
-		display: none;
-	}
+		&__logo {
+			margin-top: 25px;
+		}
 
-	.main-header__logo-tablet {
-		display: block;
-	}
+		&__logo-mobile {
+			display: none;
+		}
 
-	.main-header__button {
-		align-self: center;
-	}
+		&__logo-tablet {
+			display: block;
+		}
 
-	.main-header__menu {
-		top: 110px;
-	}
+		&__button {
+			align-self: center;
+		}
 
-	.main-header__promo-inner {
-		padding-top: 90px;
-		padding-bottom: 110px;
-		max-width: 300px;
-	}
+		&__menu {
+			top: 110px;
+		}
 
-	.main-header__promo-title {
-		display: block;
-	}
+		&__promo-inner {
+			padding-top: 90px;
+			padding-bottom: 110px;
+			max-width: 300px;
+		}
 
-	.main-header__download-list {
-		margin-top: 45px;
-		margin-bottom: 35px;
-	}
+		&__promo-title {
+			display: block;
+		}
 
-	.main-header__download-description {
-		max-width: 300px;
+		&__download-list {
+			margin-top: 45px;
+			margin-bottom: 35px;
+		}
 
-		font-size: 18px;
+		&__download-description {
+			max-width: 300px;
+
+			font-size: 18px;
+		}
 	}
 }
 
@@ -185,47 +185,47 @@
 												 no-repeat;
 		background-size:		 auto auto,
 												 cover;
-	}
 
-	.main-header__nav { 
-		background-color: rgba(0, 0, 0, 0.5);
-	}
+		&__nav {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
 
-	.main-header__logo-tablet {
-		display: none;
-	}
+		&__logo-tablet {
+			display: none;
+		}
 
-	.main-header__logo-desktop {
-		display: block;
-	}
+		&__logo-desktop {
+			display: block;
+		}
 
-	.main-header__button {
-		display: none;
-	}
-	
-	.main-header__menu {
-		position: static;
-		width: auto;
-		display: block;
-		align-self: center;
+		&__button {
+			display: none;
+		}
 
-		background-color: inherit;
-	}
+		&__menu {
+			position: static;
+			width: auto;
+			display: block;
+			align-self: center;
 
-	.main-header__promo-inner {
-		padding-top: 110px;
-		padding-bottom: 120px;
-	}
+			background-color: inherit;
+		}
 
-	.main-header__promo-title {
-		margin-bottom: 50px;
-		max-width: 250px;
+		&__promo-inner {
+			padding-top: 110px;
+			padding-bottom: 120px;
+		}
 
-		font-size: 50px;
-	}
+		&__promo-title {
+			margin-bottom: 50px;
+			max-width: 250px;
 
-	.main-header__download-list {
-		margin-top: 65px;
-		margin-bottom: 55px;
+			font-size: 50px;
+		}
+
+		&__download-list {
+			margin-top: 65px;
+			margin-bottom: 55px;
+		}
 	}
 }

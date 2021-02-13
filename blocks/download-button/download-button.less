@@ -20,22 +20,22 @@
 	outline-color: #ffffff;
 	transition-property: color, background-color;
 	transition-duration: @main-duration;
-}
 
-.download-button:hover,
-.download-button:focus {
-	color: @red;
+	&:hover,
+	&:focus {
+		color: @red;
 
-	background-color: #ffffff;
-}
+		background-color: #ffffff;
+	}
 
-.download-button:active {
-	color: rgba(210, 40, 86, 0.3);
-}
+	&:active {
+		color: rgba(210, 40, 86, 0.3);
+	}
 
-.download-button::selection {
-	color: @darkblue;
-	background-color: #ffffff;
+	&::selection {
+		color: @darkblue;
+		background-color: #ffffff;
+	}
 }
 
 @media (min-width: @tablet-screen) {

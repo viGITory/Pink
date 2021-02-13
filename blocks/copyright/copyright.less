@@ -10,37 +10,39 @@
 	outline-color: @darkblue;
 	transition-property: fill;
 	transition-duration: @main-duration;
-}
 
-.copyright:visited {
-	font-size: inherit;
-}
+	&:visited {
+		font-size: inherit;
+	}
 
-.copyright:hover,
-.copyright:focus {
-	fill: @darkblue;
-}
+	&:hover,
+	&:focus {
+		fill: @darkblue;
+	}
 
-.copyright:active {
-	fill: rgba(40, 54, 69, 0.3);
-}
+	&:active {
+		fill: rgba(40, 54, 69, 0.3);
+	}
 
-.copyright__text {
-	font-size: 14px;
-}
+	&__text {
+		font-size: 14px;
+	}
 
-.copyright__text::selection {
-	color: #ffffff;
+	&__text::selection {
+		color: #ffffff;
 
-	background-color: @darkblue;
-}
+		background-color: @darkblue;
+	}
 
-.copyright__icon {
-	margin-right: -7px;
+	&__icon {
+		margin-right: -7px;
+	}
 }
 
 @media (min-width: @desktop-screen) {
-	.copyright__text {
-		font-size: 18px;
+	.copyright {
+		&__text {
+			font-size: 18px;
+		}
 	}
 }

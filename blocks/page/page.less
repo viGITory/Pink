@@ -4,16 +4,18 @@
 
 	font-family: 'Open Sans', Arial, sans-serif;
 	color: @darkblue;
-}
 
-.page__research,
-.page__footer {
-	display: none;
+	&__research,
+	&__footer {
+		display: none;
+	}
 }
 
 @media (min-width: @tablet-screen) {
-	.page__research,
-	.page__footer {
-		display: block;
+	.page {
+		&__research,
+		&__footer {
+			display: block;
+		}
 	}
 }

@@ -5,47 +5,47 @@
 	align-items: flex-end;
 
 	list-style-type: none;
-}
 
-.download-list__item {
-	margin-right: 35px;
-	position: relative;
+	&__item {
+		margin-right: 35px;
+		position: relative;
 
-	font-size: 0;
-}
+		font-size: 0;
+	}
 
-.download-list__item:last-child {
-	margin-right: 0;
-}
+	&__item:last-child {
+		margin-right: 0;
+	}
 
-.download-list__link {
-	display: inline-block;
+	&__link {
+		display: inline-block;
 
-	outline-offset: 10px;
-	outline-color: #ffffff;
-	transition-property: opacity;
-	transition-duration: @main-duration;
-}
+		outline-offset: 10px;
+		outline-color: #ffffff;
+		transition-property: opacity;
+		transition-duration: @main-duration;
+	}
 
-.download-list__link::after {
-	content: '';
-	position: absolute;
-	bottom: -15px;
-	left: 50%;
-	width: 0;
-	height: 2px;
+	&__link::after {
+		content: '';
+		position: absolute;
+		bottom: -15px;
+		left: 50%;
+		width: 0;
+		height: 2px;
 
-	background-color: #ffffff;
+		background-color: #ffffff;
 
-	transition-property: all;
-	transition-duration: @main-duration;
-}
+		transition-property: all;
+		transition-duration: @main-duration;
+	}
 
-.download-list__link:hover::after {
-	width: 100%;
-	transform: translateX(-50%);
-}
+	&__link:hover::after {
+		width: 100%;
+		transform: translateX(-50%);
+	}
 
-.download-list__link:active {
-	opacity: 0.3;
+	&__link:active {
+		opacity: 0.3;
+	}
 }

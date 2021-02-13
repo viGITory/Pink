@@ -1,75 +1,81 @@
-.user-review__quote {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+.user-review {
+	&__quote {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.user-review__user {
-	margin-bottom: 25px;
-}
+	&__user {
+		margin-bottom: 25px;
+	}
 
-.user-review__user-name {
-	display: block;
+	&__user-name {
+		display: block;
 
-	font-size: 18px;
-	font-weight: 700;
-	font-style: normal;
-	line-height: 30px;
-}
+		font-size: 18px;
+		font-weight: 700;
+		font-style: normal;
+		line-height: 30px;
+	}
 
-.user-review__user-description {
-	display: none;
-	
-	font-size: 14px;
-	line-height: 30px;
-}
+	&__user-description {
+		display: none;
 
-.user-review__text {
-	margin: 0;
-	padding: 0;
+		font-size: 14px;
+		line-height: 30px;
+	}
 
-	font-size: 14px;
-	line-height: 30px;
-	text-align: center;
-}
+	&__text {
+		margin: 0;
+		padding: 0;
 
-.user-review__text::selection,
-.user-review__user-name::selection,
-.user-review__user-description::selection {
-	color: #ffffff;
+		font-size: 14px;
+		line-height: 30px;
+		text-align: center;
+	}
 
-	background-color: @darkblue; 
+	&__text::selection,
+	&__user-name::selection,
+	&__user-description::selection {
+		color: #ffffff;
+
+		background-color: @darkblue; 
+	}
 }
 
 @media (min-width: @tablet-screen) {
-	.user-review__user {
-		margin-bottom: 0;
-		order: 1;
-	}
+	.user-review {
+		&__user {
+			margin-bottom: 0;
+			order: 1;
+		}
 
-	.user-review__user-name {
-		font-size: 20px;
-	}
+		&__user-name {
+			font-size: 20px;
+		}
 
-	.user-review__user-description {
-		display: block;
-	}
+		&__user-description {
+			display: block;
+		}
 
-	.user-review__text {
-		margin-bottom: 40px;
+		&__text {
+			margin-bottom: 40px;
 
-		font-size: 18px;
+			font-size: 18px;
+		}
 	}
 }
 
 @media (min-width: @desktop-screen) {
-	.user-review__user-name {
-		font-size: 24px;
-	}
+	.user-review {
+		&__user-name {
+			font-size: 24px;
+		}
 
-	.user-review__user-description {
-		font-size: 18px;
+		&__user-description {
+			font-size: 18px;
+		}
 	}
 }

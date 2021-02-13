@@ -1,33 +1,37 @@
-.footer-logo__tablet,
-.footer-logo__desktop {
-	display: block;
-	
-	outline-offset: 10px;
-	outline-color: @darkblue;
-}
+.footer-logo {
+	&__tablet,
+	&__desktop {
+		display: block;
+		
+		outline-offset: 10px;
+		outline-color: @darkblue;
+	}
 
-.footer-logo__desktop {
-	display: none;
-}
-
-.footer-logo__tablet:hover,
-.footer-logo__desktop:hover {
-	display: block;
-	fill: @red;
-}
-
-.footer-logo__tablet:active,
-.footer-logo__desktop:active {
-	fill: @darkblue;
-	opacity: 0.3;
-}
-
-@media (min-width: @desktop-screen) {
-	.footer-logo__tablet {
+	&__desktop {
 		display: none;
 	}
 
-	.footer-logo__desktop {
+	&__tablet:hover,
+	&__desktop:hover {
 		display: block;
+		fill: @red;
+	}
+
+	&__tablet:active,
+	&__desktop:active {
+		fill: @darkblue;
+		opacity: 0.3;
+	}
+}
+
+@media (min-width: @desktop-screen) {
+	.footer-logo {
+		&__tablet {
+			display: none;
+		}
+
+		&__desktop {
+			display: block;
+		}
 	}
 }

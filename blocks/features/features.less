@@ -4,78 +4,78 @@
 	background-repeat: no-repeat;
 	background-size: auto 275px;
 	background-position: bottom -35px center;
-}
 
-.features__inner {
-	padding-top: 40px;
-	padding-bottom: 320px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+	&__inner {
+		padding-top: 40px;
+		padding-bottom: 320px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.features__title {
-	margin-bottom: 110px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	&__title {
+		margin-bottom: 110px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-	font-size: 24px;
-	font-weight: 300;
-	text-align: center;
-}
+		font-size: 24px;
+		font-weight: 300;
+		text-align: center;
+	}
 
-.features__title-row {
-	margin: 0;
-	margin-bottom: 30px;
-	padding: 0;
-}
+	&__title-row {
+		margin: 0;
+		margin-bottom: 30px;
+		padding: 0;
+	}
 
-.features__title-row:last-child {
-	max-width: 210px;
-}
+	&__title-row:last-child {
+		max-width: 210px;
+	}
 
-.features__group {
-	display: flex;
-	flex-direction: column;
-}
+	&__group {
+		display: flex;
+		flex-direction: column;
+	}
 
-.features__item {
-	margin-bottom: 35px;
+	&__item {
+		margin-bottom: 35px;
 
-	text-align: center;
-	line-height: 24px;
-}
+		text-align: center;
+		line-height: 24px;
+	}
 
-.features__item-title {
-	margin: 0;
-	margin-bottom: 15px;
-	padding: 0;
+	&__item-title {
+		margin: 0;
+		margin-bottom: 15px;
+		padding: 0;
 
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 24px;
-}
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 24px;
+	}
 
-.features__item-text {
-	margin: 0;
-	padding: 0;
+	&__item-text {
+		margin: 0;
+		padding: 0;
 
-	font-size: 14px;
-	line-height: 24px;
-}
+		font-size: 14px;
+		line-height: 24px;
+	}
 
-.features__title-row:last-child,
-.features__item:last-child {
-	margin-bottom: 0;
-}
+	&__title-row:last-child,
+	&__item:last-child {
+		margin-bottom: 0;
+	}
 
-.features__title-row::selection,
-.features__item-title::selection,
-.features__item-text::selection {
-	color: #ffffff;
+	&__title-row::selection,
+	&__item-title::selection,
+	&__item-text::selection {
+		color: #ffffff;
 
-	background-color: @darkblue;
+		background-color: @darkblue;
+	}
 }
 
 @media (min-width: @tablet-screen) {
@@ -85,86 +85,86 @@
 		background-repeat: no-repeat;
 		background-size: auto 485px;
 		background-position: bottom -60px left 20px;
-	}
 
-	.features__inner {
-		padding-top: 50px;
-		padding-bottom: 45px;
-	}
-	
-	.features__title {
-		margin-bottom: 110px;
+		&__inner {
+			padding-top: 50px;
+			padding-bottom: 45px;
+		}
 
-		font-size: 40px;
-	}
+		&__title {
+			margin-bottom: 110px;
 
-	.features__title-row {
-		margin: 0 auto;
-	}
+			font-size: 40px;
+		}
 
-	.features__title-row:last-child {
-		max-width: 340px;
-	}
+		&__title-row {
+			margin: 0 auto;
+		}
 
-	.features__group {
-		margin-left: 310px;
-	}
+		&__title-row:last-child {
+			max-width: 340px;
+		}
 
-	.features__item {
-		text-align: left;
+		&__group {
+			margin-left: 310px;
+		}
+
+		&__item {
+			text-align: left;
+		}
 	}
 }
 
 @media (min-width: @desktop-screen) {
 	.features {
 		background-image: none;
-	}
 
-	.features__inner {
-		padding-top: 70px;
-		padding-bottom: 65px;
-	}
+		&__inner {
+			padding-top: 70px;
+			padding-bottom: 65px;
+		}
 
-	.features__title {
-		font-size: 50px;
-	}
+		&__title {
+			font-size: 50px;
+		}
 
-	.features__title-row:last-child {
-		max-width: 440px;
-	}
+		&__title-row:last-child {
+			max-width: 440px;
+		}
 
-	.features__group {
-		margin-left: 0;
-		flex-direction: row;
-		justify-content: space-between;
-	}
+		&__group {
+			margin-left: 0;
+			flex-direction: row;
+			justify-content: space-between;
+		}
 
-	.features__item {
-		margin-bottom: 0;
-		padding-top: 350px;
-		flex-basis: 240px;
+		&__item {
+			margin-bottom: 0;
+			padding-top: 350px;
+			flex-basis: 240px;
 
-		text-align: center;
+			text-align: center;
 
-		background-image: url(blocks/features/img/iphone-mobile.png);
-		background-size: auto 300px;
-		background-repeat: no-repeat;
-		background-position: top center;
-	}
+			background-image: url(blocks/features/img/iphone-mobile.png);
+			background-size: auto 300px;
+			background-repeat: no-repeat;
+			background-position: top center;
+		}
 
-	.features__item:last-child {
-		margin-right: 0;
-	}
+		&__item:last-child {
+			margin-right: 0;
+		}
 
-	.features__item-title {
-		margin-bottom: 30px;
-		
-		font-size: 30px;
-		line-height: 30px;
-	}
+		&__item-title {
+			margin-bottom: 30px;
 
-	.features__item-text {
-		font-size: 18px;
-		line-height: 30px;
+			font-size: 30px;
+			line-height: 30px;
+		}
+
+		&__item-text {
+			font-size: 18px;
+			line-height: 30px;
+		}
 	}
 }

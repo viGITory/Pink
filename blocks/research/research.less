@@ -1,90 +1,92 @@
 .research {
 	background-color: #f2f2f2;
-}
 
-.research__inner {
-	padding-top: 95px;
-	padding-bottom: 90px;
-	display: flex;
-	justify-content: center;
+	&__inner {
+		padding-top: 95px;
+		padding-bottom: 90px;
+		display: flex;
+		justify-content: center;
 
-	background-image: url(blocks/research/img/diagram.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-}
+		background-image: url(blocks/research/img/diagram.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
 
-.research__group {
-	margin-left: 310px;
-}
+	&__group {
+		margin-left: 310px;
+	}
 
-.research__title {
-	margin: 0;
-	margin-bottom: 15px;
-	padding: 0;
-	max-width: 170px;
-	
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 36px;
-}
+	&__title {
+		margin: 0;
+		margin-bottom: 15px;
+		padding: 0;
+		max-width: 170px;
 
-.research__text {
-	margin: 0;
-	margin-bottom: 15px;
-	padding: 0;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 36px;
+	}
 
-	font-size: 14px;
-	line-height: 24px;
-}
+	&__text {
+		margin: 0;
+		margin-bottom: 15px;
+		padding: 0;
 
-.research__link {
-	font-size: 14px;
-	line-height: 24px;
-	color: @red;
-	text-decoration: underline;
+		font-size: 14px;
+		line-height: 24px;
+	}
 
-	outline-offset: 5px;
-	outline-color: @darkblue;
-	transition-property: color;
-	transition-duration: @main-duration;
-}
+	&__link {
+		font-size: 14px;
+		line-height: 24px;
+		color: @red;
+		text-decoration: underline;
 
-.research__link:visited {
-	color: @red;
-}
+		outline-offset: 5px;
+		outline-color: @darkblue;
+		transition-property: color;
+		transition-duration: @main-duration;
+	}
 
-.research__link:hover,
-.research__link:focus,
-.research__link:active {
-	color: @darkblue;
-}
+	&__link:visited {
+		color: @red;
+	}
 
-.research__title::selection,
-.research__text::selection,
-.research__link::selection {
-	color: #ffffff;
-	
-	background-color: @darkblue;
+	&__link:hover,
+	&__link:focus,
+	&__link:active {
+		color: @darkblue;
+	}
+
+	&__title::selection,
+	&__text::selection,
+	&__link::selection {
+		color: #ffffff;
+
+		background-color: @darkblue;
+	}
 }
 
 @media (min-width: @desktop-screen) {
-	.research__group {
-		margin-left: 370px;
-	}
+	.research {
+		&__group {
+			margin-left: 370px;
+		}
 
-	.research__title {
-		margin-bottom: 20px;
+		&__title {
+			margin-bottom: 20px;
 
-		line-height: 30px;
-	}
+			line-height: 30px;
+		}
 
-	.research__text {
-		margin-bottom: 35px;
-	}
+		&__text {
+			margin-bottom: 35px;
+		}
 
-	.research__text,
-	.research__link {
-		font-size: 18px;
-		line-height: 30px;
+		&__text,
+		&__link {
+			font-size: 18px;
+			line-height: 30px;
+		}
 	}
 }

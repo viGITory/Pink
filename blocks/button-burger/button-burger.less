@@ -13,21 +13,20 @@
 	cursor: pointer;
 	transition-property: fill, opacity;
 	transition-duration: @main-duration;
-}
 
-.button-burger:hover,
-.button-burger:focus {
-	fill: @red;
-}
+	&:hover,
+	&:focus {
+		fill: @red;
+	}
 
-.button-burger:active {
-	fill: rgba(210, 40, 86, 0.3);
-}
+	&:active {
+		fill: rgba(210, 40, 86, 0.3);
+	}
 
-.button-burger__icon-cross {
-	display: none;
+	&__icon-cross {
+		display: none;
+	}
 }
-
 // JS //
 .js-btn-burger__icon--hide {
 	display: none;

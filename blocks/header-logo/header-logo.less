@@ -1,52 +1,58 @@
-.header-logo__mobile,
-.header-logo__tablet,
-.header-logo__desktop {
-	display: block;
-	
-	fill: #ffffff;
-	outline-offset: 5px;
-	outline-color: #ffffff;
-}
+.header-logo {
+	&__mobile,
+	&__tablet,
+	&__desktop {
+		display: block;
+		
+		fill: #ffffff;
+		outline-offset: 5px;
+		outline-color: #ffffff;
+	}
 
-.header-logo__tablet,
-.header-logo__desktop {
-	display: none;
-}
-
-.header-logo__mobile:hover,
-.header-logo__mobile:focus,
-.header-logo__tablet:hover,
-.header-logo__tablet:focus,
-.header-logo__desktop:hover,
-.header-logo__desktop:focus {
-	fill: @red;
-}
-
-.header-logo__mobile:active,
-.header-logo__tablet:active {
-	fill: rgba(210, 40, 86, 0.3);
-}
-
-.header-logo__desktop:active {
-	fill: rgba(255, 255, 255, 0.3);
-}
-
-@media (min-width: @tablet-screen) {
-	.header-logo__mobile {
+	&__tablet,
+	&__desktop {
 		display: none;
 	}
 
-	.header-logo__tablet {
-		display: block;
+	&__mobile:hover,
+	&__mobile:focus,
+	&__tablet:hover,
+	&__tablet:focus,
+	&__desktop:hover,
+	&__desktop:focus {
+		fill: @red;
+	}
+
+	&__mobile:active,
+	&__tablet:active {
+		fill: rgba(210, 40, 86, 0.3);
+	}
+
+	&__desktop:active {
+		fill: rgba(255, 255, 255, 0.3);
+	}
+}
+
+@media (min-width: @tablet-screen) {
+	.header-logo {
+		&__mobile {
+			display: none;
+		}
+
+		&__tablet {
+			display: block;
+		}
 	}
 }
 
 @media (min-width: @desktop-screen) {
-	.header-logo__tablet {
-		display: none;
-	}
+	.header-logo {
+		&__tablet {
+			display: none;
+		}
 
-	.header-logo__desktop {
-		display: block;
+		&__desktop {
+			display: block;
+		}
 	}
 }

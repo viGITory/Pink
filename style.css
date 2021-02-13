@@ -331,7 +331,7 @@ input[type='radio'].visually-hidden {
 .main-menu__link:focus {
   color: #d22856;
 }
-.main-menu__link:active {
+.main-menu .main-menu__link:active {
   color: rgba(210, 40, 86, 0.3);
 }
 .main-menu__link::selection {
