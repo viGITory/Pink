@@ -1,0 +1,145 @@
+doctype html
+html(lang="ru")
+
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="")
+		//- OPEN GRAPH ДЛЯ СОЦСЕТЕЙ
+		include ../blocks/opengraph/opengraph.pug
+		title Фотографии
+		link(rel="icon" href="#" type="image/png" sizes="32x32")
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="style.css")
+
+	body.page.page-photo
+		include ../blocks/svg/svg.pug
+
+		//- div.page-photo__header
+		//- 	header.main-header
+		//- 		div.main-header__nav
+		//- 			div.container
+		//- 				div.main-header__nav-inner
+		//- 					div.main-header__logo
+		//- 						include ../blocks/header-logo/header-logo.pug
+		//- 					div.main-header__button
+		//- 						include ../blocks/button-burger/button-burger.pug
+		//- 					div.main-header__menu
+		//- 						include ../blocks/main-menu/main-menu.pug
+		//- 		div.main-header__promo
+		//- 			div.container
+		//- 					h1 Фотографии пользователей
+
+		main.page-photo__main
+			//- div.page-photo__inner
+			p.page-photo__title Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+
+			section.page-photo__posts
+				div.page-photo__user-post
+					article.user-post.user-post--special
+						img.user-post__photo(src="../blocks/user-post/img/panorama.jpg")
+						div.container
+							div.user-post__comment
+								div.user-post__user
+									span.user-post__user-name Анна&nbsp;
+									span.user-post__time (5 минут назад)
+								p.user-post__text Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+								p.user-post__like Нравится:&nbsp;
+									span.user-post__like-count 215
+
+				div.page-photo__user-post
+					div.container
+						article.user-post
+							img.user-post__photo(src="../blocks/user-post/img/photo2-mobile.jpg")
+							div.user-post__comment
+								div.user-post__user
+									span.user-post__user-name Левон&nbsp;
+									span.user-post__time (5 часов назад)
+									p.user-post__text Вчера он на луну летал, сегодня в руки к нам попал.
+									p.user-post__like Нравится:&nbsp;
+									span.user-post__like-count 356
+
+				div.page-photo__user-post
+					div.container
+						article.user-post
+							img.user-post__photo(src="../blocks/user-post/img/photo3-mobile.jpg")
+							div.user-post__comment
+								div.user-post__user
+									span.user-post__user-name Левон&nbsp;
+									span.user-post__time (12 часов назад)
+								p.user-post__text Соседи будут рады!
+								p.user-post__like Нравится:&nbsp;
+									span.user-post__like-count 666
+
+				div.page-photo__user-post
+					div.container
+						article.user-post
+							img.user-post__photo(src="../blocks/user-post/img/photo4-mobile.jpg")
+							div.user-post__comment
+								div.user-post__user
+									span.user-post__user-name Борис&nbsp;
+									span.user-post__time (20 часов назад)
+								p.user-post__text Здесь могла быть ваша цитата о высоком и вечном.
+								p.user-post__like Нравится:&nbsp;
+									span.user-post__like-count 215
+
+				div.page-photo__user-post
+					div.container
+						article.user-post
+							img.user-post__photo(src="../blocks/user-post/img/photo5-mobile.jpg")
+							div.user-post__comment
+								div.user-post__user
+									span.user-post__user-name Сергей&nbsp;
+									span.user-post__time (25 часов назад)
+								p.user-post__text Самая кубанская в мире!
+								p.user-post__like Нравится:&nbsp;
+									span.user-post__like-count 4
+
+				div.page-photo__user-post
+					div.container
+						article.user-post
+							img.user-post__photo(src="../blocks/user-post/img/photo6-mobile.jpg")
+							div.user-post__comment
+								div.user-post__user
+									span.user-post__user-name Максим&nbsp;
+									span.user-post__time (40 часов назад)
+								p.user-post__text Где снег-то?
+								p.user-post__like Нравится:&nbsp;
+									span.user-post__like-count 150
+
+				div.page-photo__user-post
+					div.container
+						article.user-post
+							img.user-post__photo(src="../blocks/user-post/img/photo7-mobile.jpg")
+							div.user-post__comment
+								div.user-post__user
+									span.user-post__user-name Надежда&nbsp;
+									span.user-post__time (45 часов назад)
+								p.user-post__text Всем GM и взаимные лайки!
+								p.user-post__like Нравится:&nbsp;
+									span.user-post__like-count 2560
+
+			div.page-photo__title
+				p.page-photo__title-row Затмите их всех!
+				p.page-photo__title-row Выкладывайте все, что накопилось в телефоне!
+
+			section.page-photo__filter
+				div.container
+					div.filter
+						div.filter__inner
+							img.filter__image(src="../blocks/filter/img/filter.jpg")
+							ul.filter__list
+								li.filter__item
+								li.filter__item
+								li.filter__item
+							div.filter__range
+							div.filter__buttons
+								button.button.button--post(type="button") Запостить
+								button.button.button--cancel(type="button") Отмена
+
+
+		div.page-photo__footer
+			include ../blocks/main-footer/main-footer.pug
+
+		//- script(src="scripts/scripts.js", type="module")

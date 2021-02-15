@@ -43,11 +43,9 @@ input[type='radio'].visually-hidden {
   color: #ffffff;
   background-color: #283645;
   background-image: url(blocks/main-header/img/iphone-mobile.png), url(blocks/main-header/img/back-desktop.jpg);
-  background-position: center bottom 270px,
-											 center bottom 270px;
+  background-position: center bottom 270px, center bottom 270px;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto 285px,
-											 cover;
+  background-size: auto 285px, cover;
 }
 .main-header__nav {
   position: relative;
@@ -130,11 +128,9 @@ input[type='radio'].visually-hidden {
 @media (min-width: 660px) {
   .main-header {
     background-image: url(blocks/main-header/img/iphone-tablet.png), url(blocks/main-header/img/back-desktop.jpg);
-    background-position: center bottom,
-												 center center;
+    background-position: center bottom, center center;
     background-repeat: no-repeat, no-repeat;
-    background-size: auto auto,
-												 cover;
+    background-size: auto auto, cover;
   }
   .main-header__nav-inner {
     min-height: 110px;
@@ -178,11 +174,9 @@ input[type='radio'].visually-hidden {
 @media (min-width: 960px) {
   .main-header {
     background-image: url(blocks/main-header/img/iphone-desktop.png), url(blocks/main-header/img/back-desktop.jpg);
-    background-position: center bottom,
-												 center center;
+    background-position: center bottom, center center;
     background-repeat: no-repeat, no-repeat;
-    background-size: auto auto,
-												 cover;
+    background-size: auto auto, cover;
   }
   .main-header__nav {
     background-color: rgba(0, 0, 0, 0.5);
@@ -380,7 +374,9 @@ input[type='radio'].visually-hidden {
     background-color: rgba(255, 255, 255, 0.3);
   }
 }
-.download-button {
+.button {
+  margin: 0;
+  padding: 0;
   width: 280px;
   height: 55px;
   display: inline-flex;
@@ -390,38 +386,28 @@ input[type='radio'].visually-hidden {
   font-weight: 700;
   line-height: 18px;
   text-decoration: none;
-  color: #ffffff;
-  text-align: center;
   overflow: hidden;
   box-sizing: border-box;
-  border: 3px solid #ffffff;
+  border: 3px solid;
   border-radius: 30px;
+  background-color: transparent;
   outline-offset: 10px;
-  outline-color: #ffffff;
   transition-property: color, background-color;
   transition-duration: 0.2s;
 }
-.download-button:hover,
-.download-button:focus {
+.button--download {
+  color: #ffffff;
+  border-color: #ffffff;
+  outline-color: #ffffff;
+}
+.button--post {
   color: #d22856;
-  background-color: #ffffff;
+  border-color: #d22856;
+  outline-color: #283645;
 }
-.download-button:active {
-  color: rgba(210, 40, 86, 0.3);
-}
-.download-button::selection {
-  color: #283645;
-  background-color: #ffffff;
-}
-@media (min-width: 660px) {
-  .download-button {
-    width: 300px;
-  }
-}
-@media (min-width: 960px) {
-  .download-button {
-    font-size: 21px;
-  }
+.button--cancel {
+  color: rgba(40, 54, 69, 0.1);
+  border-color: rgba(40, 54, 69, 0.1);
 }
 .download-list {
   margin: 0;
@@ -1262,4 +1248,159 @@ input[type='radio'].visually-hidden {
   .copyright__text {
     font-size: 18px;
   }
+}
+.page-photo {
+  background-color: #ffffff;
+}
+.page-photo__main {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-photo__title {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  max-width: 250px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+.page-photo__user-post {
+  margin-bottom: 25px;
+}
+.page-photo__user-comment {
+  margin-bottom: 20px;
+}
+.page-photo__user-comment:last-child {
+  margin-bottom: 0;
+}
+.page-photo__text {
+  margin-bottom: 20px;
+}
+.page-photo__title-row {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+.page-photo__filter {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.user-post__photo {
+  width: 100%;
+  display: block;
+}
+.user-post--special {
+  position: relative;
+}
+.user-post--special::after {
+  content: 'Панорама дня';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 140px;
+  height: 35px;
+  font-size: 12px;
+  line-height: 35px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #d22856;
+}
+.user-post__comment {
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  background-color: #f2f2f2;
+}
+.user-post__user-name {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.user-post__time {
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.user-post__text {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+.user-post__like {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 24px;
+  color: #d22856;
+  text-transform: uppercase;
+}
+.filter__inner {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.filter__image {
+  display: block;
+  width: 100%;
+}
+.filter__list {
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+.filter__item {
+  margin-right: 35px;
+  width: 45px;
+  height: 45px;
+  background-color: #d22856;
+}
+.filter__item:last-child {
+  margin-right: 0;
+}
+.filter__range {
+  margin-bottom: 35px;
+  width: 240px;
+  height: 2px;
+  position: relative;
+  background-color: #283645;
+}
+.filter__range::after {
+  content: '';
+  position: absolute;
+  top: -6.5px;
+  left: 200px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #d22856;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+.filter__buttons {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.filter__button-post,
+.filter__button-cancel {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.filter__button-cancel {
+  margin-bottom: 0;
 }
