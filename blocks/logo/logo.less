@@ -2,6 +2,76 @@
 	font-size: 0;
 
 	text-decoration: none;
+	outline-offset: 5px;
 	transition-property: fill, opacity;
 	transition-duration: @main-duration;
+
+	&:hover,
+	&:focus {
+		fill: @red;
+	}
+
+	// MODIFIERS
+	&--header {
+		display: block;
+
+		fill: #ffffff;
+		outline-color: #ffffff;
+	}
+
+	&--header-tablet,
+	&--header-desktop {
+		display: none;
+	}
+
+	&--header-mobile:active,
+	&--header-tablet:active {
+		fill: rgba(210, 40, 86, 0.3);
+	}
+
+	&--header-desktop:active {
+		fill: rgba(255, 255, 255, 0.3);
+	}
+
+	&--footer {
+		display: block;
+
+		outline-color: @darkblue;
+	}
+
+	&--footer-desktop {
+		display: none;
+	}
+
+	&--footer-tablet:active,
+	&--footer-desktop:active {
+		fill: @darkblue;
+		opacity: 0.3;
+	}
+}
+
+@media @tablet {
+	.logo {
+		&--header-mobile {
+			display: none;
+		}
+
+		&--header-tablet {
+			display: block;
+		}
+	}
+}
+
+@media @desktop {
+	.logo {
+		&--header-tablet,
+		&--footer-tablet {
+			display: none;
+		}
+
+		&--header-desktop,
+		&--footer-desktop {
+			display: block;
+		}
+	}
 }
