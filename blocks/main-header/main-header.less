@@ -9,7 +9,6 @@
 
 	&__nav {
 		position: relative;
-
 		background-color: rgba(0, 0, 0, 0.5);
 	}
 
@@ -36,11 +35,6 @@
 
 	&__logo {
 		margin-right: 20px;
-	}
-
-	&__logo-tablet,
-	&__logo-desktop {
-		display: none;
 	}
 
 	&__menu {
@@ -72,6 +66,11 @@
 		font-size: 40px;
 		font-weight: 300;
 		text-align: center;
+
+		&::selection {
+			color: @darkblue;
+			background-color: #ffffff;
+		}
 	}
 
 	&__download-list {
@@ -88,13 +87,11 @@
 		font-weight: 300;
 		line-height: 24px;
 		text-align: center;
-	}
 
-	&__promo-title::selection,
-	&__download-description::selection {
-		color: @darkblue;
-
-		background-color: #ffffff;
+		&::selection {
+			color: @darkblue;
+			background-color: #ffffff;
+		}
 	}
 }
 
@@ -108,7 +105,7 @@
 }
 //
 
-@media (min-width: @tablet-screen) {
+@media @tablet {
 	.main-header {
 		background-image: url(blocks/main-header/img/iphone-tablet.png), url(blocks/main-header/img/back-desktop.jpg);
 		background-position: center bottom, center center;
@@ -126,14 +123,6 @@
 
 		&__logo {
 			margin-top: 25px;
-		}
-
-		&__logo-mobile {
-			display: none;
-		}
-
-		&__logo-tablet {
-			display: block;
 		}
 
 		&__button {
@@ -161,13 +150,12 @@
 
 		&__download-description {
 			max-width: 300px;
-
 			font-size: 18px;
 		}
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.main-header {
 		background-image: url(blocks/main-header/img/iphone-desktop.png), url(blocks/main-header/img/back-desktop.jpg);
 		background-position: center bottom, center center;
@@ -176,14 +164,6 @@
 
 		&__nav {
 			background-color: rgba(0, 0, 0, 0.5);
-		}
-
-		&__logo-tablet {
-			display: none;
-		}
-
-		&__logo-desktop {
-			display: block;
 		}
 
 		&__button {

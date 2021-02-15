@@ -20,15 +20,6 @@
 	transition-property: color, background-color;
 	transition-duration: @main-duration;
 
-	// MEDIA
-	@media (min-width: @tablet-screen) {
-		width: 300px;
-	}
-
-	@media (min-width: @desktop-screen) {
-		font-size: 21px;
-	}
-
 	// MODIFIERS
 	&--download {
 		color: #ffffff;
@@ -63,5 +54,17 @@
 		color: rgba(40, 54, 69, 0.1);
 		border-color: rgba(40, 54, 69, 0.1);
 		// outline-color: @darkblue;
+	}
+}
+
+@media @tablet {
+	.button {
+		width: 300px;
+	}
+}
+
+@media @desktop {
+	.button {
+		font-size: 21px;
 	}
 }

@@ -18,6 +18,11 @@
 		font-size: 24px;
 		font-weight: 300;
 		text-align: center;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__group {
@@ -27,29 +32,24 @@
 
 	&__group-item {
 		margin-bottom: 20px;
-
 		font-style: normal;
 		text-align: center;
-	}
 
-	&__group-item:last-child {
-		margin-bottom: 0;
-		max-width: 240px;
+		&:last-child {
+			margin-bottom: 0;
+			max-width: 240px;
+		}
 	}
 
 	&__item-title {
 		display: block;
-		
 		font-size: 18px;
 		font-weight: 700;
-	}
 
-	&__title::selection,
-	&__item-title::selection,
-	&__link::selection {
-		color: #ffffff;
-
-		background-color: @darkblue;
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__link {
@@ -61,24 +61,30 @@
 		outline-color: @darkblue;
 		transition-property: color;
 		transition-duration: @main-duration;
-	}
 
-	&__link:visited {
-		color: @red;
-	}
+		&:visited {
+			color: @red;
+		}
 
-	&__link:hover,
-	&__link:focus {
-		color: @darkblue;
-	}
+		&:hover,
+		&:focus {
+			color: @darkblue;
+		}
 
-	&__link--email:hover {
-		text-decoration: underline;
-	}
+		&:active {
+			color: rgba(40, 54, 69, 0.3);
+			text-decoration: none;
+		}
 
-	&__link:active {
-		color: rgba(40, 54, 69, 0.3);
-		text-decoration: none;
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
+
+		// MODIFIERS
+		&--email:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__map {
@@ -100,7 +106,7 @@
 	}
 }
 
-@media (min-width: @tablet-screen) {
+@media @tablet {
 	.contacts {
 		&__inner {
 			padding-top: 50px;
@@ -110,7 +116,6 @@
 		&__title {
 			margin-bottom: 50px;
 			max-width: 550px;
-
 			font-size: 40px;
 		}
 
@@ -123,10 +128,10 @@
 
 		&__group-item {
 			margin-bottom: 45px;
-		}
 
-		&__group-item:last-child {
-			margin: 0 auto;
+			&:last-child {
+				margin: 0 auto;
+			}
 		}
 
 		&__map {
@@ -135,7 +140,7 @@
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.contacts {
 		&__inner {
 			padding-top: 70px;
@@ -145,7 +150,6 @@
 		&__title {
 			margin-bottom: 50px;
 			max-width: 480px;
-
 			font-size: 50px;
 		}
 
@@ -156,10 +160,11 @@
 
 		&__group-item {
 			margin-bottom: 0px;
-		}
 
-		&__group-item--email {
-			order: 1;
+			// MODIFIERS
+			&--email {
+				order: 1;
+			}
 		}
 
 		&__map {

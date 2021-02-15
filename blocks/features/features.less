@@ -4,7 +4,7 @@
 	background-repeat: no-repeat;
 	background-size: auto 275px;
 	background-position: bottom -35px center;
-
+	
 	&__inner {
 		padding-top: 40px;
 		padding-bottom: 320px;
@@ -28,10 +28,16 @@
 		margin: 0;
 		margin-bottom: 30px;
 		padding: 0;
-	}
 
-	&__title-row:last-child {
-		max-width: 210px;
+		&:last-child {
+			margin-bottom: 0;
+			max-width: 210px;
+		}
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__group {
@@ -44,6 +50,10 @@
 
 		text-align: center;
 		line-height: 24px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	&__item-title {
@@ -54,6 +64,11 @@
 		font-size: 18px;
 		font-weight: 700;
 		line-height: 24px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__item-text {
@@ -62,23 +77,15 @@
 
 		font-size: 14px;
 		line-height: 24px;
-	}
 
-	&__title-row:last-child,
-	&__item:last-child {
-		margin-bottom: 0;
-	}
-
-	&__title-row::selection,
-	&__item-title::selection,
-	&__item-text::selection {
-		color: #ffffff;
-
-		background-color: @darkblue;
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 }
 
-@media (min-width: @tablet-screen) {
+@media @tablet {
 	.features {
 		background-color: #ffffff;
 		background-image: url(blocks/features/img/iphone-mobile.png);
@@ -93,16 +100,15 @@
 
 		&__title {
 			margin-bottom: 110px;
-
 			font-size: 40px;
 		}
 
 		&__title-row {
 			margin: 0 auto;
-		}
 
-		&__title-row:last-child {
-			max-width: 340px;
+			&:last-child {
+				max-width: 340px;
+			}
 		}
 
 		&__group {
@@ -115,7 +121,7 @@
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.features {
 		background-image: none;
 
@@ -128,8 +134,10 @@
 			font-size: 50px;
 		}
 
-		&__title-row:last-child {
-			max-width: 440px;
+		&__title-row {
+			&:last-child {
+				max-width: 440px;
+			}
 		}
 
 		&__group {
@@ -149,15 +157,14 @@
 			background-size: auto 300px;
 			background-repeat: no-repeat;
 			background-position: top center;
-		}
 
-		&__item:last-child {
-			margin-right: 0;
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 
 		&__item-title {
 			margin-bottom: 30px;
-
 			font-size: 30px;
 			line-height: 30px;
 		}

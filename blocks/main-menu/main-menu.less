@@ -13,10 +13,10 @@
 
 		box-shadow: 0px -1px 0 0 #000000,
 		inset 0px 1px 0 0 rgba(255, 255, 255, 0.15);
-	}
 
-	&__item:last-child {
-		border-bottom: 1px solid #000000;
+		&:last-child {
+			border-bottom: 1px solid #000000;
+		}
 	}
 
 	&__link {
@@ -35,29 +35,28 @@
 		outline-color: #ffffff;
 		transition-property: color, opacity;
 		transition-duration: @main-duration;
-	}
 
-	&__link:visited {
-		color: #ffffff;
-	}
+		&:visited {
+			color: #ffffff;
+		}
 
-	&__link:hover,
-	&__link:focus {
-		color: @red;
-	}
+		&:hover,
+		&:focus {
+			color: @red;
+		}
 
-	.main-menu__link:active {
-		color: rgba(210, 40, 86, 0.3);
-	}
+		&:active {
+			color: rgba(210, 40, 86, 0.3);
+		}
 
-	&__link::selection {
-		color: @darkblue;
-
-		background-color: #ffffff;
+		&::selection {
+			color: @darkblue;
+			background-color: #ffffff;
+		}
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.main-menu {
 		&__list {
 			display: flex;
@@ -66,14 +65,12 @@
 
 		&__item {
 			margin-right: 80px;
-
 			box-shadow: none;
-		}
 
-		&__item:last-child {
-			margin-right: 0;
-
-			border-bottom: none;
+			&:last-child {
+				margin-right: 0;
+				border-bottom: none;
+			}
 		}
 
 		&__link {
@@ -84,32 +81,32 @@
 			line-height: 18px;
 
 			outline-offset: 5px;
-		}
 
-		&__link:active {
-			color: rgba(255, 255, 255, 0.3);
-		}
+			&:active {
+				color: rgba(255, 255, 255, 0.3);
+			}
 
-		&__link::after {
-			content: '';
-			position: absolute;
-			bottom: -15px;
-			left: 50%;
-			width: 0;
-			height: 2px;
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -15px;
+				left: 50%;
+				width: 0;
+				height: 2px;
 
-			background-color: #ffffff;
-			transition-property: all;
-			transition-duration: @main-duration;
-		}
+				background-color: #ffffff;
+				transition-property: all;
+				transition-duration: @main-duration;
+			}
 
-		&__link:hover::after {
-			width: 100%;
-			transform: translateX(-50%);
-		}
+			&:hover::after {
+				width: 100%;
+				transform: translateX(-50%);
+			}
 
-		&__link:active::after {
-			background-color: rgba(255, 255, 255, 0.3);
+			&:active::after {
+				background-color: rgba(255, 255, 255, 0.3);
+			}
 		}
 	}
 }

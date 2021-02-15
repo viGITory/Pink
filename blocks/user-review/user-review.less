@@ -18,6 +18,11 @@
 		font-weight: 700;
 		font-style: normal;
 		line-height: 30px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue; 
+		}
 	}
 
 	&__user-description {
@@ -25,6 +30,11 @@
 
 		font-size: 14px;
 		line-height: 30px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue; 
+		}
 	}
 
 	&__text {
@@ -34,18 +44,15 @@
 		font-size: 14px;
 		line-height: 30px;
 		text-align: center;
-	}
 
-	&__text::selection,
-	&__user-name::selection,
-	&__user-description::selection {
-		color: #ffffff;
-
-		background-color: @darkblue; 
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue; 
+		}
 	}
 }
 
-@media (min-width: @tablet-screen) {
+@media @tablet {
 	.user-review {
 		&__user {
 			margin-bottom: 0;
@@ -62,13 +69,12 @@
 
 		&__text {
 			margin-bottom: 40px;
-
 			font-size: 18px;
 		}
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.user-review {
 		&__user-name {
 			font-size: 24px;

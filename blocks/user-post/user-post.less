@@ -4,29 +4,6 @@
 		display: block;
 	}
 
-	&--special {
-		position: relative;
-	}
-
-	&--special::after {
-		content: 'Панорама дня';
-		position: absolute;
-		top: 0;
-		left: 50%;
-		width: 140px;
-		height: 35px;
-
-		font-size: 12px;
-		line-height: 35px; //24px
-		font-weight: 700;
-		color: #ffffff;
-		text-transform: uppercase;
-		text-align: center;
-		vertical-align: middle;
-
-		background-color: @red;
-	}
-
 	&__comment {
 		padding-top: 20px;
 		padding-right: 15px;
@@ -65,5 +42,29 @@
 		line-height: 24px;
 		color: @red;
 		text-transform: uppercase;
+	}
+
+	// MODIFIERS
+	&--special {
+		position: relative;
+
+		&::after {
+			content: 'Панорама дня';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 140px;
+			height: 35px;
+
+			font-size: 12px;
+			line-height: 35px; //24px
+			font-weight: 700;
+			color: #ffffff;
+			text-transform: uppercase;
+			text-align: center;
+			vertical-align: middle;
+
+			background-color: @red;
+		}
 	}
 }

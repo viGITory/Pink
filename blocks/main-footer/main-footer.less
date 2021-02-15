@@ -12,17 +12,13 @@
 		margin-top: 35px;
 	}
 
-	&__logo-desktop {
-		display: none;
-	}
-
 	&__social,
 	&__copyright {
 		align-self: center;
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.main-footer {
 		&__inner {
 			min-height: 195px;
@@ -30,14 +26,6 @@
 
 		&__logo {
 			margin-top: 70px;
-		}
-
-		&__logo-tablet {
-			display: none;
-		}
-
-		&__logo-desktop {
-			display: block;
 		}
 	}
 }

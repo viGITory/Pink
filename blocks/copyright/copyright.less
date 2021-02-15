@@ -26,12 +26,11 @@
 
 	&__text {
 		font-size: 14px;
-	}
 
-	&__text::selection {
-		color: #ffffff;
-
-		background-color: @darkblue;
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__icon {
@@ -39,7 +38,7 @@
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.copyright {
 		&__text {
 			font-size: 18px;

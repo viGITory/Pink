@@ -11,15 +11,16 @@
 
 		border-radius: 50%;
 		background-color: rgba(40, 54, 69, 0.3);
-	}
 
-	&__item:last-child {
-		margin-right: 0;
-	}
+		&:last-child {
+			margin-right: 0;
+		}
 
-	&__item--checked {
-		transition: all @main-duration ease;
-		box-shadow: 0 0 0 3px @darkblue;
-		background-color: #ffffff;
+		// MODIFIERS
+		&--checked {
+			transition: all @main-duration ease;
+			box-shadow: 0 0 0 3px @darkblue;
+			background-color: #ffffff;
+		}
 	}
 }

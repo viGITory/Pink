@@ -16,19 +16,19 @@
 	}
 }
 
-@media (min-width: @tablet-screen) {
+@media @tablet {
 	.price {
-		&__slider {
-			display: none;
-		}
-		
 		&__inner {
 			padding-bottom: 70px;
+		}
+		
+		&__slider {
+			display: none;
 		}
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.price {
 		&__inner {
 			padding-top: 150px;

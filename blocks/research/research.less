@@ -25,6 +25,11 @@
 		font-size: 30px;
 		font-weight: 700;
 		line-height: 36px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__text {
@@ -34,6 +39,11 @@
 
 		font-size: 14px;
 		line-height: 24px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__link {
@@ -46,28 +56,25 @@
 		outline-color: @darkblue;
 		transition-property: color;
 		transition-duration: @main-duration;
-	}
 
-	&__link:visited {
-		color: @red;
-	}
+		&:visited {
+			color: @red;
+		}
 
-	&__link:hover,
-	&__link:focus,
-	&__link:active {
-		color: @darkblue;
-	}
+		&:hover,
+		&:focus,
+		&:active {
+			color: @darkblue;
+		}
 
-	&__title::selection,
-	&__text::selection,
-	&__link::selection {
-		color: #ffffff;
-
-		background-color: @darkblue;
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 }
 
-@media (min-width: @desktop-screen) {
+@media @desktop {
 	.research {
 		&__group {
 			margin-left: 370px;
