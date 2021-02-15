@@ -1399,7 +1399,6 @@ input[type='radio'].visually-hidden {
 .filter__button-post,
 .filter__button-cancel {
   margin-bottom: 10px;
-  text-align: center;
 }
 .filter__button-cancel {
   margin-bottom: 0;
