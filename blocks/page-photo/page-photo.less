@@ -1,0 +1,155 @@
+.page-photo {
+	&__header {
+		background-image: url(../blocks/main-header/img/back-desktop.jpg);
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__promo-inner {
+		padding-top: 35px;
+		padding-bottom: 80px;
+	}
+
+	&__promo-title {
+		margin: 0 auto;
+		padding: 0;
+		max-width: 175px;
+
+		font-size: 24px;
+		font-weight: 300;
+		text-align: center;
+
+		&::selection {
+			color: @darkblue;
+			background-color: #ffffff;
+		}
+	}
+
+	&__main {
+		padding-top: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 50px;
+		padding: 0;
+		max-width: 250px;
+
+		font-size: 14px;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	&__title-row {
+		margin: 0;
+		padding: 0;
+
+		font-size: 14px;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	&__posts-group {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 300px));
+		grid-gap: 20px 20px;
+		justify-content: center;
+	}
+
+	&__special {
+		margin-bottom: 20px;
+		position: relative;
+
+		&::after {
+			content: 'Панорама дня';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 140px;
+			height: 35px;
+
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 35px;
+			color: #ffffff;
+			text-transform: uppercase;
+			text-align: center;
+			vertical-align: middle;
+
+			background-color: @red;
+			overflow: hidden;
+		}
+	}
+
+	&__special-photo {
+		min-height: 140px;
+	}
+
+	&__filter {
+		width: 100%;
+		background-color: #f2f2f2;
+	}
+}
+
+@media @tablet {
+	.page-photo {
+		&__promo-inner {
+			padding-top: 70px;
+			padding-bottom: 140px;
+		}
+
+		&__promo-title {
+			max-width: 360px;
+			font-size: 50px;
+		}
+
+		&__main {
+			padding-top: 90px;
+		}
+
+		&__title {
+			margin-bottom: 75px;
+			max-width: 445px;
+			font-size: 18px;
+		}
+
+		&__special {
+			margin-bottom: 50px;
+
+			&::after {
+				top: 55px;
+				right: 20px;
+				left: auto;
+			}
+		}
+
+		&__special-photo {
+			min-height: 510px;
+			max-height: 510px;
+		}
+	}
+}
+
+@media @desktop {
+	.page-photo {
+		&__promo-inner {
+			padding-top: 65px;
+			padding-bottom: 100px;
+		}
+
+		&__title {
+			max-width: 575px;
+		}
+
+		&__special {
+			&::after {
+				top: 55px;
+				right: 130px;
+			}
+		}
+	}
+}
