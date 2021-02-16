@@ -5,6 +5,13 @@
 	font-family: 'Open Sans', Arial, sans-serif;
 	color: @darkblue;
 
+	&__header {
+		background-image: url(blocks/main-header/img/iphone-mobile.png), url(blocks/main-header/img/back-desktop.jpg);
+		background-position: center bottom 270px, center bottom 270px;
+		background-repeat: no-repeat, no-repeat;
+		background-size: auto 285px, cover;
+	}
+
 	&__research,
 	&__footer {
 		display: none;
@@ -13,9 +20,27 @@
 
 @media @tablet {
 	.page {
+		&__header {
+			background-image: url(blocks/main-header/img/iphone-tablet.png), url(blocks/main-header/img/back-desktop.jpg);
+			background-position: center bottom, center center;
+			background-repeat: no-repeat, no-repeat;
+			background-size: auto auto, cover;
+		}
+
 		&__research,
 		&__footer {
 			display: block;
+		}
+	}
+}
+
+@media @desktop {
+	.page {
+		&__header {
+			background-image: url(blocks/main-header/img/iphone-desktop.png), url(blocks/main-header/img/back-desktop.jpg);
+			background-position: center bottom, center center;
+			background-repeat: no-repeat, no-repeat;
+			background-size: auto auto, cover;
 		}
 	}
 }

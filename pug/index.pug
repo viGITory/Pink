@@ -16,7 +16,7 @@ html(lang="ru")
 	body.page(style="background-color: #f2f2f2;")
 		include ../blocks/svg/svg.pug
 
-		div.page__header
+		header.page__header.main-header
 			include ../blocks/main-header/main-header.pug
 
 		main.page__main
@@ -31,7 +31,14 @@ html(lang="ru")
 			div.page__contacts
 				include ../blocks/contacts/contacts.pug
 
-		div.page__footer
-			include ../blocks/main-footer/main-footer.pug
+		footer.page__footer.main-footer
+			div.container
+				div.main-footer__inner
+					div.main-footer__logo
+						include ../blocks/footer-logo/footer-logo.pug
+					div.main-footer__social
+						include ../blocks/social/social.pug
+					div.main-footer__copyright
+						include ../blocks/copyright/copyright.pug
 
 		script(src="scripts/scripts.js", type="module")
