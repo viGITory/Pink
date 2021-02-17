@@ -1,29 +1,16 @@
 .main-footer {
 	&__inner {
-		min-height: 125px;
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	&__logo {
-		margin-top: 35px;
-	}
-
-	&__social,
-	&__copyright {
-		align-self: center;
+		flex-direction: column;
+		align-items: center;
 	}
 }
 
-@media @desktop {
+@media @tablet {
 	.main-footer {
 		&__inner {
-			min-height: 195px;
-		}
-
-		&__logo {
-			margin-top: 70px;
+			flex-direction: row;
+			justify-content: space-between;
 		}
 	}
 }

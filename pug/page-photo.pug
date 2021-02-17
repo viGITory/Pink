@@ -21,18 +21,28 @@ html(lang="ru")
 				div.container
 					div.main-header__nav-inner
 						div.main-header__logo
-							include ../blocks/header-logo/header-logo.pug
+							a.logo.logo--header.logo--header-mobile(href="index.html") Логотип для смартфонов
+								svg(width="75" height="22")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile")
+							a.logo.logo--header.logo--header-tablet(href="index.html") Логотип для планшетов
+								svg(width="148" height="40")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet")
+							a.logo.logo--header.logo--header-desktop(href="index.html") Логотип для компьютеров
+								svg(width="148" height="40")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop")
 						div.main-header__button
-							include ../blocks/button-burger/button-burger.pug
+							button.button-burger(type="button") Кнопка меню
+								include ../blocks/button-burger/button-burger.pug
 						div.main-header__menu
-							include ../blocks/main-menu/main-menu.pug
-			div.page-photo__promo
-				div.container
-					div.page-photo__promo-inner
-						h1.page-photo__promo-title Фотографии пользователей
+							nav.main-menu
+								include ../blocks/main-menu/main-menu.pug
+			div.page-photo__promo.container
+				div.page-photo__promo-inner
+					h1.page-photo__promo-title Фотографии пользователей
 
 		main.page-photo__main
-			p.page-photo__title Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+			div.container
+				p.page-photo__title Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
 
 			section.page-photo__posts
 				article.page-photo__special.user-post
@@ -108,26 +118,33 @@ html(lang="ru")
 								p.user-post__like Нравится:&nbsp;
 									span.user-post__like-count 2560
 
-			div.page-photo__subtitle
-				p.page-photo__subtitle-row Затмите их всех!
-				p.page-photo__subtitle-row Выкладывайте все, что накопилось в телефоне!
+					div.page-photo__subtitle
+						p.page-photo__subtitle-row Затмите их всех!
+						p.page-photo__subtitle-row Выкладывайте все, что накопилось в телефоне!
 
-			section.page-photo__filter
-				div.container
-					div.filter
-						div.filter__inner
-							img.filter__image(src="../blocks/filter/img/filter.jpg" width="300" height="400" alt="Фотография для применения фильтра")
-							ul.filter__list
-								li.filter__item
-								li.filter__item
-								li.filter__item
-							div.filter__range
-							div.filter__button-group
-								button.filter__button.button.button--post(type="button") Запостить
-								button.filter__button.button.button--cancel(type="button") Отмена
+			//- section.page-photo__filter
+			//- 	div.container
+			//- 		div.filter
+			//- 			div.filter__inner
+			//- 				img.filter__image(src="../blocks/filter/img/filter.jpg" width="300" height="400" alt="Фотография для применения фильтра")
+			//- 				ul.filter__list
+			//- 					li.filter__item
+			//- 					li.filter__item
+			//- 					li.filter__item
+			//- 				div.filter__range
+			//- 				div.filter__button-group
+			//- 					button.filter__button.button.button--post(type="button") Запостить
+			//- 					button.filter__button.button.button--cancel(type="button") Отмена
 
 
-		//- div.page-photo__footer
-		//- 	include ../blocks/main-footer/main-footer.pug
+		footer.page-photo__footer.main-footer.container
+			div.page-photo__footer-inner.main-footer__inner
+				div.page-photo__footer-logo.main-footer__logo
+					include ../blocks/footer-logo/footer-logo.pug
+				div.page-photo__footer-social.main-footer__social
+					include ../blocks/social/social.pug
+				div.main-footer__copyright
+					include ../blocks/copyright/copyright.pug
 
-		//- //- script(src="scripts/scripts.js", type="module")
+
+		//- script(src="scripts/scripts.js", type="module")

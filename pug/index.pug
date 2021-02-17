@@ -17,7 +17,26 @@ html(lang="ru")
 		include ../blocks/svg/svg.pug
 
 		header.page__header.main-header
-			include ../blocks/main-header/main-header.pug
+			div.main-header__nav
+				div.container
+					div.main-header__nav-inner
+						a.main-header__to-main-anchor(tabindex="0" href="#to-main") Scroll to main content
+						div.main-header__logo
+								include ../blocks/header-logo/header-logo.pug
+						div.main-header__button
+							button.button-burger(type="button") Кнопка меню
+								include ../blocks/button-burger/button-burger.pug
+						div.main-header__menu
+							include ../blocks/main-menu/main-menu.pug
+			div.main-header__promo.container
+				div.main-header__promo-inner
+						h1.visually-hidden Приложение для применения фильтров на фотографиях
+						p.main-header__promo-title Взгляните на жизнь иначе!
+						div.main-header__download-button
+							a.button.button--download(href="#") Скачать приложение
+						div.main-header__download-list
+							include ../blocks/download-list/download-list.pug
+						p.main-header__download-description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
 
 		main.page__main
 			section.page__features.features
@@ -85,14 +104,13 @@ html(lang="ru")
 				div.contacts__map
 					img.contacts__map-image(src="../blocks/contacts/img/map.jpg" width="1422" height="746" alt="Наш адрес")
 
-		footer.page__footer.main-footer
-			div.container
-				div.main-footer__inner
-					div.main-footer__logo
-						include ../blocks/footer-logo/footer-logo.pug
-					div.main-footer__social
-						include ../blocks/social/social.pug
-					div.main-footer__copyright
-						include ../blocks/copyright/copyright.pug
+		footer.page__footer.main-footer.container
+			div.page__footer-inner.main-footer__inner
+				div.main-footer__logo
+					include ../blocks/footer-logo/footer-logo.pug
+				div.main-footer__social
+					include ../blocks/social/social.pug
+				div.main-footer__copyright
+					include ../blocks/copyright/copyright.pug
 
 		script(src="scripts/scripts.js", type="module")

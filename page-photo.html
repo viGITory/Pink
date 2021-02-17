@@ -165,18 +165,16 @@
       <div class="main-header__nav">
         <div class="container">
           <div class="main-header__nav-inner">
-            <div class="main-header__logo">
-              <div class="header-logo"><a class="logo logo--header logo--header-mobile" href="#">Логотип для смартфонов
-                  <svg width="75" height="22">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
-                  </svg></a><a class="logo logo--header logo--header-tablet" href="#">Логотип для планшетов
-                  <svg width="148" height="40">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet"></use>
-                  </svg></a><a class="logo logo--header logo--header-desktop" href="#">Логотип для компьютеров
-                  <svg width="148" height="40">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
-                  </svg></a></div>
-            </div>
+            <div class="main-header__logo"><a class="logo logo--header logo--header-mobile" href="index.html">Логотип для смартфонов
+                <svg width="75" height="22">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
+                </svg></a><a class="logo logo--header logo--header-tablet" href="index.html">Логотип для планшетов
+                <svg width="148" height="40">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet"></use>
+                </svg></a><a class="logo logo--header logo--header-desktop" href="index.html">Логотип для компьютеров
+                <svg width="148" height="40">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
+                </svg></a></div>
             <div class="main-header__button">
               <button class="button-burger" type="button">Кнопка меню
                 <svg class="button-burger__icon-burger" width="50" height="24">
@@ -200,16 +198,16 @@
           </div>
         </div>
       </div>
-      <div class="page-photo__promo">
-        <div class="container">
-          <div class="page-photo__promo-inner">
-            <h1 class="page-photo__promo-title">Фотографии пользователей</h1>
-          </div>
+      <div class="page-photo__promo container">
+        <div class="page-photo__promo-inner">
+          <h1 class="page-photo__promo-title">Фотографии пользователей</h1>
         </div>
       </div>
     </header>
     <main class="page-photo__main">
-      <p class="page-photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <div class="container">
+        <p class="page-photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      </div>
       <section class="page-photo__posts">
         <article class="page-photo__special user-post"><img class="page-photo__special-photo user-post__photo" src="../blocks/user-post/img/panorama.jpg" width="1200" height="506" alt="Панорама">
           <div class="container">
@@ -266,30 +264,45 @@
               </div>
             </article>
           </div>
-        </div>
-      </section>
-      <div class="page-photo__subtitle">
-        <p class="page-photo__subtitle-row">Затмите их всех!</p>
-        <p class="page-photo__subtitle-row">Выкладывайте все, что накопилось в телефоне!</p>
-      </div>
-      <section class="page-photo__filter">
-        <div class="container">
-          <div class="filter">
-            <div class="filter__inner"><img class="filter__image" src="../blocks/filter/img/filter.jpg" width="300" height="400" alt="Фотография для применения фильтра">
-              <ul class="filter__list">
-                <li class="filter__item"></li>
-                <li class="filter__item"></li>
-                <li class="filter__item"></li>
-              </ul>
-              <div class="filter__range"></div>
-              <div class="filter__button-group">
-                <button class="filter__button button button--post" type="button">Запостить</button>
-                <button class="filter__button button button--cancel" type="button">Отмена</button>
-              </div>
-            </div>
+          <div class="page-photo__subtitle">
+            <p class="page-photo__subtitle-row">Затмите их всех!</p>
+            <p class="page-photo__subtitle-row">Выкладывайте все, что накопилось в телефоне!</p>
           </div>
         </div>
       </section>
     </main>
+    <footer class="page-photo__footer main-footer container">
+      <div class="page-photo__footer-inner main-footer__inner">
+        <div class="page-photo__footer-logo main-footer__logo">
+          <div class="footer-logo"><a class="logo logo--footer logo--footer-tablet" href="#">Логотип для планшетов
+              <svg width="148" height="40">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use>
+              </svg></a><a class="logo logo--footer logo--footer-desktop" href="#">Логотип для компьютеров
+              <svg width="148" height="40">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-desktop"></use>
+              </svg></a></div>
+        </div>
+        <div class="page-photo__footer-social main-footer__social">
+          <ul class="social">
+            <li class="social__item"><a class="social__icon" href="https://twitter.com">Логотип Twitter
+                <svg width="18" height="15">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__icon" href="https://facebook.com">Логотип Facebook
+                <svg width="9" height="19">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__icon" href="https://www.youtube.com">Логотип Youtube
+                <svg width="15" height="14">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="main-footer__copyright"><a class="copyright" href="https://htmlacademy.ru"><span class="copyright__text">Designed by</span>
+            <svg class="copyright__icon" width="42" height="49">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
+            </svg></a></div>
+      </div>
+    </footer>
   </body>
 </html>
