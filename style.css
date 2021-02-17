@@ -17,12 +17,22 @@ input[type='radio'].visually-hidden {
   padding: 0;
   font-family: 'Open Sans', Arial, sans-serif;
   color: #283645;
+  background-color: #ffffff;
 }
 .page__header {
   background-image: url(blocks/main-header/img/iphone-mobile.png), url(blocks/main-header/img/back-desktop.jpg);
   background-position: center bottom 270px, center bottom 270px;
   background-repeat: no-repeat, no-repeat;
   background-size: auto 285px, cover;
+}
+.page__features {
+  background-color: #f2f2f2;
+}
+.page__research {
+  background-color: #f2f2f2;
+}
+.page__price {
+  background-color: #f2f2f2;
 }
 .page__research,
 .page__footer {
@@ -34,6 +44,9 @@ input[type='radio'].visually-hidden {
     background-position: center bottom, center center;
     background-repeat: no-repeat, no-repeat;
     background-size: auto auto, cover;
+  }
+  .page__features {
+    background-color: #ffffff;
   }
   .page__research,
   .page__footer {
@@ -471,7 +484,6 @@ input[type='radio'].visually-hidden {
   opacity: 0.3;
 }
 .features {
-  background-color: #f2f2f2;
   background-image: url(blocks/features/img/iphone-mobile.png);
   background-repeat: no-repeat;
   background-size: auto 275px;
@@ -542,7 +554,6 @@ input[type='radio'].visually-hidden {
 }
 @media (min-width: 660px) {
   .features {
-    background-color: #ffffff;
     background-image: url(blocks/features/img/iphone-mobile.png);
     background-repeat: no-repeat;
     background-size: auto 485px;
@@ -610,9 +621,6 @@ input[type='radio'].visually-hidden {
     font-size: 18px;
     line-height: 30px;
   }
-}
-.research {
-  background-color: #f2f2f2;
 }
 .research__inner {
   padding-top: 95px;
@@ -688,9 +696,6 @@ input[type='radio'].visually-hidden {
     font-size: 18px;
     line-height: 30px;
   }
-}
-.reviews {
-  background-color: #ffffff;
 }
 .reviews__inner {
   padding-top: 40px;
@@ -838,9 +843,6 @@ input[type='radio'].visually-hidden {
   transition: all 0.2s ease;
   box-shadow: 0 0 0 3px #283645;
   background-color: #ffffff;
-}
-.price {
-  background-color: #f2f2f2;
 }
 .price__inner {
   padding-top: 90px;
@@ -1023,9 +1025,6 @@ input[type='radio'].visually-hidden {
     font-size: 18px;
   }
 }
-.contacts {
-  background-color: #ffffff;
-}
 .contacts__inner {
   padding-top: 45px;
   padding-bottom: 75px;
@@ -1097,15 +1096,11 @@ input[type='radio'].visually-hidden {
 .contacts__map {
   margin: 0 auto;
   max-width: 1200px;
-  min-height: 190px;
-  position: relative;
 }
 .contacts__map-image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  min-height: 190px;
   display: block;
   object-fit: cover;
 }
@@ -1131,7 +1126,7 @@ input[type='radio'].visually-hidden {
   .contacts__group-item:last-child {
     margin: 0 auto;
   }
-  .contacts__map {
+  .contacts__map-image {
     min-height: 375px;
   }
 }
@@ -1155,12 +1150,10 @@ input[type='radio'].visually-hidden {
   .contacts__group-item--email {
     order: 1;
   }
-  .contacts__map {
+  .contacts__map-image {
     min-height: 500px;
+    max-height: 500px;
   }
-}
-.main-footer {
-  background-color: #ffffff;
 }
 .main-footer__inner {
   min-height: 125px;
@@ -1300,12 +1293,6 @@ input[type='radio'].visually-hidden {
   line-height: 30px;
   text-align: center;
 }
-.page-photo__posts-group {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 300px));
-  grid-gap: 20px 20px;
-  justify-content: center;
-}
 .page-photo__special {
   margin-bottom: 20px;
   position: relative;
@@ -1330,6 +1317,24 @@ input[type='radio'].visually-hidden {
 .page-photo__special-photo {
   min-height: 140px;
 }
+.page-photo__posts-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 300px));
+  grid-gap: 20px 20px;
+  justify-content: center;
+}
+.page-photo__subtitle {
+  margin-top: 45px;
+  margin-bottom: 50px;
+  max-width: 260px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+.page-photo__subtitle-row {
+  margin: 0;
+  padding: 0;
+}
 .page-photo__filter {
   width: 100%;
   background-color: #f2f2f2;
@@ -1344,7 +1349,7 @@ input[type='radio'].visually-hidden {
     font-size: 50px;
   }
   .page-photo__main {
-    padding-top: 90px;
+    padding-top: 95px;
   }
   .page-photo__title {
     margin-bottom: 75px;
@@ -1363,6 +1368,18 @@ input[type='radio'].visually-hidden {
     min-height: 510px;
     max-height: 510px;
   }
+  .page-photo__special-like {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+  }
+  .page-photo__subtitle {
+    margin-top: 65px;
+    margin-bottom: 70px;
+    max-width: 430px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 @media (min-width: 960px) {
   .page-photo__promo-inner {
@@ -1370,6 +1387,7 @@ input[type='radio'].visually-hidden {
     padding-bottom: 100px;
   }
   .page-photo__title {
+    margin-bottom: 90px;
     max-width: 575px;
   }
   .page-photo__special::after {
@@ -1439,11 +1457,6 @@ input[type='radio'].visually-hidden {
   .user-post__text {
     margin-bottom: 0;
   }
-  .user-post__like--special {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-  }
 }
 @media (min-width: 960px) {
   .user-post__photo {
@@ -1451,14 +1464,17 @@ input[type='radio'].visually-hidden {
   }
 }
 .filter__inner {
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .filter__image {
-  display: block;
   width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 .filter__list {
   margin: 0;
@@ -1478,7 +1494,7 @@ input[type='radio'].visually-hidden {
   margin-right: 0;
 }
 .filter__range {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   width: 240px;
   height: 2px;
   position: relative;
@@ -1496,14 +1512,28 @@ input[type='radio'].visually-hidden {
   background-color: #f2f2f2;
   box-sizing: border-box;
 }
-.filter__buttons {
-  padding-top: 40px;
+.filter__button-group {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
-.filter__button-post {
+.filter__button {
   margin-bottom: 10px;
 }
-.filter__button-cancel {
+.filter__button:last-child {
   margin-bottom: 0;
+}
+@media (min-width: 660px) {
+  .filter__inner {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    flex-direction: row;
+  }
+  .filter__image {
+    max-width: 300px;
+  }
+  .filter__list {
+    margin: 0;
+    flex-direction: column;
+  }
 }

@@ -13,23 +13,77 @@ html(lang="ru")
 		link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet")
 		link(rel="stylesheet" href="style.css")
 
-	body.page(style="background-color: #f2f2f2;")
+	body.page
 		include ../blocks/svg/svg.pug
 
 		header.page__header.main-header
 			include ../blocks/main-header/main-header.pug
 
 		main.page__main
-			div.page__features
-				include ../blocks/features/features.pug
-			div.page__research
-				include ../blocks/research/research.pug
-			div.page__reviews
-				include ../blocks/reviews/reviews.pug
-			div.page__price
-				include ../blocks/price/price.pug
-			div.page__contacts
-				include ../blocks/contacts/contacts.pug
+			section.page__features.features
+				div.container
+					div.features__inner
+						h2.visually-hidden Преимущества приложения
+						div.features__title
+							a(id="to-main")
+							p.features__title-row Устали от серости мегаполиса?
+							p.features__title-row Нам есть, что вам предложить!
+						div.features__group
+							div.features__item
+								h3.features__item-title Поднимает настроение
+								p.features__item-text Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+							div.features__item
+								h3.features__item-title Меняет мир вокруг
+								p.features__item-text Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+							div.features__item
+								h3.features__item-title Заводит новых друзей
+								p.features__item-text Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+			section.page__research.research
+				div.container
+					div.research__inner
+						h2.visually-hidden Исследования
+						div.research__group
+							p.research__title Эффект на 24 часа!
+							p.research__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+							a.research__link(href="#") Узнать больше об исследовании
+			section.page__reviews.reviews
+				div.container
+					div.reviews__inner
+						h2.visually-hidden Отзывы пользователей
+						button.reviews__arrow(type="button") Предыдущий отзыв
+							svg(width="22", height="41")
+								use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-left")
+						div.reviews__user-review
+							include ../blocks/user-review/user-review.pug
+						div.reviews__slider
+							include ../blocks/slider/slider.pug
+						button.reviews__arrow(type="button") Следующий отзыв
+							svg(width="22", height="41")
+								use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-right")
+			section.page__price.price
+				div.price__inner
+					h2.visually-hidden Прайс-лист
+					div.price__table
+						include ../blocks/price-table/price-table.pug
+					div.price__slider
+						include ../blocks/slider/slider.pug
+			section.page__contacts.contacts
+				div.container
+					div.contacts__inner
+						h2.visually-hidden Контакты
+						p.contacts__title Остались вопросы? Свяжитесь с нами!
+						div.contacts__group
+							address.contacts__group-item
+								span.contacts__item-title Звоните
+								a.contacts__link(href='tel:+7(999)999-99-99') +7 (999) 999-99-99
+							address.contacts__group-item.contacts__group-item--email
+								span.contacts__item-title Пишите:
+								a.contacts__link.contacts__link--email(href='mailto:example@example.ru') example@example.com
+							address.contacts__group-item
+								span.contacts__item-title Приезжайте в гости:
+								a.contacts__link(href='#') ул. Большая Конюшенная, 19/8
+				div.contacts__map
+					img.contacts__map-image(src="../blocks/contacts/img/map.jpg" width="1422" height="746" alt="Наш адрес")
 
 		footer.page__footer.main-footer
 			div.container

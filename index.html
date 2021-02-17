@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body class="page" style="background-color: #f2f2f2;">
+  <body class="page">
     <svg version="1.1" style="display: none">
       <symbol id="android-logo" viewbox="0 0 42.084 47.041">
         <path fill="#A4C639" d="M34.144,14.009H7.945c-0.009,0.11-0.018,0.22-0.018,0.333v18.755c0,1.926,1.457,3.49,3.316,3.627v7.434 c0,1.594,1.291,2.885,2.885,2.885c1.593,0,2.885-1.291,2.885-2.885v-7.42h8.058v7.42c0,1.594,1.291,2.885,2.885,2.885 c1.595,0,2.886-1.291,2.886-2.885v-7.434c1.858-0.137,3.315-1.701,3.315-3.627V14.342C34.157,14.229,34.153,14.119,34.144,14.009z"></path>
@@ -228,191 +228,181 @@
       </div>
     </header>
     <main class="page__main">
-      <div class="page__features">
-        <section class="features">
-          <div class="container">
-            <div class="features__inner">
-              <h2 class="visually-hidden">Преимущества приложения</h2>
-              <div class="features__title"><a id="to-main"></a>
-                <p class="features__title-row">Устали от серости мегаполиса?</p>
-                <p class="features__title-row">Нам есть, что вам предложить!</p>
+      <section class="page__features features">
+        <div class="container">
+          <div class="features__inner">
+            <h2 class="visually-hidden">Преимущества приложения</h2>
+            <div class="features__title"><a id="to-main"></a>
+              <p class="features__title-row">Устали от серости мегаполиса?</p>
+              <p class="features__title-row">Нам есть, что вам предложить!</p>
+            </div>
+            <div class="features__group">
+              <div class="features__item">
+                <h3 class="features__item-title">Поднимает настроение</h3>
+                <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </div>
-              <div class="features__group">
-                <div class="features__item">
-                  <h3 class="features__item-title">Поднимает настроение</h3>
-                  <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-                </div>
-                <div class="features__item">
-                  <h3 class="features__item-title">Меняет мир вокруг</h3>
-                  <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-                </div>
-                <div class="features__item">
-                  <h3 class="features__item-title">Заводит новых друзей</h3>
-                  <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-                </div>
+              <div class="features__item">
+                <h3 class="features__item-title">Меняет мир вокруг</h3>
+                <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </div>
+              <div class="features__item">
+                <h3 class="features__item-title">Заводит новых друзей</h3>
+                <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-      <div class="page__research">
-        <section class="research">
-          <div class="container">
-            <div class="research__inner">
-              <h2 class="visually-hidden">Исследования</h2>
-              <div class="research__group">
-                <p class="research__title">Эффект на 24 часа!</p>
-                <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a class="research__link" href="#">Узнать больше об исследовании</a>
-              </div>
+        </div>
+      </section>
+      <section class="page__research research">
+        <div class="container">
+          <div class="research__inner">
+            <h2 class="visually-hidden">Исследования</h2>
+            <div class="research__group">
+              <p class="research__title">Эффект на 24 часа!</p>
+              <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a class="research__link" href="#">Узнать больше об исследовании</a>
             </div>
           </div>
-        </section>
-      </div>
-      <div class="page__reviews">
-        <section class="reviews">
-          <div class="container">
-            <div class="reviews__inner">
-              <h2 class="visually-hidden">Отзывы пользователей</h2>
-              <button class="reviews__arrow" type="button">Предыдущий отзыв
-                <svg width="22" height="41">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
-                </svg>
-              </button>
-              <div class="reviews__user-review">
-                <article class="user-review">
-                  <h3 class="visually-hidden">Отзыв пользователя</h3>
-                  <blockquote class="user-review__quote">
-                    <div class="user-review__user">
-                      <cite class="user-review__user-name">Николай Петров</cite><span class="user-review__user-description">25 лет, водитель трамвая</span>
-                    </div>
-                    <p class="user-review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                  </blockquote>
-                </article>
-              </div>
-              <div class="reviews__slider">
-                <div class="slider"><span class="slider__item"></span><span class="slider__item slider__item--checked"></span><span class="slider__item"></span></div>
-              </div>
-              <button class="reviews__arrow" type="button">Следующий отзыв
-                <svg width="22" height="41">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use>
-                </svg>
-              </button>
+        </div>
+      </section>
+      <section class="page__reviews reviews">
+        <div class="container">
+          <div class="reviews__inner">
+            <h2 class="visually-hidden">Отзывы пользователей</h2>
+            <button class="reviews__arrow" type="button">Предыдущий отзыв
+              <svg width="22" height="41">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <div class="reviews__user-review">
+              <article class="user-review">
+                <h3 class="visually-hidden">Отзыв пользователя</h3>
+                <blockquote class="user-review__quote">
+                  <div class="user-review__user">
+                    <cite class="user-review__user-name">Николай Петров</cite><span class="user-review__user-description">25 лет, водитель трамвая</span>
+                  </div>
+                  <p class="user-review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </blockquote>
+              </article>
             </div>
-          </div>
-        </section>
-      </div>
-      <div class="page__price">
-        <section class="price">
-          <div class="price__inner">
-            <h2 class="visually-hidden">Прайс-лист</h2>
-            <div class="price__table">
-              <table class="price-table">
-                <thead class="price-table__header">
-                  <tr class="price-table__row">
-                    <th class="price-table__header-cell">Цены</th>
-                    <th class="price-table__header-cell"><span class="price-table__plan">База</span><span class="price-table__cost">1,99 USD</span></th>
-                    <th class="price-table__header-cell price-table__header-cell--special"><span class="price-table__plan">Стандарт</span><span class="price-table__cost">3,99 USD</span></th>
-                    <th class="price-table__header-cell"><span class="price-table__plan">Анлим</span><span class="price-table__cost">9,99 USD</span></th>
-                  </tr>
-                </thead>
-                <tbody class="price-table__body">
-                  <tr class="price-table__row">
-                    <td class="price-table__cell"><span class="price-table__cell-text">Розовый фильтр</span></td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Розовый фильтр</span>
-                        <svg class="price-table__check-on" width="31" height="21">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
-                        </svg>
-                      </div>
-                    </td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Розовый фильтр</span>
-                        <svg class="price-table__check-on" width="31" height="21">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
-                        </svg>
-                      </div>
-                    </td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Розовый фильтр</span>
-                        <svg class="price-table__check-on" width="31" height="21">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
-                        </svg>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="price-table__row">
-                    <td class="price-table__cell"><span class="price-table__cell-text">Смайлики</span></td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Смайлики</span>
-                        <svg class="price-table__check-off" width="27" height="26">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
-                        </svg>
-                      </div>
-                    </td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Смайлики</span>
-                        <svg class="price-table__check-on" width="31" height="21">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
-                        </svg>
-                      </div>
-                    </td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Смайлики</span>
-                        <svg class="price-table__check-on" width="31" height="21">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
-                        </svg>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="price-table__row">
-                    <td class="price-table__cell"><span class="price-table__cell-text">Комментарии</span></td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Комментарии</span>
-                        <svg class="price-table__check-off" width="27" height="26">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
-                        </svg>
-                      </div>
-                    </td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Комментарии</span>
-                        <svg class="price-table__check-off" width="27" height="26">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
-                        </svg>
-                      </div>
-                    </td>
-                    <td class="price-table__cell">
-                      <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Комментарии</span>
-                        <svg class="price-table__check-on" width="31" height="21">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
-                        </svg>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="price__slider">
+            <div class="reviews__slider">
               <div class="slider"><span class="slider__item"></span><span class="slider__item slider__item--checked"></span><span class="slider__item"></span></div>
             </div>
+            <button class="reviews__arrow" type="button">Следующий отзыв
+              <svg width="22" height="41">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
           </div>
-        </section>
-      </div>
-      <div class="page__contacts">
-        <section class="contacts">
-          <div class="container">
-            <div class="contacts__inner">
-              <h2 class="visually-hidden">Контакты</h2>
-              <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-              <div class="contacts__group">
-                <address class="contacts__group-item"><span class="contacts__item-title">Звоните</span><a class="contacts__link" href="tel:+7(999)999-99-99">+7 (999) 999-99-99</a></address>
-                <address class="contacts__group-item contacts__group-item--email"><span class="contacts__item-title">Пишите:</span><a class="contacts__link contacts__link--email" href="mailto:example@example.ru">example@example.com</a></address>
-                <address class="contacts__group-item"><span class="contacts__item-title">Приезжайте в гости:</span><a class="contacts__link" href="#">ул. Большая Конюшенная, 19/8</a></address>
-              </div>
+        </div>
+      </section>
+      <section class="page__price price">
+        <div class="price__inner">
+          <h2 class="visually-hidden">Прайс-лист</h2>
+          <div class="price__table">
+            <table class="price-table">
+              <thead class="price-table__header">
+                <tr class="price-table__row">
+                  <th class="price-table__header-cell">Цены</th>
+                  <th class="price-table__header-cell"><span class="price-table__plan">База</span><span class="price-table__cost">1,99 USD</span></th>
+                  <th class="price-table__header-cell price-table__header-cell--special"><span class="price-table__plan">Стандарт</span><span class="price-table__cost">3,99 USD</span></th>
+                  <th class="price-table__header-cell"><span class="price-table__plan">Анлим</span><span class="price-table__cost">9,99 USD</span></th>
+                </tr>
+              </thead>
+              <tbody class="price-table__body">
+                <tr class="price-table__row">
+                  <td class="price-table__cell"><span class="price-table__cell-text">Розовый фильтр</span></td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Розовый фильтр</span>
+                      <svg class="price-table__check-on" width="31" height="21">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Розовый фильтр</span>
+                      <svg class="price-table__check-on" width="31" height="21">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Розовый фильтр</span>
+                      <svg class="price-table__check-on" width="31" height="21">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                      </svg>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__cell"><span class="price-table__cell-text">Смайлики</span></td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Смайлики</span>
+                      <svg class="price-table__check-off" width="27" height="26">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Смайлики</span>
+                      <svg class="price-table__check-on" width="31" height="21">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Смайлики</span>
+                      <svg class="price-table__check-on" width="31" height="21">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                      </svg>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__cell"><span class="price-table__cell-text">Комментарии</span></td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Комментарии</span>
+                      <svg class="price-table__check-off" width="27" height="26">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Комментарии</span>
+                      <svg class="price-table__check-off" width="27" height="26">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__cell-wrapper"><span class="price-table__cell-text">Комментарии</span>
+                      <svg class="price-table__check-on" width="31" height="21">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                      </svg>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="price__slider">
+            <div class="slider"><span class="slider__item"></span><span class="slider__item slider__item--checked"></span><span class="slider__item"></span></div>
+          </div>
+        </div>
+      </section>
+      <section class="page__contacts contacts">
+        <div class="container">
+          <div class="contacts__inner">
+            <h2 class="visually-hidden">Контакты</h2>
+            <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
+            <div class="contacts__group">
+              <address class="contacts__group-item"><span class="contacts__item-title">Звоните</span><a class="contacts__link" href="tel:+7(999)999-99-99">+7 (999) 999-99-99</a></address>
+              <address class="contacts__group-item contacts__group-item--email"><span class="contacts__item-title">Пишите:</span><a class="contacts__link contacts__link--email" href="mailto:example@example.ru">example@example.com</a></address>
+              <address class="contacts__group-item"><span class="contacts__item-title">Приезжайте в гости:</span><a class="contacts__link" href="#">ул. Большая Конюшенная, 19/8</a></address>
             </div>
           </div>
-          <div class="contacts__map"><img class="contacts__map-image" src="blocks/contacts/img/map.jpg" width="1422" height="746" alt="Наш адрес"></div>
-        </section>
-      </div>
+        </div>
+        <div class="contacts__map"><img class="contacts__map-image" src="../blocks/contacts/img/map.jpg" width="1422" height="746" alt="Наш адрес"></div>
+      </section>
     </main>
     <footer class="page__footer main-footer">
       <div class="container">
