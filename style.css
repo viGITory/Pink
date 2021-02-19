@@ -789,7 +789,7 @@ input[type='radio'].visually-hidden {
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
-    background-image: url(../blocks/reviews/img/quotes.svg);
+    background-image: url(blocks/reviews/img/quotes.svg);
     background-size: auto auto;
     background-position: top 70px center;
     background-repeat: no-repeat;
@@ -1312,7 +1312,7 @@ input[type='radio'].visually-hidden {
   }
 }
 .page-photo__header {
-  background-image: url(../blocks/main-header/img/back-desktop.jpg);
+  background-image: url(blocks/main-header/img/back-desktop.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1722,6 +1722,9 @@ input[type='radio'].visually-hidden {
   box-sizing: border-box;
   outline: none;
   cursor: pointer;
+}
+.editor__range-button:hover {
+  background-color: #d22856;
 }
 .editor__range-button:active {
   background-color: #d22856;
