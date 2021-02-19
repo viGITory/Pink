@@ -96,6 +96,11 @@
 			overflow: hidden;
 			background-color: transparent;
 
+			& > svg {
+				transition-property: fill;
+				transition-duration: @main-duration;
+			}
+			
 			&:hover > svg {
 				fill: @darkblue;
 			}
@@ -105,9 +110,9 @@
 			padding-left: 20px;
 
 			&::selection {
-			color: #ffffff;
-			background-color: @red;
-		}
+				color: #ffffff;
+				background-color: @red;
+			}
 		}
 
 		&-count {

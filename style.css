@@ -1593,6 +1593,10 @@ input[type='radio'].visually-hidden {
   overflow: hidden;
   background-color: transparent;
 }
+.user-post__like-button > svg {
+  transition-property: fill;
+  transition-duration: 0.2s;
+}
 .user-post__like-button:hover > svg {
   fill: #283645;
 }
@@ -1687,6 +1691,8 @@ input[type='radio'].visually-hidden {
   outline: 0;
   cursor: pointer;
   background-color: transparent;
+  transition-property: fill;
+  transition-duration: 0.2s;
 }
 .editor__tools-button:hover {
   fill: rgba(40, 54, 69, 0.5);
@@ -1722,6 +1728,8 @@ input[type='radio'].visually-hidden {
   box-sizing: border-box;
   outline: none;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 .editor__range-button:hover {
   background-color: #d22856;
