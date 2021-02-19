@@ -470,8 +470,8 @@ input[type='radio'].visually-hidden {
   border-color: transparent;
 }
 .button--cancel::selection {
-  color: #283645;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #283645;
 }
 @media (min-width: 660px) {
   .button--download {
@@ -1458,7 +1458,6 @@ input[type='radio'].visually-hidden {
   }
   .page-photo__special-like {
     position: absolute;
-    top: 25px;
     right: 30px;
   }
   .page-photo__posts-group {
@@ -1568,17 +1567,37 @@ input[type='radio'].visually-hidden {
   margin: 0;
   margin-top: auto;
   padding: 0;
-  padding-left: 30px;
+  display: flex;
+  align-items: center;
   font-size: 12px;
   line-height: 24px;
   color: #d22856;
   text-transform: uppercase;
-  background: url(../blocks/user-post/img/icons/icon-heart.svg);
-  background-repeat: no-repeat;
-  background-size: 13px auto;
-  background-position: left center;
 }
 .user-post__like::selection {
+  color: #ffffff;
+  background-color: #d22856;
+}
+.user-post__like-button {
+  margin: 0;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  order: -1;
+  font-size: 0;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+}
+.user-post__like-button:hover > svg {
+  fill: #283645;
+}
+.user-post__like-text {
+  padding-left: 20px;
+}
+.user-post__like-text::selection {
   color: #ffffff;
   background-color: #d22856;
 }
@@ -1599,10 +1618,15 @@ input[type='radio'].visually-hidden {
   .user-post__text {
     margin-bottom: 0;
   }
-  .user-post__like {
+  .user-post__like-button {
+    margin-left: auto;
+    order: 1;
+  }
+  .user-post__like-text {
     padding-left: 0;
-    padding-right: 30px;
-    background-position: right center;
+  }
+  .user-post__like-count {
+    padding-right: 20px;
   }
 }
 @media (min-width: 960px) {
