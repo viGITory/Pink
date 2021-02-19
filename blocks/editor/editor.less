@@ -1,0 +1,287 @@
+.editor {
+	background-color: #f2f2f2;
+
+	&__inner {
+		padding-top: 20px;
+		padding-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__image {
+		width: 100%;
+		max-width: 300px;
+		height: 100%;
+		display: block;
+
+		object-fit: cover;
+
+		&::selection {
+			background-color: @darkblue;
+		}
+	}
+
+	&__tools {
+		padding-top: 45px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__tools-list {
+		margin: 0;
+		margin-bottom: 70px;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		list-style-type: none;
+	}
+
+	&__tools-item {
+		margin-right: 35px;
+		position: relative;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__tools-button {
+		margin: 0;
+		margin-bottom: 40px;
+		padding: 0;
+
+		font-size: 0;
+
+		fill: @darkblue30;
+		border: 0;
+		outline: 0;
+		background-color: transparent;
+
+		&:hover {
+			fill: @darkblue50;
+		}
+
+		&:active {
+			fill: @red;
+		}
+
+		&--crop {
+			fill: @red;
+		}
+	}
+
+	&__tools-range {
+		width: 240px;
+		height: 2px;
+		position: absolute;
+		left: -20px;
+
+		background-color: @darkblue;
+
+		&-fill,
+		&-contrast {
+			display: none;
+		}
+	}
+
+	&__range-button {
+		padding: 0;
+		position: absolute;
+		top: -6.5px;
+		left: 79.16%;
+		width: 15px;
+		height: 15px;
+
+		font-size: 0;
+
+		border-radius: 50%;
+		border: 2px solid @red;
+		background-color: #f2f2f2;
+		box-sizing: border-box;
+		outline: none;
+
+		&:active {
+			background-color: @red;
+		}
+	}
+
+	&__button-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__button {
+		margin-bottom: 15px;
+		width: 280px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media @tablet {
+	.editor {
+		&__inner {
+			padding-top: 55px;
+			padding-bottom: 55px;
+			display: grid;
+			grid-template-columns: 300px auto;
+			grid-gap: 45px;
+			justify-content: center;
+			align-items: stretch;
+		}
+
+		&__tools {
+			margin-left: auto;
+			padding-top: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		&__tools-list {
+			margin-bottom: auto;
+			flex-direction: column;
+		}
+
+		&__tools-item {
+			margin-right: 0;
+			padding-top: 25px;
+			padding-right: 20px;
+			padding-bottom: 25px;
+			padding-left: 5px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			border-bottom: 1px solid @darkblue10;
+
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+
+		&__tools-button {
+			margin-right: 30px;
+			margin-bottom: 0;
+			fill: @red;
+
+			& > svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		&__tools-range {
+			width: 200px;
+			position: relative;
+			left: 0;
+
+			&-fill {
+				display: block;
+			}
+
+			&-contrast {
+				display: block;
+			}
+		}
+
+		&__range-button {
+			&-crop {
+				left: 72.5%;
+			}
+
+			&-fill {
+				left: 12.5%;
+			}
+
+			&-contrast {
+				left: 47.5%;
+			}
+		}
+
+		&__button-group {
+			margin-top: 0;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__button {
+			width: 260px;
+
+			&:first-child {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+@media @desktop {
+	.editor {
+		&__inner {
+			padding-top: 60px;
+			padding-bottom: 60px;
+			grid-gap: 90px;
+		}
+
+		&__tools {
+			margin-top: 0;
+		}
+
+		&__tools-item {
+			padding-top: 15px;
+			padding-right: 30px;
+			padding-bottom: 15px;
+			padding-left: 0;
+		}
+
+		&__tools-button {
+			margin-right: 40px;
+
+			& > svg {
+				width: 48px;
+				height: 48px;
+			}
+		}
+
+		&__tools-range {
+			width: 290px;
+		}
+
+		&__range-button {
+			&-crop {
+				left: 24.14%;
+			}
+
+			&-fill {
+				left: 86.2%;
+			}
+
+			&-contrast {
+				left: 55.17%;
+			}
+		}
+
+		&__button-group {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__button {
+			margin-right: 45px;
+			width: 180px;
+
+			&:first-child {
+				margin-bottom: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
