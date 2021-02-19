@@ -5,9 +5,10 @@
 		display: flex;
 		justify-content: center;
 
-		background-image: url(blocks/research/img/diagram.png);
+		background-image: url(blocks/research/img/clock.svg);
 		background-repeat: no-repeat;
 		background-position: left center;
+		background-size: 240px auto;
 	}
 
 	&__group {
@@ -67,13 +68,17 @@
 
 		&::selection {
 			color: #ffffff;
-			background-color: @darkblue;
+			background-color: @red;
 		}
 	}
 }
 
 @media @desktop {
 	.research {
+		&__inner {
+			background-size: 300px 345px;
+		}
+
 		&__group {
 			margin-left: 370px;
 		}

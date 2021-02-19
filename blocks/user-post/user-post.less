@@ -9,6 +9,10 @@
 		display: block;
 
 		object-fit: cover;
+
+		&::selection {
+			background-color: @darkblue;
+		}
 	}
 
 	&__inner {
@@ -29,12 +33,22 @@
 		font-size: 14px;
 		font-weight: 700;
 		line-height: 24px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__time {
 		font-size: 12px;
 		line-height: 24px;
 		text-transform: uppercase;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__text {
@@ -44,17 +58,39 @@
 
 		font-size: 14px;
 		line-height: 24px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
 	}
 
 	&__like {
 		margin: 0;
 		margin-top: auto;
 		padding: 0;
+		padding-left: 30px;
 
 		font-size: 12px;
 		line-height: 24px;
 		color: @red;
 		text-transform: uppercase;
+		background: url(../blocks/user-post/img/icons/icon-heart.svg);
+		background-repeat: no-repeat;
+		background-size: 13px auto;
+		background-position: left center;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @red;
+		}
+
+		&-count {
+			&::selection {
+			color: #ffffff;
+			background-color: @red;
+		}
+		}
 	}
 }
 
@@ -73,6 +109,12 @@
 
 		&__text {
 			margin-bottom: 0;
+		}
+
+		&__like {
+			padding-left: 0;
+			padding-right: 30px;
+			background-position: right center;
 		}
 	}
 }

@@ -10,10 +10,18 @@
 		display: inline-block;
 
 		border-radius: 50%;
-		background-color: rgba(40, 54, 69, 0.3);
+		background-color: @darkblue30;
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		&:hover {
+			background-color: @darkblue60;
+		}
+
+		&:active {
+			background-color: @darkblue10;
 		}
 
 		// MODIFIERS
@@ -21,6 +29,10 @@
 			transition: all @main-duration ease;
 			box-shadow: 0 0 0 3px @darkblue;
 			background-color: #ffffff;
+
+			&:hover {
+				background-color: #ffffff;
+			}
 		}
 	}
 }

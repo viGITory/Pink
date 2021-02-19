@@ -26,20 +26,19 @@ html(lang="ru")
 						div.main-header__button
 							button.button-burger(type="button") Кнопка меню
 								include ../blocks/button-burger/button-burger.pug
-						div.main-header__menu
+						div.main-header__menu.main-menu
 							include ../blocks/main-menu/main-menu.pug
 			div.main-header__promo.container
 				div.main-header__promo-inner
 						h1.visually-hidden Приложение для применения фильтров на фотографиях
 						p.main-header__promo-title Взгляните на жизнь иначе!
-						div.main-header__download-button
-							a.button.button--download(href="#") Скачать приложение
+						a.button.button--download(href="#") Скачать приложение
 						div.main-header__download-list
 							include ../blocks/download-list/download-list.pug
 						p.main-header__download-description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
 
 		main.page__main
-			section.page__features.features
+			section.features
 				div.container
 					div.features__inner
 						h2.visually-hidden Преимущества приложения
@@ -65,28 +64,34 @@ html(lang="ru")
 							p.research__title Эффект на 24 часа!
 							p.research__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
 							a.research__link(href="#") Узнать больше об исследовании
-			section.page__reviews.reviews
+			section.reviews
 				div.container
 					div.reviews__inner
 						h2.visually-hidden Отзывы пользователей
 						button.reviews__arrow(type="button") Предыдущий отзыв
 							svg(width="22", height="41")
 								use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-left")
-						div.reviews__user-review
-							include ../blocks/user-review/user-review.pug
+						article.reviews__user-review.user-review
+							blockquote.user-review__quote
+								div.user-review__user
+									cite.user-review__user-name Николай Петров
+									span.user-review__user-description 25 лет, водитель трамвая
+								p.user-review__text Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
 						div.reviews__slider
-							include ../blocks/slider/slider.pug
+							div.slider
+								span.slider__item
+								span.slider__item.slider__item--checked
+								span.slider__item
 						button.reviews__arrow(type="button") Следующий отзыв
 							svg(width="22", height="41")
 								use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-right")
-			section.page__price.price
+			section.price
 				div.price__inner
 					h2.visually-hidden Прайс-лист
-					div.price__table
-						include ../blocks/price-table/price-table.pug
+					include ../blocks/price-table/price-table.pug
 					div.price__slider
 						include ../blocks/slider/slider.pug
-			section.page__contacts.contacts
+			section.contacts
 				div.container
 					div.contacts__inner
 						h2.visually-hidden Контакты
@@ -102,15 +107,17 @@ html(lang="ru")
 								span.contacts__item-title Приезжайте в гости:
 								a.contacts__link(href='#') ул. Большая Конюшенная, 19/8
 				div.contacts__map
-					img.contacts__map-image(src="../blocks/contacts/img/map.jpg" width="1422" height="746" alt="Наш адрес")
+					div.contacts__map-inner
+						img.contacts__map-image(src="../blocks/contacts/img/map.jpg" width="1422" height="746" alt="Наш адрес")
+						iframe.contacts__map-frame(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613679186850!5m2!1sru!2sru" width="1200" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
 
 		footer.page__footer.main-footer.container
 			div.page__footer-inner.main-footer__inner
 				div.main-footer__logo
 					include ../blocks/footer-logo/footer-logo.pug
-				div.main-footer__social
+				ul.social
 					include ../blocks/social/social.pug
-				div.main-footer__copyright
+				a.copyright(href='https://htmlacademy.ru')
 					include ../blocks/copyright/copyright.pug
 
 		script(src="scripts/scripts.js", type="module")

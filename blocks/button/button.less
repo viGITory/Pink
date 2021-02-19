@@ -1,7 +1,7 @@
 .button {
 	margin: 0;
 	padding: 0;
-	width: 280px;
+	// width: 280px;
 	height: 55px;
 	display: inline-flex;
 	align-items: center;
@@ -22,6 +22,8 @@
 
 	// MODIFIERS
 	&--download {
+		width: 280px;
+
 		color: #ffffff;
 
 		border-color: #ffffff;
@@ -35,7 +37,7 @@
 		}
 
 		&:active {
-			color: rgba(210, 40, 86, 0.3);
+			color: @red30;
 		}
 
 		&::selection {
@@ -47,19 +49,53 @@
 	&--post {
 		color: @red;
 		border-color: @red;
-		// outline-color: @darkblue;
+		outline-offset: 5px;
+		outline-color: @red;
+
+		&:hover {
+			color: #ffffff;
+			background-color: @red;
+		}
+
+		&:active {
+			color: @white30;
+		}
+
+		&::selection {
+			color: #ffffff;
+			background-color: @red;
+		}
 	}
 
 	&--cancel {
-		color: rgba(40, 54, 69, 0.1);
-		border-color: rgba(40, 54, 69, 0.1);
-		// outline-color: @darkblue;
+		color: @darkblue10;
+		border-color: @darkblue10;
+		outline-offset: 5px;
+		outline-color: @darkblue30;
+
+		&:hover {
+			color: @darkblue30;
+			border-color: @darkblue30;
+		}
+
+		&:active {
+			color: @white30;
+			background-color: @darkblue30;
+			border-color: transparent;
+		}
+
+		&::selection {
+			color: @darkblue;
+			background-color: #ffffff;
+		}
 	}
 }
 
 @media @tablet {
 	.button {
-		width: 300px;
+		&--download {
+			width: 300px;
+		}
 	}
 }
 

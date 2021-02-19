@@ -12,7 +12,7 @@
 		text-align: center;
 
 		box-shadow: 0px -1px 0 0 #000000,
-		inset 0px 1px 0 0 rgba(255, 255, 255, 0.15);
+		inset 0px 1px 0 0 @white15;
 
 		&:last-child {
 			border-bottom: 1px solid #000000;
@@ -46,7 +46,7 @@
 		}
 
 		&:active {
-			color: rgba(210, 40, 86, 0.3);
+			color: @red30;
 		}
 
 		&::selection {
@@ -83,7 +83,7 @@
 			outline-offset: 5px;
 
 			&:active {
-				color: rgba(255, 255, 255, 0.3);
+				color: @white30;
 			}
 
 			&::after {
@@ -105,7 +105,7 @@
 			}
 
 			&:active::after {
-				background-color: rgba(255, 255, 255, 0.3);
+				background-color: @white30;
 			}
 		}
 	}

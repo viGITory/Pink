@@ -35,7 +35,15 @@ html(lang="ru")
 								include ../blocks/button-burger/button-burger.pug
 						div.main-header__menu
 							nav.main-menu
-								include ../blocks/main-menu/main-menu.pug
+								ul.main-menu__list
+									li.main-menu__item
+										a.main-menu__link(href="index.html") Главная
+									li.main-menu__item
+										a.main-menu__link(href="page-photo.html") Фотографии
+									li.main-menu__item
+										a.main-menu__link(href="#") Конкурс
+									li.main-menu__item
+										a.main-menu__link(href="#") О нас
 			div.page-photo__promo.container
 				div.page-photo__promo-inner
 					h1.page-photo__promo-title Фотографии пользователей
@@ -45,8 +53,10 @@ html(lang="ru")
 				p.page-photo__title Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
 
 			section.page-photo__posts
+				h2.visually-hidden Посты пользователей
 				article.page-photo__special.user-post
-					img.page-photo__special-photo.user-post__photo(src="../blocks/user-post/img/panorama.jpg" width="1200" height="506" alt="Панорама")
+					h3.visually-hidden Пост пользователя
+					img.page-photo__special-photo.user-post__photo(src="../blocks/user-post/img/user-photos/panorama.jpg" width="1200" height="506" alt="Панорама с моста в горах")
 					div.container
 						div.user-post__inner
 							div.user-post__user
@@ -59,7 +69,8 @@ html(lang="ru")
 				div.container
 					div.page-photo__posts-group
 						article.user-post
-							img.user-post__photo(src="../blocks/user-post/img/photo1.jpg" width="300" height="400" alt="Фотография пользователя")
+							h3.visually-hidden Пост пользователя
+							img.user-post__photo(src="../blocks/user-post/img/user-photos/photo1.jpg" width="300" height="400" alt="Фотоаппарат фотографирующий автомобиль")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Левон&nbsp;
@@ -69,7 +80,8 @@ html(lang="ru")
 										span.user-post__like-count 356
 
 						article.user-post
-							img.user-post__photo(src="../blocks/user-post/img/photo2.jpg" width="300" height="400" alt="Фотография пользователя")
+							h3.visually-hidden Пост пользователя
+							img.user-post__photo(src="../blocks/user-post/img/user-photos/photo2.jpg" width="300" height="400" alt="Барабанная установка")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Антон&nbsp;
@@ -79,7 +91,8 @@ html(lang="ru")
 									span.user-post__like-count 666
 
 						article.user-post
-							img.user-post__photo(src="../blocks/user-post/img/photo3.jpg" width="300" height="400" alt="Фотография пользователя")
+							h3.visually-hidden Пост пользователя
+							img.user-post__photo(src="../blocks/user-post/img/user-photos/photo3.jpg" width="300" height="400" alt="Прозрачная стеклянная крыша")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Борис&nbsp;
@@ -89,7 +102,8 @@ html(lang="ru")
 									span.user-post__like-count 215
 
 						article.user-post
-							img.user-post__photo(src="../blocks/user-post/img/photo4.jpg" width="300" height="400" alt="Фотография пользователя")
+							h3.visually-hidden Пост пользователя
+							img.user-post__photo(src="../blocks/user-post/img/user-photos/photo4.jpg" width="300" height="400" alt="Рынок с бахчой")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Сергей&nbsp;
@@ -99,7 +113,8 @@ html(lang="ru")
 									span.user-post__like-count 4
 
 						article.user-post
-							img.user-post__photo(src="../blocks/user-post/img/photo5.jpg" width="300" height="400" alt="Фотография пользователя")
+							h3.visually-hidden Пост пользователя
+							img.user-post__photo(src="../blocks/user-post/img/user-photos/photo5.jpg" width="300" height="400" alt="Мужчина на камне")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Максим&nbsp;
@@ -109,7 +124,8 @@ html(lang="ru")
 									span.user-post__like-count 150
 
 						article.user-post
-							img.user-post__photo(src="../blocks/user-post/img/photo6.jpg" width="300" height="400" alt="Фотография пользователя")
+							h3.visually-hidden Пост пользователя
+							img.user-post__photo(src="../blocks/user-post/img/user-photos/photo6.jpg" width="300" height="400" alt="Крыло самолета из иллюминатора")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Надежда&nbsp;
@@ -122,29 +138,49 @@ html(lang="ru")
 						p.page-photo__subtitle-row Затмите их всех!
 						p.page-photo__subtitle-row Выкладывайте все, что накопилось в телефоне!
 
-			//- section.page-photo__filter
-			//- 	div.container
-			//- 		div.filter
-			//- 			div.filter__inner
-			//- 				img.filter__image(src="../blocks/filter/img/filter.jpg" width="300" height="400" alt="Фотография для применения фильтра")
-			//- 				ul.filter__list
-			//- 					li.filter__item
-			//- 					li.filter__item
-			//- 					li.filter__item
-			//- 				div.filter__range
-			//- 				div.filter__button-group
-			//- 					button.filter__button.button.button--post(type="button") Запостить
-			//- 					button.filter__button.button.button--cancel(type="button") Отмена
+			section.page-photo__editor
+				h2.visually-hidden Редактор фотографий
+				div.container
+					div.editor
+						div.editor__inner
+							img.editor__image(src="../blocks/editor/img/editor.jpg" width="300" height="400" alt="Фотография для применения фильтра")
+							div.editor__tools
+								ul.editor__tools-list
+									li.editor__tools-item
+										button.editor__tools-button.editor__tools-button--crop Кнопка «Обрезать»
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48"><path fill="none" d="M0,0h48v48H0V0z"/><path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/></svg>
+										div.editor__tools-range.editor__tools-range-crop
+											button.editor__range-button.editor__range-button-crop(type="button") Кнопка «Ползунок»
+									li.editor__tools-item
+										button.editor__tools-button Кнопка «Заливка»
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+												<path fill="none" d="M0,0h48v48H0V0z"/>
+												<path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+												<rect y="40" width="48" height="3"/>
+											</svg>
+										div.editor__tools-range.editor__tools-range-fill
+											button.editor__range-button.editor__range-button-fill(type="button") Кнопка «Ползунок»
+									li.editor__tools-item
+										button.editor__tools-button Кнопка «Контраст»
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="-43 -16 48 48" width="48" height="48">
+												<path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+												<path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+											</svg>
+										div.editor__tools-range.editor__tools-range-contrast
+											button.editor__range-button.editor__range-button-contrast(type="button") Кнопка «Ползунок»
+								div.editor__button-group
+									button.editor__button.button.button--post(type="button") Запостить
+									button.editor__button.button.button--cancel(type="button") Отмена
 
 
 		footer.page-photo__footer.main-footer.container
 			div.page-photo__footer-inner.main-footer__inner
 				div.page-photo__footer-logo.main-footer__logo
 					include ../blocks/footer-logo/footer-logo.pug
-				div.page-photo__footer-social.main-footer__social
+				ul.page-photo__footer-social.social
 					include ../blocks/social/social.pug
-				div.main-footer__copyright
+				div.main-footer__copyright.copyright
 					include ../blocks/copyright/copyright.pug
 
 
-		//- script(src="scripts/scripts.js", type="module")
+		script(src="scripts/scripts.js", type="module")
