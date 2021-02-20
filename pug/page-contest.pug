@@ -1,0 +1,143 @@
+doctype html
+html(lang="ru")
+
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="")
+		//- OPEN GRAPH ДЛЯ СОЦСЕТЕЙ
+		include ../blocks/opengraph/opengraph.pug
+		title Конкурс
+		link(rel="icon" href="#" type="image/png" sizes="32x32")
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="style.css")
+
+	body.page-contest.page
+		include ../blocks/svg/svg.pug
+
+		header.page-contest__header.main-header
+			div.main-header__nav
+				div.container
+					div.main-header__nav-inner
+						div.main-header__logo
+							a.logo.logo--header.logo--header-mobile(href="index.html") Логотип для смартфонов
+								svg(width="75" height="22")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile")
+							a.logo.logo--header.logo--header-tablet(href="index.html") Логотип для планшетов
+								svg(width="148" height="40")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet")
+							a.logo.logo--header.logo--header-desktop(href="index.html") Логотип для компьютеров
+								svg(width="148" height="40")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop")
+						div.main-header__button
+							button.button-burger(type="button") Кнопка меню
+								include ../blocks/button-burger/button-burger.pug
+						div.main-header__menu
+							nav.main-menu
+								ul.main-menu__list
+									li.main-menu__item
+										a.main-menu__link(href="index.html") Главная
+									li.main-menu__item
+										a.main-menu__link(href="page-photo.html") Фотографии
+									li.main-menu__item
+										a.main-menu__link(href="#") Конкурс
+									li.main-menu__item
+										a.main-menu__link(href="#") О нас
+			div.page-contest__promo.container
+				div.page-contest__promo-inner
+					h1.page-contest__promo-title Конкурс на самое безбашенное путешествие с Пинк
+
+		main.page-contest__main
+			div.page-contest__inner
+				div.container
+					p.page-contest__title Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+				form.page-contest__form
+					div.container
+						fieldset.page-contest__fieldset-name
+							legend.visually-hidden ФИО
+							div.page-contest__input-group
+								label.page-contest__form-label(for="input-surname") Фамилия:
+								input.page-contest__text-input(type="text" id="input-surname" placeholder="Укажите фамилию *")
+							div.page-contest__input-group
+								label.page-contest__form-label(for="input-name") Имя:
+								input.page-contest__text-input(type="text" id="input-name" placeholder="Введите ваше имя *")
+							div.page-contest__input-group
+								label.page-contest__form-label(for="input-middle-name") Отчество:
+								input.page-contest__text-input(type="text" id="input-middle-name" placeholder="Ну и отчество тоже")
+
+					fieldset.page-contest__achievements
+						legend.visually-hidden
+						div.container
+							div.page-contest__achievements-inner
+								h2.page-contest__achievements-title Ваши безбашенные достижения в путешествии
+								div.page-contest__checkbox-group
+									div.page-contest__checkbox
+										input.page-contest__checkbox-input(type="checkbox" id="checkbox-selfie" name="selfie-with-shark" checked)
+										label.page-contest__checkbox-label(for="checkbox-selfie") Сделал селфи с акулой
+									div.page-contest__checkbox
+										input.page-contest__checkbox-input(type="checkbox" id="checkbox-burned" name="burned-on-beach" checked)
+										label.page-contest__checkbox-label(for="checkbox-burned") Обгорел на пляже
+									div.page-contest__checkbox
+										input.page-contest__checkbox-input(type="checkbox" id="checkbox-norris" name="see-Chuck-Norris")
+										label.page-contest__checkbox-label(for="checkbox-norris") Видел Чака Норриса
+									div.page-contest__checkbox
+										input.page-contest__checkbox-input(type="checkbox" id="checkbox-souvenirs" name="buy-souvenirs")
+										label.page-contest__checkbox-label(for="checkbox-souvenirs") Накупил сувениров
+									div.page-contest__checkbox
+										input.page-contest__checkbox-input(type="checkbox" id="checkbox-tower" name="held-tower" checked)
+										label.page-contest__checkbox-label(for="checkbox-tower") Удержал башню
+									div.page-contest__checkbox
+										input.page-contest__checkbox-input(type="checkbox" id="checkbox-hotel" name="smash-hotel")
+										label.page-contest__checkbox-label(for="checkbox-hotel") Разгромил отель
+
+					fieldset.page-contest__contacts
+						legend.visually-hidden
+						div.container
+							div.page-contest__contacts-inner
+								div.page-contest__input-group
+									label.page-contest__form-label(for="input-tel") Номер телефона
+									input.page-contest__text-input(type="text" id="input-tel" placeholder="Номер, пожалуйста")
+								div.page-contest__input-group
+									label.page-contest__form-label(for="input-email") Адрес почты
+									input.page-contest__text-input(type="text" id="input-email" placeholder="Введите почту *")
+
+					fieldset.page-contest__app
+						legend.visually-hidden
+						div.container
+							div.page-contest__app-inner
+								h2.page-contest__app-title С каким приложением путешествовали?
+								div.page-contest__radio-group
+									div.page-contest__radio
+										input.page-contest__input-radio(type="radio" id="radio-ios" name="radio-app" checked)
+										label.page-contest__radio-label(for="radio-ios") Pink для iOS
+									div.page-contest__radio
+										input.page-contest__input-radio(type="radio" id="radio-android" name="radio-app")
+										label.page-contest__radio-label(for="radio-android") Pink для Android
+									div.page-contest__radio
+										input.page-contest__input-radio(type="radio" id="radio-winphone" name="radio-app")
+										label.page-contest__radio-label(for="radio-winphone") Windows Phone
+
+					div.container
+						div.page-contest__review
+							div.page-contest__review-inner
+								h2.page-contest__review-title Опишите свои эмоции
+								label.visually-hidden(for="textarea") Текстовое поле
+								textarea.page-contest__textarea(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях")
+
+						div.page-contest__button-group
+							button.page-contest__button.button.button--form(type="submit") Отправить форму
+							p.page-contest__subtitle
+								span.page-contest__subtitle-star *&nbsp;
+								span — обязательные поля
+
+		footer.page-photo__footer.main-footer.container
+			div.page-photo__footer-inner.main-footer__inner
+				div.page-photo__footer-logo.main-footer__logo
+					include ../blocks/footer-logo/footer-logo.pug
+				ul.page-photo__footer-social.social
+					include ../blocks/social/social.pug
+				div.main-footer__copyright.copyright
+					include ../blocks/copyright/copyright.pug
+
+		script(src="scripts/scripts.js", type="module")

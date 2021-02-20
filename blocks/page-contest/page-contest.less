@@ -1,0 +1,437 @@
+.page-contest {
+	&__header {
+		background-image: url(blocks/main-header/img/back-desktop.jpg);
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__promo-inner {
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+
+	&__promo-title {
+		margin: 0 auto;
+		padding: 0;
+
+		font-size: 24px;
+		font-weight: 300;
+		text-align: center;
+
+		&::selection {
+			color: @darkblue;
+			background-color: #ffffff;
+		}
+	}
+
+	&__inner {
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 45px;
+		padding: 0;
+
+		font-size: 14px;
+		line-height: 30px;
+		text-align: center;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
+	}
+
+	&__form {
+		margin: 0 auto;
+		max-width: 940px;
+	}
+
+	&__fieldset-name {
+		margin: 0;
+		margin-bottom: 45px;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		border: none;
+	}
+
+	&__input-group {
+		margin-bottom: 25px;
+		display: flex;
+		flex-direction: column;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__form-label {
+		margin-left: 20px;
+		margin-bottom: 10px;
+
+		color: @red;
+		font-size: 14px;
+		line-height: 30px;
+		text-transform: uppercase;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @red;
+		}
+	}
+
+	&__text-input {
+		padding: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 280px;
+		height: 65px;
+
+		color: @darkblue;
+
+		border: 2px solid #e5e5e5;
+		border-radius: 3px;
+		box-sizing: border-box;
+		outline: none;
+		transition-property: color, border-color;
+		transition-duration: @main-duration;
+
+		&::placeholder {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 18px;
+			line-height: 30px;
+			color: @darkblue;
+		}
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
+
+		&:hover {
+			border-color: @darkblue;
+		}
+
+		&:focus {
+			border-color: @darkblue;
+		}
+
+		&:focus::placeholder {
+			color: #e5e5e5;
+		}
+
+		&:active {
+			border-color: @red;
+		}
+	}
+
+	&__achievements {
+		margin: 0;
+		padding: 0;
+
+		border: none;
+		background-color: #f2f2f2;
+	}
+
+	&__achievements-inner {
+		padding-top: 35px;
+		padding-bottom: 40px;
+	}
+
+	&__achievements-title {
+		margin: 0;
+		margin-bottom: 35px;
+		padding: 0;
+
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: normal;
+		color: @red;
+		text-align: center;
+		text-transform: uppercase;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @red;
+		}
+	}
+
+	&__checkbox {
+		margin-bottom: 45px;
+		display: flex;
+		align-items: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__checkbox-input {
+		margin: 0;
+		padding: 0;
+		min-width: 40px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+
+		border: 2px solid #e5e5e5;
+		border-radius: 3px;
+		background-color: #ffffff;
+		appearance: none;
+		outline: none;
+		cursor: pointer;
+		transition-property: border-color;
+		transition-duration: @main-duration;
+
+		&:checked {
+			&::after {
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 13px;
+				width: 8px;
+				height: 20px;
+
+				border: 2px solid @red;
+				border-left-width: 0;
+				border-top-width: 0;
+				transform: rotate(45deg);
+			}
+		}
+
+		&:hover {
+			border-color: @darkblue;
+		}
+
+		&:active {
+			border-color: @red;
+		}
+	}
+
+	&__checkbox-label {
+		padding-left: 30px;
+
+		font-size: 18px;
+		line-height: 30px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
+	}
+
+	&__contacts {
+		margin: 0;
+		padding: 0;
+
+		border: none;
+	}
+
+	&__contacts-inner {
+		padding-top: 35px;
+		padding-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__app {
+		margin: 0;
+		padding: 0;
+
+		border: 0;
+		background-color: #f2f2f2;
+	}
+
+	&__app-inner {
+		padding-top: 35px;
+		padding-bottom: 40px;
+	}
+
+	&__app-title {
+		margin: 0;
+		margin-bottom: 30px;
+
+		color: @red;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: normal;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__radio {
+		margin-bottom: 35px;
+		display: flex;
+		align-items: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__input-radio {
+		margin: 0;
+		min-width: 40px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+
+		border: 2px solid #e5e5e5;
+		border-radius: 50%;
+		background-color: #ffffff;
+		outline: none;
+		box-sizing: border-box;
+		appearance: none;
+		transition-property: border-color;
+		transition-duration: @main-duration;
+
+		&:checked {
+			&::after {
+				content: '';
+				position: absolute;
+				top: 10.5px;
+				left: 10.5px;
+				width: 15px;
+				height: 15px;
+
+				background-color: @red;
+				border-radius: 50%;
+			}
+		}
+
+		&:hover {
+			border-color: @darkblue;
+		}
+
+		&:active {
+			border-color: @red;
+		}
+	}
+
+	&__radio-label {
+		padding-left: 30px;
+
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	&__review-inner {
+		padding-top: 35px;
+		padding-bottom: 45px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__review-title {
+		margin: 0;
+		margin-bottom: 15px;
+
+		color: @red;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	&__textarea {
+		margin: 0;
+		padding: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+		min-height: 200px;
+		min-width: 280px;
+
+		font-size: 18px;
+		line-height: 30px;
+		color: @darkblue;
+		border: 2px solid #e5e5e5;
+		outline: none;
+		appearance: none;
+		box-sizing: border-box;
+		resize: none;
+
+		&::placeholder {
+			color: @darkblue;
+		}
+	}
+
+	&__button-group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__button {
+		margin-bottom: 40px;
+		outline: none;
+
+		&:hover {
+			background-color: #1c9b5e;
+		}
+
+		&:active {
+			color: @white30;
+		}
+
+		&:disabled {
+			background-color: #e5e5e5;
+		}
+	}
+
+	&__subtitle {
+		margin: 0;
+		padding: 0;
+
+		font-size: 14px;
+		line-height: 30px;
+	}
+
+	&__subtitle-star {
+		color: @red;
+	}
+}
+
+@media @tablet {
+	.page-contest {
+		&__promo-inner {
+			padding-top: 75px;
+			padding-bottom: 75px;
+		}
+
+		&__promo-title {
+			font-size: 50px;
+		}
+
+		&__inner {
+			padding-top: 95px;
+		}
+
+		&__title {
+			margin-bottom: 70px;
+			font-size: 18px;
+		}
+
+		&__input-group {
+			flex-direction: row;
+			align-items: center;
+			width: 100%;
+		}
+
+		&__form-label {
+			margin: 0;
+			margin-right: 20px;
+		}
+
+		&__text-input {
+			width: 100%;
+		}
+	}
+}
