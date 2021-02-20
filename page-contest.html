@@ -205,110 +205,116 @@
       </div>
     </header>
     <main class="page-contest__main">
-      <div class="page-contest__inner">
+      <div class="page-contest__main-inner">
         <div class="container">
           <p class="page-contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
         </div>
-        <form class="page-contest__form">
-          <div class="container">
-            <fieldset class="page-contest__fieldset-name">
-              <legend class="visually-hidden">ФИО</legend>
-              <div class="page-contest__input-group">
-                <label class="page-contest__form-label" for="input-surname">Фамилия:</label>
-                <input class="page-contest__text-input" type="text" id="input-surname" placeholder="Укажите фамилию *">
-              </div>
-              <div class="page-contest__input-group">
-                <label class="page-contest__form-label" for="input-name">Имя:</label>
-                <input class="page-contest__text-input" type="text" id="input-name" placeholder="Введите ваше имя *">
-              </div>
-              <div class="page-contest__input-group">
-                <label class="page-contest__form-label" for="input-middle-name">Отчество:</label>
-                <input class="page-contest__text-input" type="text" id="input-middle-name" placeholder="Ну и отчество тоже">
-              </div>
-            </fieldset>
-          </div>
-          <fieldset class="page-contest__achievements">
-            <legend class="visually-hidden"></legend>
+        <form class="page-contest__form form">
+          <fieldset class="form__fieldset">
+            <legend class="page-contest__legend form__legend visually-hidden">ФИО</legend>
+            <div class="container">
+              <ul class="page-contest__input-list">
+                <li class="page-contest__input-text input-text">
+                  <label class="page-contest__label input-text__label" for="input-surname">Фамилия:</label>
+                  <input class="input-text__input" type="text" id="input-surname" placeholder="Укажите фамилию *">
+                </li>
+                <li class="page-contest__input-text input-text">
+                  <label class="page-contest__label input-text__label" for="input-name">Имя:</label>
+                  <input class="input-text__input" type="text" id="input-name" placeholder="Введите ваше имя *">
+                </li>
+                <li class="page-contest__input-text input-text">
+                  <label class="page-contest__label input-text__label" for="input-middle-name">Отчество:</label>
+                  <input class="input-text__input" type="text" id="input-middle-name" placeholder="Ну и отчество тоже">
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset class="page-contest__achievements form__fieldset">
+            <legend class="page-contest__legend form__legend">Ваши безбашенные достижения в путешествии</legend>
             <div class="container">
               <div class="page-contest__achievements-inner">
-                <h2 class="page-contest__achievements-title">Ваши безбашенные достижения в путешествии</h2>
-                <div class="page-contest__checkbox-group">
-                  <div class="page-contest__checkbox">
-                    <input class="page-contest__checkbox-input" type="checkbox" id="checkbox-selfie" name="selfie-with-shark" checked>
-                    <label class="page-contest__checkbox-label" for="checkbox-selfie">Сделал селфи с акулой</label>
-                  </div>
-                  <div class="page-contest__checkbox">
-                    <input class="page-contest__checkbox-input" type="checkbox" id="checkbox-burned" name="burned-on-beach" checked>
-                    <label class="page-contest__checkbox-label" for="checkbox-burned">Обгорел на пляже</label>
-                  </div>
-                  <div class="page-contest__checkbox">
-                    <input class="page-contest__checkbox-input" type="checkbox" id="checkbox-norris" name="see-Chuck-Norris">
-                    <label class="page-contest__checkbox-label" for="checkbox-norris">Видел Чака Норриса</label>
-                  </div>
-                  <div class="page-contest__checkbox">
-                    <input class="page-contest__checkbox-input" type="checkbox" id="checkbox-souvenirs" name="buy-souvenirs">
-                    <label class="page-contest__checkbox-label" for="checkbox-souvenirs">Накупил сувениров</label>
-                  </div>
-                  <div class="page-contest__checkbox">
-                    <input class="page-contest__checkbox-input" type="checkbox" id="checkbox-tower" name="held-tower" checked>
-                    <label class="page-contest__checkbox-label" for="checkbox-tower">Удержал башню</label>
-                  </div>
-                  <div class="page-contest__checkbox">
-                    <input class="page-contest__checkbox-input" type="checkbox" id="checkbox-hotel" name="smash-hotel">
-                    <label class="page-contest__checkbox-label" for="checkbox-hotel">Разгромил отель</label>
-                  </div>
-                </div>
+                <ul class="page-contest__input-list">
+                  <li class="page-contest__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" id="checkbox-selfie" name="selfie-with-shark" checked>
+                    <label class="checkbox__label" for="checkbox-selfie">Сделал селфи с акулой</label>
+                  </li>
+                  <li class="page-contest__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" id="checkbox-burned" name="burned-on-the-beach" checked>
+                    <label class="checkbox__label" for="checkbox-burned">Обгорел на пляже</label>
+                  </li>
+                  <li class="page-contest__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" id="checkbox-norris" name="see-Chuck-Norris">
+                    <label class="checkbox__label" for="checkbox-norris">Видел Чака Норриса</label>
+                  </li>
+                  <li class="page-contest__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" id="checkbox-souvenirs" name="buy-souvenirs">
+                    <label class="checkbox__label" for="checkbox-souvenirs">Накупил сувениров</label>
+                  </li>
+                  <li class="page-contest__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" id="checkbox-tower" name="held-tower" checked>
+                    <label class="checkbox__label" for="checkbox-tower">Удержал башню</label>
+                  </li>
+                  <li class="page-contest__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" id="checkbox-hotel" name="smash-hotel">
+                    <label class="checkbox__label" for="checkbox-hotel">Разгромил отель</label>
+                  </li>
+                </ul>
               </div>
             </div>
           </fieldset>
-          <fieldset class="page-contest__contacts">
-            <legend class="visually-hidden"></legend>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend visually-hidden">Контактная информация</legend>
             <div class="container">
               <div class="page-contest__contacts-inner">
-                <div class="page-contest__input-group">
-                  <label class="page-contest__form-label" for="input-tel">Номер телефона</label>
-                  <input class="page-contest__text-input" type="text" id="input-tel" placeholder="Номер, пожалуйста">
-                </div>
-                <div class="page-contest__input-group">
-                  <label class="page-contest__form-label" for="input-email">Адрес почты</label>
-                  <input class="page-contest__text-input" type="text" id="input-email" placeholder="Введите почту *">
-                </div>
+                <ul class="page-contest__input-list">
+                  <li class="page-contest__input-text input-text">
+                    <label class="input-text__label" for="input-tel">Номер телефона</label>
+                    <input class="input-text__input" type="tel" id="input-tel" placeholder="Номер, пожалуйста">
+                  </li>
+                  <li class="page-contest__input-text input-text">
+                    <label class="input-text__label" for="input-email">Адрес почты</label>
+                    <input class="input-text__input" type="email" id="input-email" placeholder="Введите почту *">
+                  </li>
+                </ul>
               </div>
             </div>
           </fieldset>
-          <fieldset class="page-contest__app">
-            <legend class="visually-hidden"></legend>
+          <fieldset class="page-contest__app form__fieldset">
+            <legend class="page-contest__legend form__legend">С каким приложением путешествовали?</legend>
             <div class="container">
               <div class="page-contest__app-inner">
-                <h2 class="page-contest__app-title">С каким приложением путешествовали?</h2>
-                <div class="page-contest__radio-group">
-                  <div class="page-contest__radio">
-                    <input class="page-contest__input-radio" type="radio" id="radio-ios" name="radio-app" checked>
-                    <label class="page-contest__radio-label" for="radio-ios">Pink для iOS</label>
-                  </div>
-                  <div class="page-contest__radio">
-                    <input class="page-contest__input-radio" type="radio" id="radio-android" name="radio-app">
-                    <label class="page-contest__radio-label" for="radio-android">Pink для Android</label>
-                  </div>
-                  <div class="page-contest__radio">
-                    <input class="page-contest__input-radio" type="radio" id="radio-winphone" name="radio-app">
-                    <label class="page-contest__radio-label" for="radio-winphone">Windows Phone</label>
-                  </div>
+                <ul class="page-contest__input-list">
+                  <li class="page-contest__radio radio">
+                    <input class="radio__input" type="radio" id="radio-ios" name="radio-app" checked>
+                    <label class="radio__label" for="radio-ios">Pink для iOS</label>
+                  </li>
+                  <li class="page-contest__radio radio">
+                    <input class="radio__input" type="radio" id="radio-android" name="radio-app">
+                    <label class="radio__label" for="radio-android">Pink для Android</label>
+                  </li>
+                  <li class="page-contest__radio radio">
+                    <input class="radio__input" type="radio" id="radio-winphone" name="radio-app">
+                    <label class="radio__label" for="radio-winphone">Windows Phone</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="page-contest__legend form__legend form__legend--textarea">Опишите свои эмоции</legend>
+            <div class="container">
+              <div class="page-contest__review-inner">
+                <div class="textarea">
+                  <label class="visually-hidden" for="textarea">Текстовое поле</label>
+                  <textarea class="textarea__input" id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                 </div>
               </div>
             </div>
           </fieldset>
           <div class="container">
-            <div class="page-contest__review">
-              <div class="page-contest__review-inner">
-                <h2 class="page-contest__review-title">Опишите свои эмоции</h2>
-                <label class="visually-hidden" for="textarea">Текстовое поле</label>
-                <textarea class="page-contest__textarea" id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-              </div>
-            </div>
             <div class="page-contest__button-group">
               <button class="page-contest__button button button--form" type="submit">Отправить форму</button>
-              <p class="page-contest__subtitle"><span class="page-contest__subtitle-star">*&nbsp;</span><span>— обязательные поля</span></p>
+              <p class="page-contest__subtitle"><span class="page-contest__subtitle-remark">&midast;&nbsp;</span><span class="page-contest__subtitle-text">— обязательные поля</span></p>
             </div>
           </div>
         </form>

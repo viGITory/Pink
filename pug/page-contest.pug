@@ -49,87 +49,89 @@ html(lang="ru")
 					h1.page-contest__promo-title Конкурс на самое безбашенное путешествие с Пинк
 
 		main.page-contest__main
-			div.page-contest__inner
+			div.page-contest__main-inner
 				div.container
 					p.page-contest__title Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-				form.page-contest__form
-					div.container
-						fieldset.page-contest__fieldset-name
-							legend.visually-hidden ФИО
-							div.page-contest__input-group
-								label.page-contest__form-label(for="input-surname") Фамилия:
-								input.page-contest__text-input(type="text" id="input-surname" placeholder="Укажите фамилию *")
-							div.page-contest__input-group
-								label.page-contest__form-label(for="input-name") Имя:
-								input.page-contest__text-input(type="text" id="input-name" placeholder="Введите ваше имя *")
-							div.page-contest__input-group
-								label.page-contest__form-label(for="input-middle-name") Отчество:
-								input.page-contest__text-input(type="text" id="input-middle-name" placeholder="Ну и отчество тоже")
+				form.page-contest__form.form
+					fieldset.form__fieldset
+						legend.page-contest__legend.form__legend.visually-hidden ФИО
+						div.container
+							ul.page-contest__input-list
+								li.page-contest__input-text.input-text
+									label.page-contest__label.input-text__label(for="input-surname") Фамилия:
+									input.input-text__input(type="text" id="input-surname" placeholder="Укажите фамилию *")
+								li.page-contest__input-text.input-text
+									label.page-contest__label.input-text__label(for="input-name") Имя:
+									input.input-text__input(type="text" id="input-name" placeholder="Введите ваше имя *")
+								li.page-contest__input-text.input-text
+									label.page-contest__label.input-text__label(for="input-middle-name") Отчество:
+									input.input-text__input(type="text" id="input-middle-name" placeholder="Ну и отчество тоже")
 
-					fieldset.page-contest__achievements
-						legend.visually-hidden
+					fieldset.page-contest__achievements.form__fieldset
+						legend.page-contest__legend.form__legend Ваши безбашенные достижения в путешествии
 						div.container
 							div.page-contest__achievements-inner
-								h2.page-contest__achievements-title Ваши безбашенные достижения в путешествии
-								div.page-contest__checkbox-group
-									div.page-contest__checkbox
-										input.page-contest__checkbox-input(type="checkbox" id="checkbox-selfie" name="selfie-with-shark" checked)
-										label.page-contest__checkbox-label(for="checkbox-selfie") Сделал селфи с акулой
-									div.page-contest__checkbox
-										input.page-contest__checkbox-input(type="checkbox" id="checkbox-burned" name="burned-on-beach" checked)
-										label.page-contest__checkbox-label(for="checkbox-burned") Обгорел на пляже
-									div.page-contest__checkbox
-										input.page-contest__checkbox-input(type="checkbox" id="checkbox-norris" name="see-Chuck-Norris")
-										label.page-contest__checkbox-label(for="checkbox-norris") Видел Чака Норриса
-									div.page-contest__checkbox
-										input.page-contest__checkbox-input(type="checkbox" id="checkbox-souvenirs" name="buy-souvenirs")
-										label.page-contest__checkbox-label(for="checkbox-souvenirs") Накупил сувениров
-									div.page-contest__checkbox
-										input.page-contest__checkbox-input(type="checkbox" id="checkbox-tower" name="held-tower" checked)
-										label.page-contest__checkbox-label(for="checkbox-tower") Удержал башню
-									div.page-contest__checkbox
-										input.page-contest__checkbox-input(type="checkbox" id="checkbox-hotel" name="smash-hotel")
-										label.page-contest__checkbox-label(for="checkbox-hotel") Разгромил отель
+								ul.page-contest__input-list
+									li.page-contest__checkbox.checkbox
+										input.checkbox__input(type="checkbox" id="checkbox-selfie" name="selfie-with-shark" checked)
+										label.checkbox__label(for="checkbox-selfie") Сделал селфи с акулой
+									li.page-contest__checkbox.checkbox
+										input.checkbox__input(type="checkbox" id="checkbox-burned" name="burned-on-the-beach" checked)
+										label.checkbox__label(for="checkbox-burned") Обгорел на пляже
+									li.page-contest__checkbox.checkbox
+										input.checkbox__input(type="checkbox" id="checkbox-norris" name="see-Chuck-Norris")
+										label.checkbox__label(for="checkbox-norris") Видел Чака Норриса
+									li.page-contest__checkbox.checkbox
+										input.checkbox__input(type="checkbox" id="checkbox-souvenirs" name="buy-souvenirs")
+										label.checkbox__label(for="checkbox-souvenirs") Накупил сувениров
+									li.page-contest__checkbox.checkbox
+										input.checkbox__input(type="checkbox" id="checkbox-tower" name="held-tower" checked)
+										label.checkbox__label(for="checkbox-tower") Удержал башню
+									li.page-contest__checkbox.checkbox
+										input.checkbox__input(type="checkbox" id="checkbox-hotel" name="smash-hotel")
+										label.checkbox__label(for="checkbox-hotel") Разгромил отель
 
-					fieldset.page-contest__contacts
-						legend.visually-hidden
+					fieldset.form__fieldset
+						legend.form__legend.visually-hidden Контактная информация
 						div.container
 							div.page-contest__contacts-inner
-								div.page-contest__input-group
-									label.page-contest__form-label(for="input-tel") Номер телефона
-									input.page-contest__text-input(type="text" id="input-tel" placeholder="Номер, пожалуйста")
-								div.page-contest__input-group
-									label.page-contest__form-label(for="input-email") Адрес почты
-									input.page-contest__text-input(type="text" id="input-email" placeholder="Введите почту *")
+								ul.page-contest__input-list
+									li.page-contest__input-text.input-text
+										label.input-text__label(for="input-tel") Номер телефона
+										input.input-text__input(type="tel" id="input-tel" placeholder="Номер, пожалуйста")
+									li.page-contest__input-text.input-text
+										label.input-text__label(for="input-email") Адрес почты
+										input.input-text__input(type="email" id="input-email" placeholder="Введите почту *")
 
-					fieldset.page-contest__app
-						legend.visually-hidden
+					fieldset.page-contest__app.form__fieldset
+						legend.page-contest__legend.form__legend С каким приложением путешествовали?
 						div.container
 							div.page-contest__app-inner
-								h2.page-contest__app-title С каким приложением путешествовали?
-								div.page-contest__radio-group
-									div.page-contest__radio
-										input.page-contest__input-radio(type="radio" id="radio-ios" name="radio-app" checked)
-										label.page-contest__radio-label(for="radio-ios") Pink для iOS
-									div.page-contest__radio
-										input.page-contest__input-radio(type="radio" id="radio-android" name="radio-app")
-										label.page-contest__radio-label(for="radio-android") Pink для Android
-									div.page-contest__radio
-										input.page-contest__input-radio(type="radio" id="radio-winphone" name="radio-app")
-										label.page-contest__radio-label(for="radio-winphone") Windows Phone
+								ul.page-contest__input-list
+									li.page-contest__radio.radio
+										input.radio__input(type="radio" id="radio-ios" name="radio-app" checked)
+										label.radio__label(for="radio-ios") Pink для iOS
+									li.page-contest__radio.radio
+										input.radio__input(type="radio" id="radio-android" name="radio-app")
+										label.radio__label(for="radio-android") Pink для Android
+									li.page-contest__radio.radio
+										input.radio__input(type="radio" id="radio-winphone" name="radio-app")
+										label.radio__label(for="radio-winphone") Windows Phone
+
+					fieldset.form__fieldset
+						legend.page-contest__legend.form__legend.form__legend--textarea Опишите свои эмоции
+						div.container
+							div.page-contest__review-inner
+								div.textarea
+									label.visually-hidden(for="textarea") Текстовое поле
+									textarea.textarea__input(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях")
 
 					div.container
-						div.page-contest__review
-							div.page-contest__review-inner
-								h2.page-contest__review-title Опишите свои эмоции
-								label.visually-hidden(for="textarea") Текстовое поле
-								textarea.page-contest__textarea(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях")
-
 						div.page-contest__button-group
 							button.page-contest__button.button.button--form(type="submit") Отправить форму
 							p.page-contest__subtitle
-								span.page-contest__subtitle-star *&nbsp;
-								span — обязательные поля
+								span.page-contest__subtitle-remark &midast;&nbsp;
+								span.page-contest__subtitle-text — обязательные поля
 
 		footer.page-photo__footer.main-footer.container
 			div.page-photo__footer-inner.main-footer__inner

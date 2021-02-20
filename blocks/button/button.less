@@ -100,6 +100,23 @@
 		border-radius: 3px;
 		border-width: 0;
 		background-color: @green;
+
+		&:hover {
+			background-color: #1c9b5e;
+		}
+
+		&:active {
+			color: @white30;
+		}
+
+		&:disabled {
+			background-color: #e5e5e5;
+		}
+
+		&::selection {
+			color: @green;
+			background-color: #ffffff;
+		}
 	}
 }
 
