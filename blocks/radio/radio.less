@@ -1,0 +1,58 @@
+.radio {
+	display: flex;
+	align-items: center;
+
+	&__input {
+		margin: 0;
+		padding: 0;
+		min-width: 40px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+
+		border: 2px solid #e5e5e5;
+		border-radius: 50%;
+		background-color: #ffffff;
+		outline: none;
+		box-sizing: border-box;
+		appearance: none;
+		cursor: pointer;
+		transition-property: border-color;
+		transition-duration: @main-duration;
+
+		&:checked {
+			&::after {
+				content: '';
+				position: absolute;
+				top: 10.5px;
+				left: 10.5px;
+				width: 15px;
+				height: 15px;
+
+				background-color: @red;
+				border-radius: 50%;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			border-color: @darkblue;
+		}
+
+		&:active {
+			border-color: @red;
+		}
+	}
+
+	&__label {
+		padding-left: 30px;
+
+		font-size: 18px;
+		line-height: 30px;
+		
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
+	}
+}

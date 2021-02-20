@@ -1,0 +1,43 @@
+.textarea {
+	&__input {
+		margin: 0;
+		padding: 0;
+		padding-top: 15px;
+				padding-right: 20px;
+				padding-bottom: 15px;
+		padding-left: 20px;
+		min-height: 200px;
+		min-width: 280px;
+		width: 100%;
+
+		font-size: 18px;
+		line-height: 30px;
+		color: @darkblue;
+		border: 2px solid #e5e5e5;
+		border-radius: 3px;
+		outline: none;
+		appearance: none;
+		box-sizing: border-box;
+		resize: none;
+		transition-property: border-color;
+		transition-duration: @main-duration;
+
+		&::placeholder {
+			color: @darkblue;
+		}
+
+		&:hover,
+		&:focus {
+			border-color: @darkblue;
+		}
+
+		&:active {
+			border-color: @red;
+		}
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
+	}
+}
