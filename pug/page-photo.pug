@@ -186,12 +186,13 @@ html(lang="ru")
 									button.editor__button.button.button--post(type="button") Запостить
 									button.editor__button.button.button--cancel(type="button") Отмена
 
-		footer.page-photo__footer.main-footer.container
-			div.page-photo__footer-inner.main-footer__inner
-				div.page-photo__footer-logo.main-footer__logo
+		footer.main-footer.container
+			div.main-footer__inner
+				div.main-footer__logo
 					include ../blocks/footer-logo/footer-logo.pug
-				ul.page-photo__footer-social.social
-					include ../blocks/social/social.pug
+				div.main-footer__social
+					ul.social
+						include ../blocks/social/social.pug
 				div.main-footer__copyright.copyright
 					include ../blocks/copyright/copyright.pug
 
