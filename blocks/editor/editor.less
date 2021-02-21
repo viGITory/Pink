@@ -70,6 +70,10 @@
 			fill: @red;
 		}
 
+		&:focus {
+			fill: @darkblue;
+		}
+
 		&--crop {
 			fill: @red;
 		}
@@ -108,10 +112,8 @@
 		transition-property: background-color;
 		transition-duration: @main-duration;
 
-		&:hover {
-			background-color: @red;
-		}
-		
+		&:hover,
+		&:focus,
 		&:active {
 			background-color: @red;
 		}

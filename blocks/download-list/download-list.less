@@ -20,8 +20,7 @@
 	&__link {
 		display: inline-block;
 
-		outline-offset: 10px;
-		outline-color: #ffffff;
+		outline: none;
 		transition-property: opacity;
 		transition-duration: @main-duration;
 
@@ -38,7 +37,8 @@
 			transition-duration: @main-duration;
 		}
 
-		&:hover::after {
+		&:hover::after,
+		&:focus::after {
 			width: 100%;
 			transform: translateX(-50%);
 		}
