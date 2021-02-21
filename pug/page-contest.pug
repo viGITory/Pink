@@ -95,10 +95,10 @@ html(lang="ru")
 						ul.form__input-list.form__input-list--contacts
 							li.form__input-text.input-text.form__input-text--contacts
 								label.form__label.input-text__label.form__label--contacts(for="input-tel") Номер телефона
-								input.input-text__input(type="tel" id="input-tel" placeholder="Номер, пожалуйста")
+								input.input-text__input.form__input--tel(type="tel" id="input-tel" placeholder="Номер, пожалуйста")
 							li.form__input-text.input-text.form__input-text--contacts
 								label.form__label.input-text__label.form__label--contacts(for="input-email") Адрес почты
-								input.input-text__input(type="email" id="input-email" placeholder="Введите почту *")
+								input.input-text__input.form__input--email(type="email" id="input-email" placeholder="Введите почту *")
 
 				fieldset.form__fieldset.form__fieldset--app
 					legend.form__legend С каким приложением путешествовали?
@@ -119,7 +119,7 @@ html(lang="ru")
 					div.container
 						div.form__textarea.textarea
 							label.visually-hidden(for="textarea") Текстовое поле
-							textarea.textarea__input(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях")
+							textarea.form__textarea-input.textarea__input(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях")
 
 				div.form__button-group.container
 					button.form__button.button.button--form(type="submit") Отправить форму
@@ -127,12 +127,13 @@ html(lang="ru")
 						span.form__subtitle-remark &midast;&nbsp;
 						span.form__subtitle-text — обязательные поля
 
-		footer.page-photo__footer.main-footer.container
-			div.page-photo__footer-inner.main-footer__inner
-				div.page-photo__footer-logo.main-footer__logo
+		footer.main-footer.container
+			div.main-footer__inner
+				div.main-footer__logo
 					include ../blocks/footer-logo/footer-logo.pug
-				ul.page-photo__footer-social.social
-					include ../blocks/social/social.pug
+				div.main-footer__social
+					ul.social
+						include ../blocks/social/social.pug
 				div.main-footer__copyright.copyright
 					include ../blocks/copyright/copyright.pug
 

@@ -92,6 +92,10 @@
 		}
 	}
 
+	&__textarea-input {
+		min-height: 200px;
+	}
+
 	&__button-group {
 		display: flex;
 		flex-direction: column;
@@ -193,6 +197,20 @@
 			}
 		}
 
+		&__input {
+			&--tel {
+				background-image: url(blocks/form/icons/tel.svg);
+				background-repeat: no-repeat;
+				background-position: right 20px center;
+			}
+
+			&--email {
+				background-image: url(blocks/form/icons/email.svg);
+				background-repeat: no-repeat;
+				background-position: right 20px center;
+			}
+		}
+
 		&__label {
 			&--user-name {
 				margin-right: 20px;
@@ -228,6 +246,10 @@
 			margin-left: 40px;
 		}
 
+		&__textarea-input {
+			min-height: 190px;
+		}
+
 		&__button-group {
 			flex-direction: row;
 			justify-content: space-between;
@@ -235,6 +257,96 @@
 
 		&__button {
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media @desktop {
+	.form {
+		padding: 0 10px;
+		display: grid;
+		grid-template-columns: 435px 435px;
+		justify-content: space-between;
+		grid-row-gap: 55px;
+		max-width: 960px;
+
+		box-sizing: border-box;
+
+		&__fieldset {
+			margin-bottom: 0;
+
+			& > .container {
+				padding: 0;
+			}
+
+			&--user-name {
+				padding-bottom: 0;
+				align-self: flex-end;
+			}
+
+			&--app,
+			&--contacts,
+			&--achievements,
+			&--textarea {
+				margin-right: 0;
+				margin-left: 0;
+			}
+
+			&--contacts,
+			&--achievements,
+			&--textarea {
+				grid-column-start: 1;
+				grid-column-end: -1;
+			}
+		}
+
+		&__input-list {
+			&--app {
+				margin-left: 75px;
+			}
+
+			&--achievements {
+				display: grid;
+				grid-template-columns: repeat(3, auto);
+				grid-gap: 40px 45px;
+			}
+
+			&--contacts {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			&--contacts,
+			&--achievements {
+				margin-right: 60px;
+				margin-left: 60px;
+			}
+		}
+
+		&__input-text {
+			&--contacts {
+				margin-bottom: 0;
+				width: 375px;
+			}
+		}
+
+		&__checkbox {
+			margin-bottom: 0;
+		}
+
+		&__textarea {
+			margin-right: 60px;
+			margin-left: 60px;
+		}
+
+		&__textarea-input {
+			min-height: 125px;
+		}
+
+		&__button-group {
+			padding: 0;
+			grid-column-start: 1;
+			grid-column-end: -1;
 		}
 	}
 }

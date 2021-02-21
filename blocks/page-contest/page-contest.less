@@ -31,7 +31,7 @@
 	}
 
 	&__main-title {
-		margin: 0;
+		margin: 0 auto;
 		margin-bottom: 45px;
 		padding: 0;
 
@@ -48,9 +48,18 @@
 
 @media @tablet {
 	.page-contest {
+		&__promo {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+
 		&__promo-inner {
 			padding-top: 75px;
 			padding-bottom: 75px;
+		}
+
+		&__promo-title {
+			font-size: 50px;
 		}
 
 		&__main {
@@ -58,13 +67,32 @@
 			padding-bottom: 55px;
 		}
 
-		&__promo-title {
-			font-size: 50px;
+		&__main-title {
+			max-width: 505px;
+			font-size: 18px;
 		}
 
 		&__title {
 			margin-bottom: 70px;
 			font-size: 18px;
+		}
+	}
+}
+
+@media @desktop {
+	.page-contest {
+		&__promo {
+			padding-top: 70px;
+			padding-bottom: 90px;
+		}
+
+		&__main {
+			padding-bottom: 40px;
+		}
+
+		&__main-title {
+			margin-bottom: 75px;
+			max-width: 765px;
 		}
 	}
 }
