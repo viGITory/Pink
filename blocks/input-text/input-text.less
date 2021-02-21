@@ -1,7 +1,4 @@
-.input-text {
-	display: flex;
-	flex-direction: column;
-	
+.input-text {	
 	&__input {
 		padding: 0;
 		padding-left: 20px;
@@ -47,10 +44,7 @@
 		}
 	}
 
-	&__label {
-				margin-left: 20px;
-		margin-bottom: 10px;
-		
+	&__label {		
 		color: @red;
 		font-size: 14px;
 		line-height: 30px;
@@ -59,6 +53,11 @@
 		&::selection {
 			color: #ffffff;
 			background-color: @red;
+		}
+
+		&--contacts {
+			margin-top: 15px;
+			margin-left: 15px;
 		}
 	}
 }
