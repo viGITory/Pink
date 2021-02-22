@@ -1,0 +1,28 @@
+.button--form {
+	height: 65px;
+
+	color: #ffffff;
+	text-transform: uppercase;
+
+	border-radius: 3px;
+	border: none;
+	background-color: @green;
+
+	&::selection {
+		color: @green;
+		background-color: #ffffff;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: #1c9b5e;
+	}
+
+	&:active {
+		color: @white30;
+	}
+
+	&:disabled {
+		background-color: #e5e5e5;
+	}
+}

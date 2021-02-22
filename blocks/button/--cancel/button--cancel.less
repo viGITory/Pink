@@ -1,0 +1,26 @@
+.button--cancel {
+	height: 55px;
+
+	color: @darkblue10;
+	
+	border: 3px solid @darkblue10;
+	border-radius: 30px;
+	background-color: transparent;
+
+	&::selection {
+		color: #ffffff;
+		background-color: @darkblue;
+	}
+	
+	&:hover,
+	&:focus {
+		color: @darkblue30;
+		border-color: @darkblue30;
+	}
+
+	&:active {
+		color: @white30;
+		background-color: @darkblue30;
+		border: 0;
+	}
+}

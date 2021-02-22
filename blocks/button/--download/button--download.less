@@ -1,0 +1,24 @@
+.button--download {
+	height: 55px;
+
+	color: #ffffff;
+
+	border: 3px solid #ffffff;
+	border-radius: 30px;
+	background-color: transparent;
+
+	&::selection {
+		color: @darkblue;
+		background-color: #ffffff;
+	}
+	
+	&:hover,
+	&:focus {
+		color: @red;
+		background-color: #ffffff;
+	}
+
+	&:active {
+		color: @red30;
+	}
+}
