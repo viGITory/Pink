@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 55px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -15,119 +14,7 @@
 	overflow: hidden;
 	cursor: pointer;
 	box-sizing: border-box;
-	border: 3px solid;
-	border-radius: 30px;
-	background-color: transparent;
+	outline: none;
 	transition-property: color, background-color;
 	transition-duration: @main-duration;
-
-	// MODIFIERS
-	&--download {
-		width: 280px;
-
-		color: #ffffff;
-
-		border-color: #ffffff;
-		outline: none;
-
-		&:hover,
-		&:focus {
-			color: @red;
-			background-color: #ffffff;
-		}
-
-		&:active {
-			color: @red30;
-		}
-
-		&::selection {
-			color: @darkblue;
-			background-color: #ffffff;
-		}
-	}
-
-	&--post {
-		color: @red;
-		border-color: @red;
-		outline: none;
-
-		&:hover,
-		&:focus {
-			color: #ffffff;
-			background-color: @red;
-		}
-
-		&:active {
-			color: @white30;
-		}
-
-		&::selection {
-			color: #ffffff;
-			background-color: @red;
-		}
-	}
-
-	&--cancel {
-		color: @darkblue10;
-		border-color: @darkblue10;
-		outline: none;
-
-		&:hover,
-		&:focus {
-			color: @darkblue30;
-			border-color: @darkblue30;
-		}
-
-		&:active {
-			color: @white30;
-			background-color: @darkblue30;
-			border-color: transparent;
-		}
-
-		&::selection {
-			color: #ffffff;
-			background-color: @darkblue;
-		}
-	}
-
-	&--form {
-		color: #ffffff;
-		line-height: 30px;
-		text-transform: uppercase;
-
-		border-radius: 3px;
-		border-width: 0;
-		background-color: @green;
-
-		&:hover {
-			background-color: #1c9b5e;
-		}
-
-		&:active {
-			color: @white30;
-		}
-
-		&:disabled {
-			background-color: #e5e5e5;
-		}
-
-		&::selection {
-			color: @green;
-			background-color: #ffffff;
-		}
-	}
-}
-
-@media @tablet {
-	.button {
-		&--download {
-			width: 300px;
-		}
-	}
-}
-
-@media @desktop {
-	.button {
-		font-size: 21px;
-	}
 }

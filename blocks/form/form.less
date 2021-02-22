@@ -4,35 +4,6 @@
 	display: flex;
 	flex-direction: column;
 
-	&__fieldset {
-		margin: 0;
-		padding: 0;
-		padding-bottom: 40px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		border: 0;
-		box-sizing: border-box;
-		overflow: hidden;
-
-		&--app,
-		&--achievements {
-			background-color: #f2f2f2;
-		}
-
-		&--app,
-		&--contacts,
-		&--achievements,
-		&--textarea {
-			padding-top: 40px;
-		}
-
-		&--textarea {
-			padding-bottom: 50px;
-		}
-	}
-
 	&__legend {
 		margin: 0;
 		margin-bottom: 40px;
@@ -68,11 +39,6 @@
 		list-style-type: none;
 	}
 
-	&__label {
-		margin-left: 20px;
-		margin-bottom: 10px;
-	}
-
 	&__input-text {
 		margin-bottom: 25px;
 		display: flex;
@@ -83,12 +49,42 @@
 		}
 	}
 
+	&__input-text-label {
+		margin-left: 20px;
+		margin-bottom: 10px;
+
+		color: @red;
+		font-size: 14px;
+		line-height: 30px;
+		text-transform: uppercase;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @red;
+		}
+	}
+
 	&__checkbox,
 	&__radio {
 		margin-bottom: 40px;
+		display: flex;
+		align-items: center;
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	&__checkbox-label,
+	&__radio-label {
+		padding-left: 30px;
+
+		font-size: 18px;
+		line-height: 30px;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
 		}
 	}
 
@@ -134,49 +130,6 @@
 
 @media @tablet {
 	.form {
-		&__fieldset {
-			padding-bottom: 55px;
-
-			&--user-name {
-				order: -10;
-			}
-
-			&--app {
-				order: -3;
-			}
-
-			&--contacts {
-				padding-bottom: 35px;
-				order: -2;
-			}
-
-			&--textarea {
-				margin-bottom: 65px;
-			}
-
-			&--app,
-			&--achievements {
-				background-color: transparent;
-			}
-
-			&--app,
-			&--achievements,
-			&--contacts {
-				margin-bottom: 55px;
-			}
-
-			&--app,
-			&--achievements,
-			&--contacts,
-			&--textarea {
-				margin-right: 20px;
-				margin-left: 20px;
-				padding-top: 0;
-				border: 2px solid #e5e5e5;
-				border-radius: 3px;
-			}
-		}
-
 		&__input-list {
 			&--app,
 			&--contacts,
@@ -241,6 +194,10 @@
 			}
 		}
 
+		&__checkbox-label {
+			padding-left: 20px;
+		}
+
 		&__textarea {
 			margin-right: 40px;
 			margin-left: 40px;
@@ -271,34 +228,6 @@
 		max-width: 960px;
 
 		box-sizing: border-box;
-
-		&__fieldset {
-			margin-bottom: 0;
-
-			& > .container {
-				padding: 0;
-			}
-
-			&--user-name {
-				padding-bottom: 0;
-				align-self: flex-end;
-			}
-
-			&--app,
-			&--contacts,
-			&--achievements,
-			&--textarea {
-				margin-right: 0;
-				margin-left: 0;
-			}
-
-			&--contacts,
-			&--achievements,
-			&--textarea {
-				grid-column-start: 1;
-				grid-column-end: -1;
-			}
-		}
 
 		&__input-list {
 			&--app {

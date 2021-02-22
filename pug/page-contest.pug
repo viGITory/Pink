@@ -31,8 +31,7 @@ html(lang="ru")
 								svg(width="148" height="40")
 									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop")
 						div.main-header__button
-							button.button-burger(type="button") Кнопка меню
-								include ../blocks/button-burger/button-burger.pug
+							include ../blocks/button-burger/button-burger.pug
 						div.main-header__menu
 							nav.main-menu
 								ul.main-menu__list
@@ -51,70 +50,70 @@ html(lang="ru")
 		main.page-contest__main
 			div.container
 				p.page-contest__main-title Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-			form.form
-				fieldset.form__fieldset.form__fieldset--user-name
+			form.form(action="#" method="post")
+				fieldset.fieldset.fieldset--user-name
 					legend.form__legend.visually-hidden ФИО
 					div.container
 						ul.form__input-list.form__input-list--user-name
-							li.form__input-text.input-text
-								label.form__label.input-text__label.form__label--user-name(for="input-surname") Фамилия:
-								input.input-text__input(type="text" id="input-surname" placeholder="Укажите фамилию *")
-							li.form__input-text.input-text
-								label.form__label.input-text__label.form__label--user-name(for="input-name") Имя:
-								input.input-text__input(type="text" id="input-name" placeholder="Введите ваше имя *")
-							li.form__input-text.input-text
-								label.form__label.input-text__label.form__label--user-name(for="input-middle-name") Отчество:
-								input.input-text__input(type="text" id="input-middle-name" placeholder="Ну и отчество тоже")
+							li.form__input-text
+								label.form__input-text-label.form__label--user-name(for="input-surname") Фамилия:
+								input.input-text(type="text" id="input-surname" placeholder="Укажите фамилию *")
+							li.form__input-text
+								label.form__input-text-label.form__label--user-name(for="input-name") Имя:
+								input.input-text(type="text" id="input-name" placeholder="Введите ваше имя *")
+							li.form__input-text
+								label.form__input-text-label.form__label--user-name(for="input-middle-name") Отчество:
+								input.input-text(type="text" id="input-middle-name" placeholder="Ну и отчество тоже")
 
-				fieldset.form__fieldset.form__fieldset--achievements
+				fieldset.fieldset.fieldset--achievements
 					legend.form__legend Ваши безбашенные достижения в путешествии
 					div.container
 						ul.form__input-list.form__input-list--achievements
-							li.form__checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="checkbox-selfie" name="selfie-with-shark" checked)
-								label.checkbox__label(for="checkbox-selfie") Сделал селфи с акулой
-							li.form__checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="checkbox-burned" name="burned-on-the-beach" checked)
-								label.checkbox__label(for="checkbox-burned") Обгорел на пляже
-							li.form__checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="checkbox-norris" name="see-Chuck-Norris")
-								label.checkbox__label(for="checkbox-norris") Видел Чака Норриса
-							li.form__checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="checkbox-souvenirs" name="buy-souvenirs")
-								label.checkbox__label(for="checkbox-souvenirs") Накупил сувениров
-							li.form__checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="checkbox-tower" name="held-tower" checked)
-								label.checkbox__label(for="checkbox-tower") Удержал башню
-							li.form__checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="checkbox-hotel" name="smash-hotel")
-								label.checkbox__label(for="checkbox-hotel") Разгромил отель
+							li.form__checkbox
+								input.checkbox(type="checkbox" id="checkbox-selfie" name="selfie-with-shark" checked)
+								label.form__checkbox-label(for="checkbox-selfie") Сделал селфи с акулой
+							li.form__checkbox
+								input.checkbox(type="checkbox" id="checkbox-burned" name="burned-on-the-beach" checked)
+								label.form__checkbox-label(for="checkbox-burned") Обгорел на пляже
+							li.form__checkbox
+								input.checkbox(type="checkbox" id="checkbox-norris" name="see-Chuck-Norris")
+								label.form__checkbox-label(for="checkbox-norris") Видел Чака Норриса
+							li.form__checkbox
+								input.checkbox(type="checkbox" id="checkbox-souvenirs" name="buy-souvenirs")
+								label.form__checkbox-label(for="checkbox-souvenirs") Накупил сувениров
+							li.form__checkbox
+								input.checkbox(type="checkbox" id="checkbox-tower" name="held-tower" checked)
+								label.form__checkbox-label(for="checkbox-tower") Удержал башню
+							li.form__checkbox
+								input.checkbox(type="checkbox" id="checkbox-hotel" name="smash-hotel")
+								label.form__checkbox-label(for="checkbox-hotel") Разгромил отель
 
-				fieldset.form__fieldset.form__fieldset--contacts
+				fieldset.fieldset.fieldset--contacts
 					legend.form__legend.form__legend--contacts Контактная информация
 					div.container
 						ul.form__input-list.form__input-list--contacts
-							li.form__input-text.input-text.form__input-text--contacts
-								label.form__label.input-text__label.form__label--contacts(for="input-tel") Номер телефона
-								input.input-text__input.form__input--tel(type="tel" id="input-tel" placeholder="Номер, пожалуйста")
-							li.form__input-text.input-text.form__input-text--contacts
-								label.form__label.input-text__label.form__label--contacts(for="input-email") Адрес почты
-								input.input-text__input.form__input--email(type="email" id="input-email" placeholder="Введите почту *")
+							li.form__input-text.form__input-text--contacts
+								label.form__input-text-label.form__label--contacts(for="input-tel") Номер телефона
+								input.input-text.form__input--tel(type="tel" id="input-tel" placeholder="Номер, пожалуйста")
+							li.form__input-text.form__input-text--contacts
+								label.form__input-text-label.form__label--contacts(for="input-email") Адрес почты
+								input.input-text.form__input--email(type="email" id="input-email" placeholder="Введите почту *")
 
-				fieldset.form__fieldset.form__fieldset--app
+				fieldset.fieldset.fieldset--app
 					legend.form__legend С каким приложением путешествовали?
 					div.container
 						ul.form__input-list.form__input-list--app
-							li.form__radio.radio
-								input.radio__input(type="radio" id="radio-ios" name="radio-app" checked)
-								label.radio__label(for="radio-ios") Pink для iOS
-							li.form__radio.radio
-								input.radio__input(type="radio" id="radio-android" name="radio-app")
-								label.radio__label(for="radio-android") Pink для Android
-							li.form__radio.radio
-								input.radio__input(type="radio" id="radio-winphone" name="radio-app")
-								label.radio__label(for="radio-winphone") Windows Phone
+							li.form__radio
+								input.radio(type="radio" id="radio-ios" name="radio-app" checked)
+								label.form__radio-label(for="radio-ios") Pink для iOS
+							li.form__radio
+								input.radio(type="radio" id="radio-android" name="radio-app")
+								label.form__radio-label(for="radio-android") Pink для Android
+							li.form__radio
+								input.radio(type="radio" id="radio-winphone" name="radio-app")
+								label.form__radio-label(for="radio-winphone") Windows Phone
 
-				fieldset.form__fieldset.form__fieldset--textarea
+				fieldset.fieldset.fieldset--textarea
 					legend.form__legend.form__legend--textarea Опишите свои эмоции
 					div.container
 						div.form__textarea.textarea

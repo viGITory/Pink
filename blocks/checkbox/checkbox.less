@@ -1,68 +1,43 @@
-.checkbox {
-	display: flex;
-	align-items: center;
+.checkbox {	
+	margin: 0;
+	padding: 0;
+	min-width: 40px;
+	width: 40px;
+	height: 40px;
+	position: relative;
+
+	border: 2px solid #e5e5e5;
+	border-radius: 3px;
+	background-color: #ffffff;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition-property: border-color;
+	transition-duration: @main-duration;
+
+	&:checked {
+		&::after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 13px;
+			width: 8px;
+			height: 20px;
+
+			border: 2px solid @red;
+			border-left-width: 0;
+			border-top-width: 0;
+			transform: rotate(45deg);
+		}
+	}
 	
-	&__input {
-		margin: 0;
-		padding: 0;
-		min-width: 40px;
-		width: 40px;
-		height: 40px;
-		position: relative;
-
-		border: 2px solid #e5e5e5;
-		border-radius: 3px;
-		background-color: #ffffff;
-		appearance: none;
-		outline: none;
-		cursor: pointer;
-		box-sizing: border-box;
-		transition-property: border-color;
-		transition-duration: @main-duration;
-
-		&:checked {
-			&::after {
-				content: '';
-				position: absolute;
-				top: 5px;
-				left: 13px;
-				width: 8px;
-				height: 20px;
-
-				border: 2px solid @red;
-				border-left-width: 0;
-				border-top-width: 0;
-				transform: rotate(45deg);
-			}
-		}
-
-		&:hover,
-		&:focus {
-			border-color: @darkblue;
-		}
-
-		&:active {
-			border-color: @red;
-		}
+	&:hover,
+	&:focus {
+		border-color: @darkblue;
 	}
 
-	&__label {
-		padding-left: 30px;
-
-		font-size: 18px;
-		line-height: 30px;
-
-		&::selection {
-			color: #ffffff;
-			background-color: @darkblue;
-		}
-	}
-}
-
-@media @tablet {
-	.checkbox {
-		&__label {
-			padding-left: 20px;
-		}
+	&:active {
+		border-color: @red;
 	}
 }

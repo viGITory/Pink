@@ -24,15 +24,14 @@ html(lang="ru")
 						div.main-header__logo
 								include ../blocks/header-logo/header-logo.pug
 						div.main-header__button
-							button.button-burger(type="button") Кнопка «Бургер»
-								include ../blocks/button-burger/button-burger.pug
+							include ../blocks/button-burger/button-burger.pug
 						div.main-header__menu.main-menu
 							include ../blocks/main-menu/main-menu.pug
 			div.main-header__promo.container
 				div.main-header__promo-inner
 						h1.visually-hidden Приложение для применения фильтров на фотографиях
 						p.main-header__promo-title Взгляните на жизнь иначе!
-						a.button.button--download(href="#") Скачать приложение
+						a.main-header__download-button.button.button--download(href="#") Скачать приложение
 						div.main-header__download-list
 							include ../blocks/download-list/download-list.pug
 						p.main-header__download-description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
