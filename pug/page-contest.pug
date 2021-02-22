@@ -57,13 +57,13 @@ html(lang="ru")
 						ul.form__input-list.form__input-list--user-name
 							li.form__input-text
 								label.form__input-text-label.form__label--user-name(for="input-surname") Фамилия:
-								input.input-text(type="text" id="input-surname" placeholder="Укажите фамилию *")
+								input.input-text.input-text--user-name(type="text" id="input-surname" placeholder="Укажите фамилию *")
 							li.form__input-text
 								label.form__input-text-label.form__label--user-name(for="input-name") Имя:
-								input.input-text(type="text" id="input-name" placeholder="Введите ваше имя *")
+								input.input-text.input-text--user-name(type="text" id="input-name" placeholder="Введите ваше имя *")
 							li.form__input-text
 								label.form__input-text-label.form__label--user-name(for="input-middle-name") Отчество:
-								input.input-text(type="text" id="input-middle-name" placeholder="Ну и отчество тоже")
+								input.input-text.input-text--user-name(type="text" id="input-middle-name" placeholder="Ну и отчество тоже")
 
 				fieldset.fieldset.fieldset--achievements
 					legend.form__legend Ваши безбашенные достижения в путешествии
@@ -94,10 +94,10 @@ html(lang="ru")
 						ul.form__input-list.form__input-list--contacts
 							li.form__input-text.form__input-text--contacts
 								label.form__input-text-label.form__label--contacts(for="input-tel") Номер телефона
-								input.input-text.form__input--tel(type="tel" id="input-tel" placeholder="Номер, пожалуйста")
+								input.input-text.input-text--tel(type="tel" id="input-tel" placeholder="Номер, пожалуйста")
 							li.form__input-text.form__input-text--contacts
 								label.form__input-text-label.form__label--contacts(for="input-email") Адрес почты
-								input.input-text.form__input--email(type="email" id="input-email" placeholder="Введите почту *")
+								input.input-text.input-text--email(type="email" id="input-email" placeholder="Введите почту *")
 
 				fieldset.fieldset.fieldset--app
 					legend.form__legend С каким приложением путешествовали?
