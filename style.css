@@ -37,12 +37,8 @@ input[type='radio'].visually-hidden {
   background-repeat: no-repeat, no-repeat;
   background-size: auto 285px, cover;
 }
-.page__features {
-  background-color: #f2f2f2;
-}
-.page__research {
-  background-color: #f2f2f2;
-}
+.page__features,
+.page__research,
 .page__price {
   background-color: #f2f2f2;
 }
@@ -50,15 +46,10 @@ input[type='radio'].visually-hidden {
 .page__footer {
   display: none;
 }
-.page__footer-inner {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
 @media (min-width: 660px) {
   .page__header {
     background-image: url(blocks/main-header/img/iphone-tablet.png), url(blocks/main-header/img/back-desktop.jpg);
     background-position: center bottom, center center;
-    background-repeat: no-repeat, no-repeat;
     background-size: auto auto, cover;
   }
   .page__features {
@@ -68,21 +59,10 @@ input[type='radio'].visually-hidden {
   .page__footer {
     display: block;
   }
-  .page__footer-inner {
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
 }
 @media (min-width: 960px) {
   .page__header {
     background-image: url(blocks/main-header/img/iphone-desktop.png), url(blocks/main-header/img/back-desktop.jpg);
-    background-position: center bottom, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto auto, cover;
-  }
-  .page__footer-inner {
-    padding-top: 70px;
-    padding-bottom: 70px;
   }
 }
 .main-header {
@@ -1208,6 +1188,12 @@ input[type='radio'].visually-hidden {
     margin-bottom: 0;
   }
 }
+@media (min-width: 960px) {
+  .main-footer__inner {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
 .social {
   margin: 0;
   padding: 0;
@@ -1909,16 +1895,12 @@ input[type='radio'].visually-hidden {
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  .page-contest__promo-inner {
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
   .page-contest__promo-title {
     font-size: 50px;
   }
   .page-contest__main {
     padding-top: 95px;
-    padding-bottom: 55px;
+    padding-bottom: 50px;
   }
   .page-contest__main-title {
     max-width: 505px;
@@ -1935,7 +1917,7 @@ input[type='radio'].visually-hidden {
     padding-bottom: 90px;
   }
   .page-contest__main {
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
   .page-contest__main-title {
     margin-bottom: 75px;
@@ -2041,6 +2023,9 @@ input[type='radio'].visually-hidden {
 .form__subtitle-remark::selection {
   color: #ffffff;
   background-color: #d22856;
+}
+.form__subtitle-text {
+  text-transform: uppercase;
 }
 .form__subtitle-text::selection {
   color: #ffffff;
@@ -2375,7 +2360,7 @@ input[type='radio'].visually-hidden {
 .radio:active {
   border-color: #d22856;
 }
-.textarea__input {
+.textarea {
   margin: 0;
   padding: 0;
   padding-top: 15px;
@@ -2395,21 +2380,21 @@ input[type='radio'].visually-hidden {
   transition-property: border-color;
   transition-duration: 0.2s;
 }
-.textarea__input:hover,
-.textarea__input:focus {
+.textarea:hover,
+.textarea:focus {
   border-color: #283645;
 }
-.textarea__input:active {
+.textarea:active {
   border-color: #d22856;
 }
-.textarea__input:focus::placeholder {
+.textarea:focus::placeholder {
   color: #e5e5e5;
 }
-.textarea__input::placeholder {
+.textarea::placeholder {
   font-family: 'Open Sans', Arial, sans-serif;
   color: #283645;
 }
-.textarea__input::selection {
+.textarea::selection {
   color: #ffffff;
   background-color: #283645;
 }

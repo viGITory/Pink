@@ -14,14 +14,8 @@
 		background-size: auto 285px, cover;
 	}
 
-	&__features {
-		background-color: #f2f2f2;
-	}
-
-	&__research {
-		background-color: #f2f2f2;
-	}
-
+	&__features,
+	&__research,
 	&__price {
 		background-color: #f2f2f2;
 	}
@@ -30,11 +24,6 @@
 	&__footer {
 		display: none;
 	}
-
-	&__footer-inner {
-		padding-top: 40px;
-		padding-bottom: 40px;
-	}
 }
 
 @media @tablet {
@@ -42,7 +31,6 @@
 		&__header {
 			background-image: url(blocks/main-header/img/iphone-tablet.png), url(blocks/main-header/img/back-desktop.jpg);
 			background-position: center bottom, center center;
-			background-repeat: no-repeat, no-repeat;
 			background-size: auto auto, cover;
 		}
 
@@ -54,11 +42,6 @@
 		&__footer {
 			display: block;
 		}
-
-		&__footer-inner {
-			padding-top: 35px;
-			padding-bottom: 35px;
-		}
 	}
 }
 
@@ -66,14 +49,6 @@
 	.page {
 		&__header {
 			background-image: url(blocks/main-header/img/iphone-desktop.png), url(blocks/main-header/img/back-desktop.jpg);
-			background-position: center bottom, center center;
-			background-repeat: no-repeat, no-repeat;
-			background-size: auto auto, cover;
-		}
-
-		&__footer-inner {
-			padding-top: 70px;
-			padding-bottom: 70px;
 		}
 	}
 }

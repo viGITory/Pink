@@ -116,9 +116,9 @@ html(lang="ru")
 				fieldset.fieldset.fieldset--textarea
 					legend.form__legend.form__legend--textarea Опишите свои эмоции
 					div.container
-						div.form__textarea.textarea
+						div.form__textarea
 							label.visually-hidden(for="textarea") Текстовое поле
-							textarea.form__textarea-input.textarea__input(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях")
+							textarea.form__textarea-input.textarea(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях")
 
 				div.form__button-group.container
 					button.form__button.button.button--form(type="submit") Отправить форму
@@ -131,9 +131,8 @@ html(lang="ru")
 				div.main-footer__logo
 					include ../blocks/footer-logo/footer-logo.pug
 				div.main-footer__social
-					ul.social
-						include ../blocks/social/social.pug
-				div.main-footer__copyright.copyright
+					include ../blocks/social/social.pug
+				div.main-footer__copyright
 					include ../blocks/copyright/copyright.pug
 
 		script(src="scripts/scripts.js", type="module")
