@@ -21,15 +21,7 @@ html(lang="ru")
 				div.container
 					div.main-header__nav-inner
 						div.main-header__logo
-							a.logo.logo--header.logo--header-mobile(href="index.html") Логотип для смартфонов
-								svg(width="75" height="22")
-									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile")
-							a.logo.logo--header.logo--header-tablet(href="index.html") Логотип для планшетов
-								svg(width="148" height="40")
-									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet")
-							a.logo.logo--header.logo--header-desktop(href="index.html") Логотип для компьютеров
-								svg(width="148" height="40")
-									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop")
+							include ../blocks/header-logo/header-logo.pug
 						div.main-header__button
 							include ../blocks/button-burger/button-burger.pug
 						div.main-header__menu
@@ -63,7 +55,7 @@ html(lang="ru")
 								span.user-post__time (5 минут назад)
 							p.user-post__text.user-post__text--special Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
 							p.page-photo__special-like.user-post__like
-								button.user-post__like-button.button-like Кнопка «Лайк»
+								button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
 									include ../blocks/button-like/button-like.pug
 								span.user-post__like-text Нравится:&nbsp;
 								span.user-post__like-count 215
@@ -79,7 +71,7 @@ html(lang="ru")
 									span.user-post__time (5 часов назад)
 									p.user-post__text Вчера он на луну летал, сегодня в руки к нам попал.
 									p.user-post__like
-										button.user-post__like-button.button-like Кнопка «Лайк»
+										button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
 											include ../blocks/button-like/button-like.pug
 										span.user-post__like-text Нравится:&nbsp;
 										span.user-post__like-count 356
@@ -93,7 +85,7 @@ html(lang="ru")
 									span.user-post__time (12 часов назад)
 								p.user-post__text Соседи будут рады!
 								p.user-post__like
-									button.user-post__like-button.button-like Кнопка «Лайк»
+									button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
 										include ../blocks/button-like/button-like.pug
 									span.user-post__like-text Нравится:&nbsp;
 									span.user-post__like-count 666
@@ -107,7 +99,7 @@ html(lang="ru")
 									span.user-post__time (20 часов назад)
 								p.user-post__text Здесь могла быть ваша цитата о высоком и вечном.
 								p.user-post__like
-									button.user-post__like-button.button-like Кнопка «Лайк»
+									button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
 										include ../blocks/button-like/button-like.pug
 									span.user-post__like-text Нравится:&nbsp;
 									span.user-post__like-count 215
@@ -121,7 +113,7 @@ html(lang="ru")
 									span.user-post__time (25 часов назад)
 								p.user-post__text Самая кубанская в мире!
 								p.user-post__like
-									button.user-post__like-button.button-like Кнопка «Лайк»
+									button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
 										include ../blocks/button-like/button-like.pug
 									span.user-post__like-text Нравится:&nbsp;
 									span.user-post__like-count 4
@@ -135,7 +127,7 @@ html(lang="ru")
 									span.user-post__time (40 часов назад)
 								p.user-post__text Где снег-то?
 								p.user-post__like
-									button.user-post__like-button.button-like Кнопка «Лайк»
+									button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
 										include ../blocks/button-like/button-like.pug
 									span.user-post__like-text Нравится:&nbsp;
 									span.user-post__like-count 150
@@ -149,7 +141,7 @@ html(lang="ru")
 									span.user-post__time (45 часов назад)
 								p.user-post__text Всем GM и взаимные лайки!
 								p.user-post__like
-									button.user-post__like-button.button-like Кнопка «Лайк»
+									button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
 										include ../blocks/button-like/button-like.pug
 									span.user-post__like-text Нравится:&nbsp;
 									span.user-post__like-count 2560
@@ -167,20 +159,20 @@ html(lang="ru")
 							div.editor__tools
 								ul.editor__tools-list
 									li.editor__tools-item
-										button.editor__tools-button.editor__tools-button--crop Кнопка «Обрезать»
+										button.editor__tools-button.editor__tools-button--crop(type="button" aria-label="Кнопка «Обрезать»")
 											include ../blocks/button-cut/button-cut.pug
 										div.editor__tools-range.editor__tools-range-crop
-											button.editor__range-button.editor__range-button-crop(type="button") Кнопка «Ползунок»
+											button.editor__range-button.editor__range-button-crop(type="button" aria-label="Кнопка «Ползунок»")
 									li.editor__tools-item
-										button.editor__tools-button Кнопка «Заливка»
+										button.editor__tools-button(type="button" aria-label="Кнопка «Заливка»")
 											include ../blocks/button-fill/button-fill.pug
 										div.editor__tools-range.editor__tools-range-fill
-											button.editor__range-button.editor__range-button-fill(type="button") Кнопка «Ползунок»
+											button.editor__range-button.editor__range-button-fill(type="button" aria-label="Кнопка «Ползунок»")
 									li.editor__tools-item
-										button.editor__tools-button Кнопка «Контраст»
+										button.editor__tools-button(type="button" aria-label="Кнопка «Контраст»")
 											include ../blocks/button-contrast/button-contrast.pug
 										div.editor__tools-range.editor__tools-range-contrast
-											button.editor__range-button.editor__range-button-contrast(type="button") Кнопка «Ползунок»
+											button.editor__range-button.editor__range-button-contrast(type="button" aria-label="Кнопка «Ползунок»")
 								div.editor__button-group
 									button.editor__button.button.button--post(type="button") Запостить
 									button.editor__button.button.button--cancel(type="button") Отмена

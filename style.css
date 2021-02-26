@@ -449,7 +449,6 @@ input[type='radio'].visually-hidden {
 .download-list__item {
   margin-right: 35px;
   position: relative;
-  font-size: 0;
 }
 .download-list__item:last-child {
   margin-right: 0;
@@ -714,7 +713,6 @@ input[type='radio'].visually-hidden {
   padding: 0;
   height: 41px;
   display: none;
-  font-size: 0;
   fill: rgba(40, 54, 69, 0.3);
   border: 0;
   box-sizing: border-box;
@@ -1229,7 +1227,6 @@ input[type='radio'].visually-hidden {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0;
   text-decoration: none;
   fill: #d22856;
   box-sizing: border-box;
@@ -1541,7 +1538,6 @@ input[type='radio'].visually-hidden {
   width: 13px;
   height: 13px;
   order: -1;
-  font-size: 0;
   border: 0;
   outline: none;
   cursor: pointer;
@@ -1685,7 +1681,6 @@ input[type='radio'].visually-hidden {
   left: 79.16%;
   width: 15px;
   height: 15px;
-  font-size: 0;
   border-radius: 50%;
   border: 2px solid #d22856;
   background-color: #f2f2f2;

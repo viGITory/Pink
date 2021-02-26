@@ -21,15 +21,7 @@ html(lang="ru")
 				div.container
 					div.main-header__nav-inner
 						div.main-header__logo
-							a.logo.logo--header.logo--header-mobile(href="index.html") Логотип для смартфонов
-								svg(width="75" height="22")
-									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile")
-							a.logo.logo--header.logo--header-tablet(href="index.html") Логотип для планшетов
-								svg(width="148" height="40")
-									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet")
-							a.logo.logo--header.logo--header-desktop(href="index.html") Логотип для компьютеров
-								svg(width="148" height="40")
-									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop")
+							include ../blocks/header-logo/header-logo.pug
 						div.main-header__button
 							include ../blocks/button-burger/button-burger.pug
 						div.main-header__menu
@@ -52,7 +44,7 @@ html(lang="ru")
 				p.page-contest__main-title Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
 			form.form(action="#" method="post")
 				fieldset.fieldset.fieldset--user-name
-					legend.form__legend.visually-hidden ФИО
+					legend.form__legend.visually-hidden(aria-label="ФИО")
 					div.container
 						ul.form__input-list.form__input-list--user-name
 							li.form__input-text
@@ -89,7 +81,7 @@ html(lang="ru")
 								label.form__checkbox-label(for="checkbox-hotel") Разгромил отель
 
 				fieldset.fieldset.fieldset--contacts
-					legend.form__legend.form__legend--contacts Контактная информация
+					legend.form__legend.form__legend--contacts(aria-label="Контактная информация") Контактная информация
 					div.container
 						ul.form__input-list.form__input-list--contacts
 							li.form__input-text.form__input-text--contacts
@@ -117,8 +109,7 @@ html(lang="ru")
 					legend.form__legend.form__legend--textarea Опишите свои эмоции
 					div.container
 						div.form__textarea
-							label.visually-hidden(for="textarea") Текстовое поле
-							textarea.form__textarea-input.textarea(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях")
+							textarea.form__textarea-input.textarea(id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях" aria-label="Текстовое поле ввода")
 
 				div.form__button-group.container
 					button.form__button.button.button--form(type="submit") Отправить форму

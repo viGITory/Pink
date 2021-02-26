@@ -67,7 +67,7 @@ html(lang="ru")
 				div.container
 					div.reviews__inner
 						h2.visually-hidden Отзывы пользователей
-						button.reviews__arrow(type="button") Предыдущий отзыв
+						button.reviews__arrow(type="button" aria-label="Предыдущий отзыв")
 							svg(width="22", height="41")
 								use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-left")
 						article.reviews__user-review.user-review
@@ -82,7 +82,7 @@ html(lang="ru")
 								span.slider__item
 								span.slider__item.slider__item--checked
 								span.slider__item
-						button.reviews__arrow(type="button") Следующий отзыв
+						button.reviews__arrow(type="button" aria-label="Следующий отзыв")
 							svg(width="22", height="41")
 								use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-right")
 			section.price
@@ -99,13 +99,13 @@ html(lang="ru")
 						div.contacts__group
 							address.contacts__group-item
 								span.contacts__item-title Звоните
-								a.contacts__link(href='tel:+7(999)999-99-99') +7 (999) 999-99-99
+								a.contacts__link(href="tel:+7(999)999-99-99") +7 (999) 999-99-99
 							address.contacts__group-item.contacts__group-item--email
 								span.contacts__item-title Пишите:
-								a.contacts__link.contacts__link--email(href='mailto:example@example.ru') example@example.com
+								a.contacts__link.contacts__link--email(href="mailto:example@example.ru") example@example.com
 							address.contacts__group-item
 								span.contacts__item-title Приезжайте в гости:
-								a.contacts__link(href='#') ул. Большая Конюшенная, 19/8
+								a.contacts__link(href="#") ул. Большая Конюшенная, 19/8
 				div.contacts__map
 					div.contacts__map-inner
 						img.contacts__map-image(src="blocks/contacts/img/map.jpg" width="1422" height="746" alt="Наш адрес")
