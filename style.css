@@ -2987,6 +2987,9 @@ input[type='radio'].visually-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   resize: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   -webkit-transition-property: border-color;
   -o-transition-property: border-color;
   transition-property: border-color;
