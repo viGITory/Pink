@@ -24,6 +24,8 @@
 		color: transparent;
 		text-decoration: none;
 		outline: none;
+		transition-property: all;
+		transition-duration: @main-duration;
 	}
 
 	&__to-main-anchor:focus {
@@ -62,6 +64,7 @@
 
 		font-size: 40px;
 		font-weight: 300;
+		line-height: 1.225;
 		text-align: center;
 
 		&::selection {
@@ -131,7 +134,7 @@
 		}
 
 		&__promo-inner {
-			padding-top: 90px;
+			padding-top: 91px;
 			padding-bottom: 110px;
 			max-width: 300px;
 		}
@@ -145,13 +148,14 @@
 		}
 
 		&__download-list {
-			margin-top: 45px;
-			margin-bottom: 35px;
+			margin-top: 43px;
+			margin-bottom: 34px;
 		}
 
 		&__download-description {
 			max-width: 300px;
 			font-size: 18px;
+			line-height: 1.33;
 		}
 	}
 }

@@ -11,6 +11,16 @@
 	transition-property: fill;
 	transition-duration: @main-duration;
 
+	&__text {
+		font-size: 14px;
+		line-height: 1.28;
+
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
+		}
+	}
+	
 	&:visited {
 		font-size: inherit;
 	}
@@ -24,15 +34,6 @@
 		fill: @darkblue30;
 	}
 
-	&__text {
-		font-size: 14px;
-
-		&::selection {
-			color: #ffffff;
-			background-color: @darkblue;
-		}
-	}
-
 	&__icon {
 		margin-right: -7px;
 		outline: none;
@@ -43,6 +44,7 @@
 	.copyright {
 		&__text {
 			font-size: 18px;
+			line-height: 1;
 		}
 	}
 }
