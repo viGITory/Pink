@@ -1,7 +1,7 @@
 .contacts {
 	&__inner {
 		padding-top: 42px;
-		padding-bottom: 40px;
+		padding-bottom: 39px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -9,9 +9,9 @@
 
 	&__title {
 		margin: 0;
-		margin-bottom: 31px;
-		// margin-left: 1px;
+		margin-bottom: 32px;
 		padding: 0;
+		max-width: 300px; // PP
 
 		font-size: 24px;
 		font-weight: 300;
@@ -37,13 +37,11 @@
 		&:last-child {
 			margin-top: 4px;
 			margin-bottom: 0;
-			// margin-left: 2px;
 			max-width: 240px;
 		}
 	}
 
 	&__item-title {
-		// margin-left: 1px;
 		display: block;
 		font-size: 18px;
 		font-weight: 700;
@@ -56,10 +54,9 @@
 	}
 
 	&__link {
-		// margin-left: 2px;
 		font-size: 24px;
 		font-weight: 300;
-		line-height: 1.19;
+		line-height: 1.1;
 		color: @red;
 		text-decoration: none;
 
@@ -86,12 +83,16 @@
 			background-color: @darkblue;
 		}
 
-		// &--email {
-		// 	margin-left: 6px;
-		// }
+		&--email {
+			line-height: 1.2;
 
-		&--email:hover {
+			&:hover {
 			text-decoration: underline;
+			}
+		}
+
+		&--address {
+			line-height: 1.2;
 		}
 	}
 
