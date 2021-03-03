@@ -139,32 +139,35 @@
 @media @tablet {
 	.price-table {
 		&__header-cell {
-			min-width: 155px;
+			min-width: 154px;
 			height: 77px;
+
+			line-height: 1.7;
 
 			&:first-child {
 				display: block;
 			}
 
 			&--special::before {
-				top: 3px;
-				left: -43px;
+				top: 4px;
+				left: -41px;
+				height: 29px;
 			}
 		}
 
 		&__cell {
-			height: 47px;
+			height: 46.5px;
 
 			font-size: 0;
 			text-transform: none;
 			text-align: center;
 
 			&:first-child {
-				padding-left: 15px;
+				padding-left: 12px;
 				display: table-cell;
 
 				font-size: 14px;
-				line-height: 2.14;
+				line-height: 1.9;
 				text-align: left;
 			}
 		}
@@ -187,7 +190,9 @@
 	.price-table {
 		&__header-cell {
 			min-width: 235px;
-			height: 100px;
+			height: 95px;
+
+			line-height: 2.4;
 
 			&--special::before {
 				top: 13px;
@@ -204,9 +209,11 @@
 		}
 
 		&__cell {
-			height: 60px;
+			height: 62px;
 
 			&:first-child {
+				padding-left: 21px;
+
 				font-size: 18px;
 			}
 		}

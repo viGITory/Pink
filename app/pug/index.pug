@@ -116,9 +116,9 @@ html(lang="ru")
 			div.main-footer__inner
 				div.main-footer__logo
 					include ../blocks/footer-logo/footer-logo.pug
-
-				include ../blocks/social/social.pug
-				
-				include ../blocks/copyright/copyright.pug
+				div.main-footer__social
+					include ../blocks/social/social.pug
+				div.main-footer__copyright
+					include ../blocks/copyright/copyright.pug
 
 		script(src="scripts/scripts.js", type="module")

@@ -19,10 +19,11 @@
 @media @tablet {
 	.main-footer {
 		&__inner {
-			padding-top: 35px;
-			padding-bottom: 35px;
+			padding-top: 36px;
+			padding-bottom: 0;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: stretch;
+			align-items: stretch;
 		}
 
 		&__logo {
@@ -30,7 +31,14 @@
 		}
 
 		&__social {
+			margin-top: 3px;
 			margin-bottom: 0;
+			margin-left: 74px;
+		}
+
+		&__copyright {
+			margin-top: 5px;
+			margin-left: auto;
 		}
 	}
 }
@@ -40,6 +48,15 @@
 		&__inner {
 			padding-top: 70px;
 			padding-bottom: 70px;
+		}
+
+		&__social {
+			margin-top: 5px;
+			margin-left: 233px;
+		}
+
+		&__copyright {
+			margin-top: 5px;
 		}
 	}
 }
