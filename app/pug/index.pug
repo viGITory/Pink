@@ -11,6 +11,9 @@ html(lang="ru")
 		link(rel="icon" href="#" type="image/png" sizes="32x32")
 		link(rel="stylesheet" href="style.css")
 
+		link(rel="preload" href="style.css" as="style")
+		link(rel="preload" href="scripts/scripts.js" as="script")
+
 	body.page
 		include ../blocks/svg/svg.pug
 
