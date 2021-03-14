@@ -2,6 +2,32 @@
 	display: flex;
 	flex-direction: column;
 
+	&--special {
+		margin-bottom: 20px;
+		max-width: 1200px;
+		position: relative;
+
+		&::after {
+			content: 'Панорама дня';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 140px;
+			height: 35px;
+
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 2.90;
+			color: #ffffff;
+			text-transform: uppercase;
+			text-align: center;
+			vertical-align: middle;
+
+			background-color: @red;
+			overflow: hidden;
+		}
+	}
+
 	&__photo {
 		width: 100%;
 		height: 100%;
@@ -12,6 +38,11 @@
 
 		&::selection {
 			background-color: @darkblue;
+		}
+
+		&--special {
+			min-height: 136px;
+			max-height: 136px;
 		}
 	}
 
@@ -81,58 +112,50 @@
 			color: #ffffff;
 			background-color: @red;
 		}
+	}
 
-		&-button {
-			margin: 0;
-			padding: 0;
-			width: 13px;
-			height: 13px;
-			order: -1;
+	&__like-text {
+		padding-left: 20px;
 
-			border: 0;
-			outline: none;
-			cursor: pointer;
-			overflow: hidden;
-			background-color: transparent;
-
-			& > svg {
-				transition-property: fill;
-				transition-duration: @main-duration;
-			}
-			
-			&:hover > svg {
-				fill: @darkblue;
-			}
-
-			&:focus > svg {
-				fill: @darkblue;
-			}
+		&::selection {
+			color: #ffffff;
+			background-color: @red;
 		}
+	}
 
-		&-text {
-			padding-left: 20px;
-
-			&::selection {
-				color: #ffffff;
-				background-color: @red;
-			}
+	&__like-count {
+		&::selection {
+			color: #ffffff;
+			background-color: @red;
 		}
+	}
 
-		&-count {
-			&::selection {
-				color: #ffffff;
-				background-color: @red;
-			}
-		}
+	&__like-button {
+		order: -1;
 	}
 }
 
 @media @tablet {
 	.user-post {
 		min-height: 455px;
-		
+
+		&--special {
+			margin-bottom: 50px;
+
+			&::after {
+				top: 57px;
+				right: 20px;
+				left: auto;
+			}
+		}
+
 		&__photo {
 			max-height: 300px;
+
+			&--special {
+				min-height: 509px;
+				max-height: 509px;
+			}
 		}
 
 		&__inner {
@@ -140,6 +163,10 @@
 			padding-right: 31px;
 			padding-bottom: 22px;
 			padding-left: 27px;
+
+			&--special {
+				padding-bottom: 12px;
+			}
 		}
 
 		&__text  {
@@ -147,28 +174,65 @@
 		}
 
 		&__like {
-			&-button {
-				margin-left: auto;
-				order: 1;
+			&--special {
+				position: absolute;
+				right: 29px;
 			}
+		}
 
-			&-text {
-				padding-left: 0;
-			}
+		&__like-button {
+			margin-left: auto;
+			order: 1;
+		}
 
-			&-count {
-				padding-right: 17px;
+		&__like-text {
+			padding-left: 0;
+
+			&--special {
+				margin-top: 1px;
 			}
+		}
+
+		&__like-count {
+			padding-right: 17px;
 		}
 	}
 }
 
 @media @desktop {
 	.user-post {
-				min-height: 554px;
+		min-height: 555px;
+
+		&--special {
+			margin: 0 auto;
+			margin-bottom: 49px;
+
+			&::after {
+				height: 36px;
+				top: 54px;
+				right: 130px;
+			}
+		}
 
 		&__photo {
 			max-height: 399px;
+
+			&--special {
+				min-height: 506px;
+				max-height: 506px;
+			}
+		}
+
+		&__like {
+			&--special {
+				right: 31px;
+			}
+		}
+
+		&__like-count {
+			&--special {
+				padding-right: 18px;
+			}
 		}
 	}
 }

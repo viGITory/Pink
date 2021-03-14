@@ -48,7 +48,6 @@
 	}
 
 	&__tools-button {
-		margin: 0;
 		margin-bottom: 37px;
 		padding: 0;
 
@@ -66,20 +65,20 @@
 			fill: @darkblue50;
 		}
 
-		&:active {
-			fill: @red;
-		}
-
 		&:focus {
 			fill: @darkblue;
 		}
 
-		&--crop {
+		&:active {
+			fill: @red;
+		}
+
+		&--cut {
 			fill: @red;
 		}
 	}
 
-	&__tools-range {
+	&__range {
 		width: 240px;
 		height: 2px;
 		position: absolute;
@@ -87,8 +86,8 @@
 
 		background-color: @darkblue;
 
-		&-fill,
-		&-contrast {
+		&--fill,
+		&--contrast {
 			display: none;
 		}
 	}
@@ -144,9 +143,9 @@
 			align-items: stretch;
 		}
 
-			&__image {
-		height: 400px;
-	}
+		&__image {
+			height: 400px;
+		}
 
 		&__tools {
 			margin-top: 8px;
@@ -190,30 +189,27 @@
 			}
 		}
 
-		&__tools-range {
+		&__range {
 			width: 200px;
 			position: relative;
 			left: 0;
 
-			&-fill {
-				display: block;
-			}
-
-			&-contrast {
+			&--fill,
+			&--contrast {
 				display: block;
 			}
 		}
 
 		&__range-button {
-			&-crop {
+			&--cut {
 				left: 72.5%;
 			}
 
-			&-fill {
+			&--fill {
 				left: 12%;
 			}
 
-			&-contrast {
+			&--contrast {
 				left: 47.5%;
 			}
 		}
@@ -249,10 +245,6 @@
 			margin-top: 0;
 		}
 
-		&__tools-list {
-			// margin-top: 1px;
-		}
-
 		&__tools-item {
 			padding-top: 11px;
 			padding-right: 30px;
@@ -269,12 +261,12 @@
 			}
 		}
 
-		&__tools-range {
+		&__range {
 			width: 290px;
 		}
 
 		&__range-button {
-			&-crop {
+			&-cut {
 				left: 24.14%;
 			}
 

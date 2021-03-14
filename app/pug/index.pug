@@ -19,16 +19,24 @@ html(lang="ru")
 					div.main-header__nav-inner
 						a.main-header__to-main-anchor(tabindex="0" href="#to-main") Scroll to main content
 						div.main-header__logo
-								include ../blocks/header-logo/header-logo.pug
+							include ../blocks/header-logo/header-logo.pug
 						div.main-header__button
 							include ../blocks/button-burger/button-burger.pug
 						nav.main-header__menu.main-menu
-							include ../blocks/main-menu/main-menu.pug
+							ul.main-menu__list
+								li.main-menu__item
+									a.main-menu__link(href="#") Главная
+								li.main-menu__item
+									a.main-menu__link(href="page-photo.html") Фотографии
+								li.main-menu__item
+									a.main-menu__link(href="page-contest.html") Конкурс
+								li.main-menu__item
+									a.main-menu__link(href="") О нас
 			div.main-header__promo.container
 				div.main-header__promo-inner
 					h1.visually-hidden Приложение для применения фильтров на фотографиях
 					p.main-header__promo-title Взгляните на жизнь иначе!
-					a.main-header__download-button.button.button--download(href="#") Скачать приложение
+					a.button.button--download(href="#") Скачать приложение
 					div.main-header__download-list
 						include ../blocks/download-list/download-list.pug
 					p.main-header__download-description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
@@ -77,8 +85,8 @@ html(lang="ru")
 								p.user-review__text «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
 						div.reviews__slider
 							div.slider
-								span.slider__item
 								span.slider__item.slider__item--checked
+								span.slider__item
 								span.slider__item
 						button.reviews__arrow(type="button" aria-label="Следующий отзыв")
 							svg(width="22", height="41")
@@ -89,7 +97,10 @@ html(lang="ru")
 					h2.visually-hidden Прайс-лист
 					include ../blocks/price-table/price-table.pug
 					div.price__slider
-						include ../blocks/slider/slider.pug
+						div.slider
+							span.slider__item
+							span.slider__item.slider__item--checked
+							span.slider__item
 
 			section.contacts
 				div.container
@@ -99,13 +110,13 @@ html(lang="ru")
 						div.contacts__group
 							address.contacts__group-item
 								span.contacts__item-title Звоните:
-								a.contacts__link(href="tel:+7(812)555-66-66") +7 (812) 555-66-66
+								a.contacts__link.contacts__link--tel(href="tel:+7(812)555-66-66") +7 (812) 555-66-66
 							address.contacts__group-item.contacts__group-item--email
 								span.contacts__item-title Пишите:
 								a.contacts__link.contacts__link--email(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
 							address.contacts__group-item
 								span.contacts__item-title Приезжайте в гости:
-								a.contacts__link.contacts__link--address(href="#") ул. Большая Конюшенная, 19/8
+								a.contacts__link(href="#") ул. Большая Конюшенная, 19/8
 				div.contacts__map
 					div.contacts__map-inner
 						img.contacts__map-image(src="blocks/contacts/img/map.jpg" width="1422" height="746" alt="Наш адрес")

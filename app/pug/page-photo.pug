@@ -5,15 +5,12 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(name="description" content="")
-		//- OPEN GRAPH ДЛЯ СОЦСЕТЕЙ
 		include ../blocks/opengraph/opengraph.pug
 		title Фотографии
 		link(rel="icon" href="#" type="image/png" sizes="32x32")
 		link(rel="stylesheet" href="style.css")
 
-		//- link(rel="preload" href="style.css" as="style")
-
-	body.page.page-photo
+	body.page-photo.page
 		include ../blocks/svg/svg.pug
 
 		header.page-photo__header.main-header
@@ -24,17 +21,16 @@ html(lang="ru")
 							include ../blocks/header-logo/header-logo.pug
 						div.main-header__button
 							include ../blocks/button-burger/button-burger.pug
-						div.main-header__menu
-							nav.main-menu
-								ul.main-menu__list
-									li.main-menu__item
-										a.main-menu__link(href="index.html") Главная
-									li.main-menu__item
-										a.main-menu__link(href="#") Фотографии
-									li.main-menu__item
-										a.main-menu__link(href="page-contest.html") Конкурс
-									li.main-menu__item
-										a.main-menu__link(href="") О нас
+						nav.main-header__menu.main-menu
+							ul.main-menu__list
+								li.main-menu__item
+									a.main-menu__link(href="index.html") Главная
+								li.main-menu__item
+									a.main-menu__link(href="#") Фотографии
+								li.main-menu__item
+									a.main-menu__link(href="page-contest.html") Конкурс
+								li.main-menu__item
+									a.main-menu__link(href="") О нас
 			div.page-photo__promo.container
 				div.page-photo__promo-inner
 					h1.page-photo__promo-title Фотографии пользователей
@@ -45,20 +41,21 @@ html(lang="ru")
 
 			section.page-photo__posts
 				h2.visually-hidden Посты пользователей
-				article.page-photo__post-special.post-special
+
+				article.user-post.user-post--special
 					h3.visually-hidden Пост пользователя
-					img.post-special__photo(src="blocks/user-post/img/user-photos/panorama.jpg" width="1200" height="506" alt="Панорама с моста в горах")
+					img.user-post__photo.user-post__photo--special(src="blocks/user-post/img/user-photos/panorama.jpg" width="1200" height="506" alt="Панорама с моста в горах")
 					div.container
-						div.post-special__inner
-							div.post-special__user
-								span.post-special__user-name Анна&nbsp;
-								span.post-special__time (5 минут назад)
-							p.post-special__text Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-							p.post-special__like
-								button.post-special__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
+						div.user-post__inner.user-post__inner--special
+							div.user-post__user
+								span.user-post__user-name Анна&nbsp;
+								span.user-post__time (5 минут назад)
+							p.user-post__text Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+							p.user-post__like.user-post__like--special
+								button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
 									include ../blocks/button-like/button-like.pug
-								span.post-special__like-text Нравится:&nbsp;
-								span.post-special__like-count 215
+								span.user-post__like-text.user-post__like-text--special Нравится:&nbsp;
+								span.user-post__like-count.user-post__like-count--special 215
 
 				div.container
 					div.page-photo__posts-group
@@ -69,12 +66,12 @@ html(lang="ru")
 								div.user-post__user
 									span.user-post__user-name Левон&nbsp;
 									span.user-post__time (5 часов назад)
-									p.user-post__text Вчера он на луну летал, сегодня в руки к нам попал.
-									p.user-post__like
-										button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
-											include ../blocks/button-like/button-like.pug
-										span.user-post__like-text Нравится:&nbsp;
-										span.user-post__like-count 356
+								p.user-post__text Вчера он на луну летал, сегодня в руки к нам попал.
+								p.user-post__like
+									button.user-post__like-button.button-like(type="button" aria-label="Кнопка «Лайк»")
+										include ../blocks/button-like/button-like.pug
+									span.user-post__like-text Нравится:&nbsp;
+									span.user-post__like-count 356
 
 						article.user-post
 							h3.visually-hidden Пост пользователя
@@ -159,20 +156,20 @@ html(lang="ru")
 							div.editor__tools
 								ul.editor__tools-list
 									li.editor__tools-item
-										button.editor__tools-button.editor__tools-button--crop(type="button" aria-label="Кнопка «Обрезать»")
+										button.editor__tools-button.editor__tools-button--cut(type="button" aria-label="Кнопка «Обрезать»")
 											include ../blocks/button-cut/button-cut.pug
-										div.editor__tools-range.editor__tools-range-crop
-											button.editor__range-button.editor__range-button-crop(type="button" aria-label="Кнопка «Ползунок»")
+										div.editor__range
+											button.editor__range-button.editor__range-button--cut(type="button" aria-label="Кнопка «Ползунок»")
 									li.editor__tools-item
 										button.editor__tools-button(type="button" aria-label="Кнопка «Заливка»")
 											include ../blocks/button-fill/button-fill.pug
-										div.editor__tools-range.editor__tools-range-fill
-											button.editor__range-button.editor__range-button-fill(type="button" aria-label="Кнопка «Ползунок»")
+										div.editor__range.editor__range--fill
+											button.editor__range-button.editor__range-button--fill(type="button" aria-label="Кнопка «Ползунок»")
 									li.editor__tools-item
 										button.editor__tools-button(type="button" aria-label="Кнопка «Контраст»")
 											include ../blocks/button-contrast/button-contrast.pug
-										div.editor__tools-range.editor__tools-range-contrast
-											button.editor__range-button.editor__range-button-contrast(type="button" aria-label="Кнопка «Ползунок»")
+										div.editor__range.editor__range--contrast
+											button.editor__range-button.editor__range-button--contrast(type="button" aria-label="Кнопка «Ползунок»")
 								div.editor__button-group
 									button.editor__button.button.button--post(type="button") Запостить
 									button.editor__button.button.button--cancel(type="button") Отмена
@@ -186,4 +183,4 @@ html(lang="ru")
 				div.main-footer__copyright
 					include ../blocks/copyright/copyright.pug
 
-		script(src="scripts/scripts.js", type="module")
+		script(src="scripts/scripts.js", type="module" crossorigin="anonymous")

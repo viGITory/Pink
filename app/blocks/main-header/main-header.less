@@ -1,10 +1,10 @@
 .main-header {
 	color: #ffffff;
 	background-color: @darkblue;
-	background-image: url(blocks/main-header/img/header-iphone-mobile.png), url(blocks/main-header/img/header-bg.jpg);
-	background-position: left bottom 271px, center bottom 269px;
-	background-repeat: no-repeat, no-repeat;
-	background-size: auto 286px, cover;
+	background-image: url(blocks/main-header/img/header-bg.jpg);
+	background-position: center bottom 269px;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	&__nav {
 		position: relative;
@@ -51,6 +51,13 @@
 		background-color: @darkblue;
 	}
 
+	&__promo {
+		background-image: url(blocks/main-header/img/header-iphone-mobile.png);
+		background-position: left bottom 271px;
+		background-repeat: no-repeat;
+		background-size: auto 286px;
+	}
+
 	&__promo-inner {
 		padding-top: 423px;
 		padding-bottom: 30px;
@@ -75,10 +82,6 @@
 			color: @darkblue;
 			background-color: #ffffff;
 		}
-	}
-
-	&__download-button {
-		max-width: 280px;
 	}
 
 	&__download-list {
@@ -116,9 +119,9 @@
 
 @media @tablet {
 	.main-header {
-		background-image: url(blocks/main-header/img/header-iphone-tablet.png), url(blocks/main-header/img/header-bg.jpg);
-		background-position: center bottom, top center;
-		background-size: auto auto, cover;
+		background-image: url(blocks/main-header/img/header-bg.jpg);
+		background-position: top center;
+		background-size: cover;
 
 		&__nav-inner {
 			min-height: 110px;
@@ -141,6 +144,12 @@
 			top: 110px;
 		}
 
+		&__promo {
+			background-image: url(blocks/main-header/img/header-iphone-tablet.png);
+			background-position: center bottom;
+			background-size: auto auto;
+		}
+
 		&__promo-inner {
 			padding-top: 92px;
 			padding-bottom: 109px;
@@ -149,10 +158,6 @@
 
 		&__promo-title {
 			display: block;
-		}
-
-		&__download-button {
-			max-width: 300px;
 		}
 
 		&__download-list {
@@ -170,8 +175,7 @@
 
 @media @desktop {
 	.main-header {
-		background-image: url(blocks/main-header/img/header-iphone-desktop.png), url(blocks/main-header/img/header-bg.jpg);
-		background-position: left 147px bottom, top center;
+		background-image: url(blocks/main-header/img/header-bg.jpg);
 
 		&__nav {
 			background-color: @black50;
@@ -192,6 +196,11 @@
 			align-self: center;
 
 			background-color: inherit;
+		}
+
+		&__promo {
+			background-image: url(blocks/main-header/img/header-iphone-desktop.png);
+			background-position: left 25px bottom;
 		}
 
 		&__promo-inner {

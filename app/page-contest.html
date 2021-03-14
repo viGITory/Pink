@@ -10,7 +10,6 @@
     <title>Конкурс</title>
     <link rel="icon" href="#" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="scripts/scripts.js" as="script" crossorigin="anonymous">
   </head>
   <body class="page-contest page">
     <svg version="1.1" style="display: none">
@@ -156,16 +155,14 @@
                 </svg>
               </button>
             </div>
-            <div class="main-header__menu">
-              <nav class="main-menu">
-                <ul class="main-menu__list">
-                  <li class="main-menu__item"><a class="main-menu__link" href="index.html">Главная</a></li>
-                  <li class="main-menu__item"><a class="main-menu__link" href="page-photo.html">Фотографии</a></li>
-                  <li class="main-menu__item"><a class="main-menu__link" href="#">Конкурс</a></li>
-                  <li class="main-menu__item"><a class="main-menu__link" href="">О нас</a></li>
-                </ul>
-              </nav>
-            </div>
+            <nav class="main-header__menu main-menu">
+              <ul class="main-menu__list">
+                <li class="main-menu__item"><a class="main-menu__link" href="index.html">Главная</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="page-photo.html">Фотографии</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Конкурс</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="">О нас</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -177,11 +174,14 @@
     </header>
     <main class="page-contest__main">
       <div class="container">
-        <p class="page-contest__main-title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        <div class="page-contest__main-title">
+          <p class="page-contest__title-row">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <p class="page-contest__title-row page-contest__title-row--desktop">Пожалуйста, заполните форму ниже:</p>
+        </div>
       </div>
       <form class="form" action="#" method="post">
-        <fieldset class="fieldset fieldset--user-name">
-          <legend class="form__legend visually-hidden">ФИО</legend>
+        <fieldset class="page-contest__fieldset fieldset fieldset--user-name">
+          <legend class="visually-hidden">ФИО</legend>
           <div class="container">
             <ul class="form__input-list form__input-list--user-name">
               <li class="form__input-text">
@@ -199,8 +199,8 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="fieldset fieldset--achievements">
-          <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
+        <fieldset class="page-contest__fieldset fieldset fieldset--achievements">
+          <legend class="form__legend form__legend--achievements">Ваши безбашенные достижения в путешествии</legend>
           <div class="container">
             <ul class="form__input-list form__input-list--achievements">
               <li class="form__checkbox">
@@ -230,7 +230,7 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="fieldset fieldset--contacts">
+        <fieldset class="page-contest__fieldset fieldset fieldset--contacts">
           <legend class="form__legend form__legend--contacts">Контактная информация</legend>
           <div class="container">
             <ul class="form__input-list form__input-list--contacts">
@@ -245,26 +245,26 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="fieldset fieldset--app">
-          <legend class="form__legend">С каким приложением путешествовали?</legend>
+        <fieldset class="page-contest__fieldset fieldset fieldset--app">
+          <legend class="form__legend form__legend--app">С каким приложением путешествовали?</legend>
           <div class="container">
             <ul class="form__input-list form__input-list--app">
               <li class="form__radio">
                 <input class="radio" type="radio" id="radio-ios" name="radio-app" checked>
-                <label class="form__radio-label" for="radio-ios">Pink для iOS</label>
+                <label class="form__radio-label form__radio-label--app" for="radio-ios">Pink для iOS</label>
               </li>
               <li class="form__radio">
                 <input class="radio" type="radio" id="radio-android" name="radio-app">
-                <label class="form__radio-label" for="radio-android">Pink на Android</label>
+                <label class="form__radio-label form__radio-label--app" for="radio-android">Pink на Android</label>
               </li>
               <li class="form__radio">
                 <input class="radio" type="radio" id="radio-winphone" name="radio-app">
-                <label class="form__radio-label" for="radio-winphone">Windows Phone</label>
+                <label class="form__radio-label form__radio-label--app" for="radio-winphone">Windows Phone</label>
               </li>
             </ul>
           </div>
         </fieldset>
-        <fieldset class="fieldset fieldset--textarea">
+        <fieldset class="page-contest__fieldset fieldset fieldset--textarea">
           <legend class="form__legend form__legend--textarea">Опишите свои эмоции</legend>
           <div class="container">
             <div class="form__textarea">
@@ -274,7 +274,7 @@
         </fieldset>
         <div class="form__button-group container">
           <button class="form__button button button--form" type="submit">Отправить форму</button>
-          <p class="form__subtitle"><span class="form__subtitle-remark">&midast;&nbsp;</span><span class="form__subtitle-text">— обязательные поля</span></p>
+          <p class="form__subtitle"><span class="form__subtitle-mark">&midast;&nbsp;</span><span class="form__subtitle-text form__subtitle-text--mobile">— обязательные поля</span><span class="form__subtitle-text form__subtitle-text--desktop">— обязательные для заполнения поля</span></p>
         </div>
       </form>
     </main>
@@ -300,6 +300,6 @@
             </svg></a></div>
       </div>
     </footer>
-    <script src="scripts/scripts.js" type="module"></script>
+    <script src="scripts/scripts.js" type="module" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@
 		margin: 0;
 		margin-bottom: 32px;
 		padding: 0;
-		max-width: 300px; // PP
+		max-width: 300px;
 
 		font-size: 24px;
 		font-weight: 300;
@@ -56,7 +56,7 @@
 	&__link {
 		font-size: 24px;
 		font-weight: 300;
-		line-height: 1.1;
+		line-height: 1.23;
 		color: @red;
 		text-decoration: none;
 
@@ -84,15 +84,13 @@
 		}
 
 		&--email {
-			line-height: 1.2;
-
 			&:hover {
-			text-decoration: underline;
+				text-decoration: underline;
 			}
 		}
 
-		&--address {
-			line-height: 1.2;
+		&--tel {
+			line-height: 1.1;
 		}
 	}
 
@@ -184,7 +182,6 @@
 		&__group-item {
 			margin-bottom: 0px;
 
-			// MODIFIERS
 			&--email {
 				order: 1;
 			}

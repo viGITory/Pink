@@ -1,9 +1,5 @@
 .features {
 	background-color: #f2f2f2;
-	background-image: url(blocks/features/img/features-mobile.png);
-	background-repeat: no-repeat;
-	background-size: auto 320px;
-	background-position: bottom -43px center;
 	
 	&__inner {
 		padding-top: 40px;
@@ -11,6 +7,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		background-image: url(blocks/features/img/features-mobile.png);
+		background-repeat: no-repeat;
+		background-size: auto 320px;
+		background-position: bottom -43px center;
 	}
 
 	&__title {
@@ -91,14 +92,14 @@
 @media @tablet {
 	.features {
 		background-color: #ffffff;
-		background-image: url(blocks/features/img/features-tablet.png);
-		background-repeat: no-repeat;
-		background-size: auto 547px;
-		background-position: bottom -66px left 20px;
 
 		&__inner {
 			padding-top: 49px;
 			padding-bottom: 18px;
+
+			background-image: url(blocks/features/img/features-tablet.png);
+			background-size: auto 547px;
+			background-position: bottom -66px left;
 		}
 
 		&__title {
@@ -137,12 +138,13 @@
 
 @media @desktop {
 	.features {
-		background-image: none;
-			background-color: #f2f2f2;
+		background-color: #f2f2f2;
 
 		&__inner {
 			padding-top: 67px;
 			padding-bottom: 65px;
+
+			background-image: none;
 		}
 
 		&__title {

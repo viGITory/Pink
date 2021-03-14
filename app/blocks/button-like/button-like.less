@@ -1,0 +1,24 @@
+.button-like {
+	padding: 0;
+	width: 13px;
+	height: 13px;
+
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	overflow: hidden;
+	background-color: transparent;
+
+	& > svg {
+		transition-property: fill;
+		transition-duration: @main-duration;
+	}
+
+	&:hover > svg {
+		fill: @darkblue;
+	}
+
+	&:focus > svg {
+		fill: @darkblue;
+	}
+}

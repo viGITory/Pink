@@ -28,7 +28,11 @@
 		}
 
 		&--textarea {
-			margin-bottom: 20px;
+			margin-bottom: 17px;
+		}
+
+		&--app {
+			margin-bottom: 37px;
 		}
 	}
 
@@ -40,7 +44,7 @@
 	}
 
 	&__input-text {
-		margin-bottom: 25px;
+		margin-bottom: 17px;
 		display: flex;
 		flex-direction: column;
 
@@ -50,8 +54,8 @@
 	}
 
 	&__input-text-label {
-		margin-left: 20px;
-		margin-bottom: 10px;
+		margin-left: 22px;
+		margin-bottom: 6px;
 
 		color: @red;
 		font-size: 14px;
@@ -66,7 +70,7 @@
 
 	&__checkbox,
 	&__radio {
-		margin-bottom: 34px;
+		margin-bottom: 42px;
 		display: flex;
 		align-items: center;
 
@@ -75,9 +79,13 @@
 		}
 	}
 
+	&__radio {
+		margin-bottom: 36px;
+	}
+
 	&__checkbox-label,
 	&__radio-label {
-		padding-left: 20.5px;
+		padding-left: 29px;
 
 		font-size: 18px;
 		line-height: 1.66;
@@ -88,8 +96,12 @@
 		}
 	}
 
+	&__radio-label--app {
+		padding-left: 30px;
+	}
+
 	&__textarea-input {
-		min-height: 200px;
+		min-height: 201px;
 	}
 
 	&__button-group {
@@ -99,7 +111,7 @@
 	}
 
 	&__button {
-		margin-bottom: 40px;
+		margin-bottom: 34px;
 		max-width: 300px;
 	}
 
@@ -110,21 +122,25 @@
 		font-size: 14px;
 		line-height: 2.14;
 		text-transform: uppercase;
+	}
 
-		&-remark {
-			color: @red;
+	&__subtitle-mark {
+		color: @red;
 
-			&::selection {
-				color: #ffffff;
-				background-color: @red;
-			}
+		&::selection {
+			color: #ffffff;
+			background-color: @red;
+		}
+	}
+
+	&__subtitle-text {
+		&::selection {
+			color: #ffffff;
+			background-color: @darkblue;
 		}
 
-		&-text {			
-			&::selection {
-				color: #ffffff;
-				background-color: @darkblue;
-			}
+		&--desktop {
+			display: none;
 		}
 	}
 }
@@ -132,20 +148,32 @@
 @media @tablet {
 	.form {
 		&__input-list {
-			&--app,
-			&--contacts,
+			&--app {
+				margin-left: 38px;
+			}
+
+			&--contacts {
+				margin-left: 39px;
+				margin-right: 39px;
+			}
+
 			&--achievements {
-				margin-left: 40px;
-				margin-right: 40px;
+				margin-left: 38px;
+				margin-right: 38px;
 			}
 		}
 
+		&__radio-label--app {
+			padding-left: 20px;
+		}
+
 		&__input-text {
-			margin-bottom: 50px;
+			margin-bottom: 52px;
 			flex-direction: row;
 			align-items: center;
 
 			&--contacts {
+				margin-bottom: 30px;
 				flex-direction: column-reverse;
 				align-items: stretch;
 			}
@@ -153,14 +181,15 @@
 
 		&__label {
 			&--user-name {
-				margin-right: 20px;
+				margin-right: 19px;
 				margin-bottom: 0;
 				margin-left: 0;
 			}
 
 			&--contacts {
-				margin-top: 15px;
+				margin-top: 10px;
 				margin-bottom: 0;
+				margin-left: 18px;
 			}
 		}
 
@@ -172,12 +201,26 @@
 			float: none;
 
 			&--contacts {
+				margin-bottom: 38px;
+				padding-right: 31px;
+				padding-left: 29px;
 				display: block;
 			}
 
-			&--textarea,
-			&--contacts {
-				margin-bottom: 35px;
+			&--textarea {
+				margin-bottom: 38px;
+				padding-right: 37px;
+				padding-left: 37px;
+			}
+
+			&--app {
+				margin-bottom: 45px;
+			}
+
+			&--achievements {
+				margin-bottom: 45px;
+				padding-right: 31px;
+				padding-left: 30px;
 			}
 		}
 
@@ -186,12 +229,12 @@
 		}
 
 		&__textarea {
-			margin-right: 40px;
-			margin-left: 40px;
+			margin-right: 38px;
+			margin-left: 38px;
 		}
 
 		&__textarea-input {
-			min-height: 190px;
+			min-height: 193px;
 		}
 
 		&__button-group {
@@ -211,7 +254,7 @@
 		display: grid;
 		grid-template-columns: 435px 435px;
 		justify-content: space-between;
-		grid-row-gap: 55px;
+		grid-row-gap: 58px;
 		max-width: 960px;
 
 		box-sizing: border-box;
@@ -224,7 +267,7 @@
 			&--achievements {
 				display: grid;
 				grid-template-columns: repeat(3, auto);
-				grid-gap: 40px 45px;
+				grid-gap: 43px 45px;
 			}
 
 			&--contacts {
@@ -240,11 +283,31 @@
 			}
 		}
 
+		&__legend {
+			&--contacts {
+				margin-bottom: 35px;
+			}
+
+			&--achievements {
+				margin-bottom: 43px;
+			}
+
+			&--textarea {
+				margin-bottom: 34px;
+			}
+		}
+
 		&__input-text {
+			margin-bottom: 51.5px;
+
 			&--contacts {
 				margin-bottom: 0;
 				width: 375px;
 			}
+		}
+
+		&__label--contacts {
+			margin-left: 19px;
 		}
 
 		&__checkbox {
@@ -257,13 +320,23 @@
 		}
 
 		&__textarea-input {
-			min-height: 125px;
+			min-height: 128px;
 		}
 
 		&__button-group {
 			padding: 0;
 			grid-column-start: 1;
 			grid-column-end: -1;
+		}
+
+		&__subtitle-text {
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: inline;
+			}
 		}
 	}
 }

@@ -5,14 +5,10 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(name="description" content="")
-		//- OPEN GRAPH ДЛЯ СОЦСЕТЕЙ
 		include ../blocks/opengraph/opengraph.pug
 		title Конкурс
 		link(rel="icon" href="#" type="image/png" sizes="32x32")
 		link(rel="stylesheet" href="style.css")
-
-		//- link(rel="preload" href="style.css" as="style")
-		link(rel="preload" href="scripts/scripts.js" as="script" crossorigin="anonymous")
 
 	body.page-contest.page
 		include ../blocks/svg/svg.pug
@@ -25,27 +21,28 @@ html(lang="ru")
 							include ../blocks/header-logo/header-logo.pug
 						div.main-header__button
 							include ../blocks/button-burger/button-burger.pug
-						div.main-header__menu
-							nav.main-menu
-								ul.main-menu__list
-									li.main-menu__item
-										a.main-menu__link(href="index.html") Главная
-									li.main-menu__item
-										a.main-menu__link(href="page-photo.html") Фотографии
-									li.main-menu__item
-										a.main-menu__link(href="#") Конкурс
-									li.main-menu__item
-										a.main-menu__link(href="") О нас
+						nav.main-header__menu.main-menu
+							ul.main-menu__list
+								li.main-menu__item
+									a.main-menu__link(href="index.html") Главная
+								li.main-menu__item
+									a.main-menu__link(href="page-photo.html") Фотографии
+								li.main-menu__item
+									a.main-menu__link(href="#") Конкурс
+								li.main-menu__item
+									a.main-menu__link(href="") О нас
 			div.page-contest__promo
 				div.container
 					h1.page-contest__promo-title Конкурс на самое безбашенное путешествие с Пинк
 
 		main.page-contest__main
 			div.container
-				p.page-contest__main-title Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+				div.page-contest__main-title
+					p.page-contest__title-row Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+					p.page-contest__title-row.page-contest__title-row--desktop Пожалуйста, заполните форму ниже:
 			form.form(action="#" method="post")
-				fieldset.fieldset.fieldset--user-name
-					legend.form__legend.visually-hidden ФИО
+				fieldset.page-contest__fieldset.fieldset.fieldset--user-name
+					legend.visually-hidden ФИО
 					div.container
 						ul.form__input-list.form__input-list--user-name
 							li.form__input-text
@@ -58,8 +55,8 @@ html(lang="ru")
 								label.form__input-text-label.form__label--user-name(for="input-middle-name") Отчество:
 								input.input-text.input-text--user-name(type="text" id="input-middle-name" placeholder="Ну и отчество тоже")
 
-				fieldset.fieldset.fieldset--achievements
-					legend.form__legend Ваши безбашенные достижения в путешествии
+				fieldset.page-contest__fieldset.fieldset.fieldset--achievements
+					legend.form__legend.form__legend--achievements Ваши безбашенные достижения в путешествии
 					div.container
 						ul.form__input-list.form__input-list--achievements
 							li.form__checkbox
@@ -81,7 +78,7 @@ html(lang="ru")
 								input.checkbox(type="checkbox" id="checkbox-hotel" name="smash-hotel")
 								label.form__checkbox-label(for="checkbox-hotel") Разгромил отель
 
-				fieldset.fieldset.fieldset--contacts
+				fieldset.page-contest__fieldset.fieldset.fieldset--contacts
 					legend.form__legend.form__legend--contacts Контактная информация
 					div.container
 						ul.form__input-list.form__input-list--contacts
@@ -92,21 +89,21 @@ html(lang="ru")
 								label.form__input-text-label.form__label--contacts(for="input-email") Адрес почты
 								input.input-text.input-text--email(type="email" id="input-email" placeholder="Введите почту *")
 
-				fieldset.fieldset.fieldset--app
-					legend.form__legend С каким приложением путешествовали?
+				fieldset.page-contest__fieldset.fieldset.fieldset--app
+					legend.form__legend.form__legend--app С каким приложением путешествовали?
 					div.container
 						ul.form__input-list.form__input-list--app
 							li.form__radio
 								input.radio(type="radio" id="radio-ios" name="radio-app" checked)
-								label.form__radio-label(for="radio-ios") Pink для iOS
+								label.form__radio-label.form__radio-label--app(for="radio-ios") Pink для iOS
 							li.form__radio
 								input.radio(type="radio" id="radio-android" name="radio-app")
-								label.form__radio-label(for="radio-android") Pink на Android
+								label.form__radio-label.form__radio-label--app(for="radio-android") Pink на Android
 							li.form__radio
 								input.radio(type="radio" id="radio-winphone" name="radio-app")
-								label.form__radio-label(for="radio-winphone") Windows Phone
+								label.form__radio-label.form__radio-label--app(for="radio-winphone") Windows Phone
 
-				fieldset.fieldset.fieldset--textarea
+				fieldset.page-contest__fieldset.fieldset.fieldset--textarea
 					legend.form__legend.form__legend--textarea Опишите свои эмоции
 					div.container
 						div.form__textarea
@@ -115,8 +112,9 @@ html(lang="ru")
 				div.form__button-group.container
 					button.form__button.button.button--form(type="submit") Отправить форму
 					p.form__subtitle
-						span.form__subtitle-remark &midast;&nbsp;
-						span.form__subtitle-text — обязательные поля
+						span.form__subtitle-mark &midast;&nbsp;
+						span.form__subtitle-text.form__subtitle-text--mobile — обязательные поля
+						span.form__subtitle-text.form__subtitle-text--desktop — обязательные для заполнения поля
 
 		footer.main-footer.container
 			div.main-footer__inner
@@ -127,4 +125,4 @@ html(lang="ru")
 				div.main-footer__copyright
 					include ../blocks/copyright/copyright.pug
 
-		script(src="scripts/scripts.js", type="module")
+		script(src="scripts/scripts.js", type="module" crossorigin="anonymous")
