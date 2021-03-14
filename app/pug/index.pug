@@ -5,19 +5,15 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(name="description" content="")
-		//- OPEN GRAPH ДЛЯ СОЦСЕТЕЙ
 		include ../blocks/opengraph/opengraph.pug
 		title PINK
 		link(rel="icon" href="#" type="image/png" sizes="32x32")
 		link(rel="stylesheet" href="style.css")
 
-		//- link(rel="preload" href="style.css" as="style" crossorigin="anonymous")
-		link(rel="preload" href="scripts/scripts.js" as="script" crossorigin="anonymous")
-
 	body.page
 		include ../blocks/svg/svg.pug
 
-		header.page__header.main-header
+		header.main-header
 			div.main-header__nav
 				div.container
 					div.main-header__nav-inner
@@ -26,36 +22,36 @@ html(lang="ru")
 								include ../blocks/header-logo/header-logo.pug
 						div.main-header__button
 							include ../blocks/button-burger/button-burger.pug
-						div.main-header__menu.main-menu
+						nav.main-header__menu.main-menu
 							include ../blocks/main-menu/main-menu.pug
 			div.main-header__promo.container
 				div.main-header__promo-inner
-						h1.visually-hidden Приложение для применения фильтров на фотографиях
-						p.main-header__promo-title Взгляните на жизнь иначе!
-						a.main-header__download-button.button.button--download(href="#") Скачать приложение
-						div.main-header__download-list
-							include ../blocks/download-list/download-list.pug
-						p.main-header__download-description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+					h1.visually-hidden Приложение для применения фильтров на фотографиях
+					p.main-header__promo-title Взгляните на жизнь иначе!
+					a.main-header__download-button.button.button--download(href="#") Скачать приложение
+					div.main-header__download-list
+						include ../blocks/download-list/download-list.pug
+					p.main-header__download-description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
 
-		main.page__main
+		main#to-main.page__main
 			section.features
 				div.container
 					div.features__inner
 						h2.visually-hidden Преимущества приложения
 						div.features__title
-							a(id="to-main")
 							p.features__title-row Устали от серости мегаполиса?
 							p.features__title-row Нам есть, что вам предложить!
 						div.features__group
-							div.features__item
+							div.features__item.features__item--gray
 								h3.features__item-title Поднимает настроение
 								p.features__item-text Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-							div.features__item
+							div.features__item.features__item--pink
 								h3.features__item-title Меняет мир вокруг
 								p.features__item-text Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-							div.features__item
+							div.features__item.features__item--hello
 								h3.features__item-title Заводит новых друзей
 								p.features__item-text Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+
 			section.page__research.research
 				div.container
 					div.research__inner
@@ -64,6 +60,7 @@ html(lang="ru")
 							p.research__title Эффект на 24 часа!
 							p.research__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
 							a.research__link(href="#") Узнать больше об исследовании
+
 			section.reviews
 				div.container
 					div.reviews__inner
@@ -86,12 +83,14 @@ html(lang="ru")
 						button.reviews__arrow(type="button" aria-label="Следующий отзыв")
 							svg(width="22", height="41")
 								use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#icon-arrow-right")
+
 			section.price
 				div.price__inner
 					h2.visually-hidden Прайс-лист
 					include ../blocks/price-table/price-table.pug
 					div.price__slider
 						include ../blocks/slider/slider.pug
+
 			section.contacts
 				div.container
 					div.contacts__inner
@@ -121,4 +120,4 @@ html(lang="ru")
 				div.main-footer__copyright
 					include ../blocks/copyright/copyright.pug
 
-		script(src="scripts/scripts.js", type="module")
+		script(src="scripts/scripts.js" type="module" crossorigin="anonymous")

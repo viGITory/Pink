@@ -5,21 +5,6 @@
 	font-family: 'Open Sans', Arial, sans-serif;
 	color: @darkblue;
 
-	background-color: #ffffff;
-
-	&__header {
-		background-image: url(blocks/main-header/img/iphone-mobile.png), url(blocks/main-header/img/back-desktop.jpg);
-		background-position: center bottom 269px, center bottom 269px;
-		background-repeat: no-repeat, no-repeat;
-		background-size: auto 285px, cover;
-	}
-
-	&__features,
-	&__research,
-	&__price {
-		background-color: #f2f2f2;
-	}
-
 	&__research,
 	&__footer {
 		display: none;
@@ -28,27 +13,9 @@
 
 @media @tablet {
 	.page {
-		&__header {
-			background-image: url(blocks/main-header/img/iphone-tablet.png), url(blocks/main-header/img/back-desktop.jpg);
-			background-position: center bottom, center center;
-			background-size: auto auto, cover;
-		}
-
-		&__features {
-			background-color: #ffffff;
-		}
-
 		&__research,
 		&__footer {
 			display: block;
-		}
-	}
-}
-
-@media @desktop {
-	.page {
-		&__header {
-			background-image: url(blocks/main-header/img/iphone-desktop.png), url(blocks/main-header/img/back-desktop.jpg);
 		}
 	}
 }

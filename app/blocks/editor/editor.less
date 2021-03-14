@@ -2,8 +2,8 @@
 	background-color: #f2f2f2;
 
 	&__inner {
-		padding-top: 20px;
-		padding-bottom: 40px;
+		padding-top: 19px;
+		padding-bottom: 41px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -12,7 +12,7 @@
 	&__image {
 		width: 100%;
 		max-width: 300px;
-		height: 400px;
+		height: 374px;
 		display: block;
 
 		object-fit: cover;
@@ -23,7 +23,7 @@
 	}
 
 	&__tools {
-		padding-top: 45px;
+		margin-top: 40px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -31,7 +31,7 @@
 
 	&__tools-list {
 		margin: 0;
-		margin-bottom: 70px;
+		margin-bottom: 75px;
 		padding: 0;
 		display: flex;
 		flex-direction: row;
@@ -39,7 +39,7 @@
 	}
 
 	&__tools-item {
-		margin-right: 35px;
+		margin-right: 33px;
 		position: relative;
 
 		&:last-child {
@@ -49,7 +49,7 @@
 
 	&__tools-button {
 		margin: 0;
-		margin-bottom: 40px;
+		margin-bottom: 37px;
 		padding: 0;
 
 		font-size: 0;
@@ -123,7 +123,7 @@
 	}
 
 	&__button {
-		margin-bottom: 15px;
+		margin-bottom: 12px;
 		width: 280px;
 
 		&:last-child {
@@ -135,18 +135,23 @@
 @media @tablet {
 	.editor {
 		&__inner {
-			padding-top: 55px;
-			padding-bottom: 55px;
+			padding-top: 57px;
+			padding-bottom: 54px;
 			display: grid;
 			grid-template-columns: 300px auto;
-			grid-gap: 45px;
+			grid-gap: 44px;
 			justify-content: center;
 			align-items: stretch;
 		}
 
+			&__image {
+		height: 400px;
+	}
+
 		&__tools {
+			margin-top: 8px;
 			margin-left: auto;
-			padding-top: 10px;
+			padding-top: 0;
 			display: flex;
 			flex-direction: column;
 			align-items: stretch;
@@ -159,9 +164,9 @@
 
 		&__tools-item {
 			margin-right: 0;
-			padding-top: 25px;
+			padding-top: 24px;
 			padding-right: 20px;
-			padding-bottom: 25px;
+			padding-bottom: 23px;
 			padding-left: 5px;
 			display: flex;
 			justify-content: space-between;
@@ -175,7 +180,7 @@
 		}
 
 		&__tools-button {
-			margin-right: 30px;
+			margin-right: 28px;
 			margin-bottom: 0;
 			fill: @red;
 
@@ -205,7 +210,7 @@
 			}
 
 			&-fill {
-				left: 12.5%;
+				left: 12%;
 			}
 
 			&-contrast {
@@ -215,11 +220,13 @@
 
 		&__button-group {
 			margin-top: 0;
+			margin-left: 4px;
 			display: flex;
 			flex-direction: column;
 		}
 
 		&__button {
+			padding-bottom: 0;
 			width: 260px;
 
 			&:first-child {
@@ -232,8 +239,9 @@
 @media @desktop {
 	.editor {
 		&__inner {
-			padding-top: 60px;
-			padding-bottom: 60px;
+			padding-top: 56px;
+			padding-bottom: 57px;
+			padding-left: 18px;
 			grid-gap: 90px;
 		}
 
@@ -241,10 +249,14 @@
 			margin-top: 0;
 		}
 
+		&__tools-list {
+			// margin-top: 1px;
+		}
+
 		&__tools-item {
-			padding-top: 15px;
+			padding-top: 11px;
 			padding-right: 30px;
-			padding-bottom: 15px;
+			padding-bottom: 10px;
 			padding-left: 0;
 		}
 
@@ -276,13 +288,14 @@
 		}
 
 		&__button-group {
+			margin-left: 0;
 			flex-direction: row;
 			justify-content: space-between;
 		}
 
 		&__button {
 			margin-right: 45px;
-			width: 180px;
+			width: 182px;
 
 			&:first-child {
 				margin-bottom: 0;

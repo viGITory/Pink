@@ -1,9 +1,9 @@
 .features {
 	background-color: #f2f2f2;
-	background-image: url(blocks/features/img/iphone-features.png);
+	background-image: url(blocks/features/img/features-mobile.png);
 	background-repeat: no-repeat;
-	background-size: auto 275px;
-	background-position: bottom -35px center;
+	background-size: auto 320px;
+	background-position: bottom -43px center;
 	
 	&__inner {
 		padding-top: 40px;
@@ -14,21 +14,21 @@
 	}
 
 	&__title {
-		margin-bottom: 114px;
+		margin-bottom: 115px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		max-width: 300px;
 
 		font-size: 24px;
-		line-height: 1.20;
+		line-height: 1.22;
 		font-weight: 300;
 		text-align: center;
 	}
 
 	&__title-row {
 		margin: 0;
-		margin-bottom: 29.5px;
+		margin-bottom: 28px;
 		padding: 0;
 
 		&::selection {
@@ -54,6 +54,7 @@
 		text-align: center;
 
 		&:last-child {
+			margin-top: 1px;
 			margin-bottom: 0;
 		}
 	}
@@ -90,12 +91,13 @@
 @media @tablet {
 	.features {
 		background-color: #ffffff;
+		background-image: url(blocks/features/img/features-tablet.png);
 		background-repeat: no-repeat;
-		background-size: auto 485px;
-		background-position: bottom -60px left 50px;
+		background-size: auto 547px;
+		background-position: bottom -66px left 20px;
 
 		&__inner {
-			padding-top: 48px;
+			padding-top: 49px;
 			padding-bottom: 18px;
 		}
 
@@ -115,7 +117,7 @@
 		}
 
 		&__group {
-			margin-left: 270px;
+			margin-left: 269px;
 		}
 
 		&__item {
@@ -136,6 +138,7 @@
 @media @desktop {
 	.features {
 		background-image: none;
+			background-color: #f2f2f2;
 
 		&__inner {
 			padding-top: 67px;
@@ -143,8 +146,10 @@
 		}
 
 		&__title {
-			max-width: 750px; // PP
+			margin-bottom: 73px;
+			max-width: 750px;
 			font-size: 50px;
+			line-height: 1.2;
 		}
 
 		&__title-row {
@@ -162,23 +167,35 @@
 		&__item {
 			margin-right: 35px;
 			margin-bottom: 0;
-			padding-top: 310px;
+			padding-top: 358px;
 			flex-basis: 240px;
 
 			text-align: center;
 
-			background-image: url(blocks/features/img/iphone-features.png);
-			background-size: auto 300px;
+			background-image: none;
+			background-size: auto 301px;
 			background-repeat: no-repeat;
-			background-position: top center;
+			background-position: top 2px center;
 
 			&:last-child {
 				margin-right: 0;
 			}
+
+			&--gray {
+				background-image: url(blocks/features/img/features-iphone1.png);
+			}
+
+			&--pink {
+				background-image: url(blocks/features/img/features-iphone2.png);
+			}
+
+			&--hello {
+				background-image: url(blocks/features/img/features-iphone3.png);
+			}
 		}
 
 		&__item-title {
-			margin-bottom: 25px;
+			margin-bottom: 24px;
 			font-size: 30px;
 			line-height: 1;
 		}
