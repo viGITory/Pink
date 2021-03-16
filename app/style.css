@@ -1118,6 +1118,7 @@ input[type='radio'].visually-hidden {
   display: inline-block;
   border-radius: 50%;
   background-color: rgba(40, 54, 69, 0.3);
+  cursor: pointer;
 }
 .slider__item:last-child {
   margin-right: 0;
@@ -1479,7 +1480,6 @@ input[type='radio'].visually-hidden {
 }
 .contacts__map-inner {
   margin: 0 auto;
-  max-width: 1200px;
   position: relative;
 }
 .contacts__map-image {
@@ -2535,6 +2535,14 @@ input[type='radio'].visually-hidden {
 .page-contest__title-row {
   margin: 0;
 }
+.page-contest__title-row::-moz-selection {
+  color: #ffffff;
+  background-color: #283645;
+}
+.page-contest__title-row::selection {
+  color: #ffffff;
+  background-color: #283645;
+}
 .page-contest__title-row--desktop {
   display: none;
 }
@@ -3134,7 +3142,7 @@ input[type='radio'].visually-hidden {
     background-image: url(blocks/form/icons/tel.svg), -o-linear-gradient(right, #e5e5e5 59px, transparent 59px);
     background-image: url(blocks/form/icons/tel.svg), linear-gradient(to left, #e5e5e5 59px, transparent 59px);
     background-repeat: no-repeat;
-    background-position: right 20px center, right center;
+    background-position: right 19px center, right center;
   }
 }
 @media (min-width: 660px) {
@@ -3144,7 +3152,7 @@ input[type='radio'].visually-hidden {
     background-image: url(blocks/form/icons/email.svg), -o-linear-gradient(right, #e5e5e5 59px, transparent 59px);
     background-image: url(blocks/form/icons/email.svg), linear-gradient(to left, #e5e5e5 59px, transparent 59px);
     background-repeat: no-repeat;
-    background-position: right 20px center, right center;
+    background-position: right 18px center, right center;
   }
 }
 .checkbox {

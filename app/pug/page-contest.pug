@@ -18,7 +18,15 @@ html(lang="ru")
 				div.container
 					div.main-header__nav-inner
 						div.main-header__logo
-							include ../blocks/header-logo/header-logo.pug
+							a.logo.logo--header.logo--header-mobile(href="index.html" aria-label="Логотип Pink для экранов смартфонов")
+								svg(width="75" height="22")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile")
+							a.logo.logo--header.logo--header-tablet(href="index.html" aria-label="Логотип Pink для экранов планшетов")
+								svg(width="148" height="40")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet")
+							a.logo.logo--header.logo--header-desktop(href="index.html" aria-label="Логотип Pink для экранов компьютеров")
+								svg(width="148" height="40")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop")
 						div.main-header__button
 							include ../blocks/button-burger/button-burger.pug
 						nav.main-header__menu.main-menu

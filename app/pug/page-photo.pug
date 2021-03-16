@@ -18,7 +18,15 @@ html(lang="ru")
 				div.container
 					div.main-header__nav-inner
 						div.main-header__logo
-							include ../blocks/header-logo/header-logo.pug
+							a.logo.logo--header.logo--header-mobile(href="index.html" aria-label="Логотип Pink для экранов смартфонов")
+								svg(width="75" height="22")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile")
+							a.logo.logo--header.logo--header-tablet(href="index.html" aria-label="Логотип Pink для экранов планшетов")
+								svg(width="148" height="40")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet")
+							a.logo.logo--header.logo--header-desktop(href="index.html" aria-label="Логотип Pink для экранов компьютеров")
+								svg(width="148" height="40")
+									use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop")
 						div.main-header__button
 							include ../blocks/button-burger/button-burger.pug
 						nav.main-header__menu.main-menu
@@ -44,7 +52,8 @@ html(lang="ru")
 
 				article.user-post.user-post--special
 					h3.visually-hidden Пост пользователя
-					img.user-post__photo.user-post__photo--special(src="blocks/user-post/img/user-photos/panorama.jpg" width="1200" height="506" alt="Панорама с моста в горах")
+					a(href="#")
+						img.user-post__photo.user-post__photo--special(src="blocks/user-post/img/user-photos/panorama.jpg" width="1200" height="506" alt="Панорама с моста в горах")
 					div.container
 						div.user-post__inner.user-post__inner--special
 							div.user-post__user
@@ -61,7 +70,8 @@ html(lang="ru")
 					div.page-photo__posts-group
 						article.user-post
 							h3.visually-hidden Пост пользователя
-							img.user-post__photo(src="blocks/user-post/img/user-photos/photo1.jpg" width="300" height="400" alt="Фотоаппарат фотографирующий автомобиль")
+							a(href="#")
+								img.user-post__photo(src="blocks/user-post/img/user-photos/photo1.jpg" width="300" height="400" alt="Фотоаппарат фотографирующий автомобиль")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Левон&nbsp;
@@ -75,7 +85,8 @@ html(lang="ru")
 
 						article.user-post
 							h3.visually-hidden Пост пользователя
-							img.user-post__photo(src="blocks/user-post/img/user-photos/photo2.jpg" width="300" height="400" alt="Барабанная установка")
+							a(href="#")
+								img.user-post__photo(src="blocks/user-post/img/user-photos/photo2.jpg" width="300" height="400" alt="Барабанная установка")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Антон&nbsp;
@@ -89,7 +100,8 @@ html(lang="ru")
 
 						article.user-post
 							h3.visually-hidden Пост пользователя
-							img.user-post__photo(src="blocks/user-post/img/user-photos/photo3.jpg" width="300" height="400" alt="Прозрачная стеклянная крыша")
+							a(href="#")
+								img.user-post__photo(src="blocks/user-post/img/user-photos/photo3.jpg" width="300" height="400" alt="Прозрачная стеклянная крыша")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Борис&nbsp;
@@ -103,7 +115,8 @@ html(lang="ru")
 
 						article.user-post
 							h3.visually-hidden Пост пользователя
-							img.user-post__photo(src="blocks/user-post/img/user-photos/photo4.jpg" width="300" height="400" alt="Рынок с бахчой")
+							a(href="#")
+								img.user-post__photo(src="blocks/user-post/img/user-photos/photo4.jpg" width="300" height="400" alt="Рынок с бахчой")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Сергей&nbsp;
@@ -117,7 +130,8 @@ html(lang="ru")
 
 						article.user-post
 							h3.visually-hidden Пост пользователя
-							img.user-post__photo(src="blocks/user-post/img/user-photos/photo5.jpg" width="300" height="400" alt="Мужчина на камне")
+							a(href="#")
+								img.user-post__photo(src="blocks/user-post/img/user-photos/photo5.jpg" width="300" height="400" alt="Мужчина на камне")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Максим&nbsp;
@@ -131,7 +145,8 @@ html(lang="ru")
 
 						article.user-post
 							h3.visually-hidden Пост пользователя
-							img.user-post__photo(src="blocks/user-post/img/user-photos/photo6.jpg" width="300" height="400" alt="Крыло самолета из иллюминатора")
+							a(href="#")
+								img.user-post__photo(src="blocks/user-post/img/user-photos/photo6.jpg" width="300" height="400" alt="Крыло самолета из иллюминатора")
 							div.user-post__inner
 								div.user-post__user
 									span.user-post__user-name Надежда&nbsp;
